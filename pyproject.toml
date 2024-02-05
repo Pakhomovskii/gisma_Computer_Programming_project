@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "co2-rreduction"
+version = "0.1.0"
+description = "Python web project, providing insights and best practices for addressing CO2 emissions reduction"
+authors = ["Aleksandr Pakhomovskii <pakhomovskii@gmail.com>"]
+license = "CC-BY-SA-4.0"
+readme = "README.md"
+packages = [{include = "co2_rreduction"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
