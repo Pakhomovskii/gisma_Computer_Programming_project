@@ -16,6 +16,10 @@
 │   │   ├── __init__.py
 │   │   ├── database.py
 │   │   └── http_client.py
+│   ├── templates/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   └── constants.py
 │   └── utils/
 │       ├── __init__.py
 │       └── validation.py

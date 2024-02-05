@@ -3,6 +3,9 @@ import logging
 
 from aiohttp import web
 
+from app.routes.api import setup_routes
+from aiohttp_swagger import setup_swagger
+
 logging.basicConfig(level=logging.INFO)
 
 
@@ -13,7 +16,8 @@ async def handle_request(request):
 
 async def main():
     app = web.Application()
-    app.router.add_get('/', handle_request)
+    setup_routes(app)  # Configure API routes
+    setup_swagger(app, swagger_url="/api/doc", description="API documentation", title="API Documentation", api_version="1.0.0")  # Add Swagger documentation
 
     runner = web.AppRunner(app)
     await runner.setup()
