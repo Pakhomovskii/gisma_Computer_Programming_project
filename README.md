@@ -27,5 +27,4 @@
 ├── pyproject.toml
 ├── poetry.lock
 └── README.md
-
 ```
