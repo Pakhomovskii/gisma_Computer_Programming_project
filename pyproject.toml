@@ -11,6 +11,7 @@ packages = [{include = "co2_reduction"}]
 python = "^3.11"
 aiohttp = "^3.9.3"
 aiohttp-swagger = "^1.0.16"
+flask = "^3.0.2"
 
 
 
