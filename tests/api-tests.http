@@ -55,6 +55,6 @@ GET http://localhost:8080/get-waste-sector?user_uuid=9b7fbcb9-0efa-417a-9587-5ef
 Accept: application/json
 ###
 ### Get c
-GET http://localhost:8080/give-recommendation?user_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
+GET http://localhost:8080/give-recommendation?user_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d
 Accept: application/json
 

@@ -27,3 +27,5 @@ env/
 
 # Local development runtime state
 *.sqlite3
+
+*app.log
