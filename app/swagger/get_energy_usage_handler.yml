@@ -1,0 +1,38 @@
+      tags:
+        - Energy Management
+      summary: Get energy usage for a user
+      description: >
+        This endpoint retrieves energy usage data for a specific user based on their unique user UUID. It is intended to provide insights into the user's energy consumption patterns.
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: user_uuid
+          description: The UUID of the user for whom the energy usage is being retrieved.
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                description: Energy usage data for the specified user. The object keys and values will reflect various aspects of the user's energy consumption.
+        "404":
+          description: Not Found
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                description: A message indicating that no data was found for the provided user UUID.
+        "500":
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: A message describing the internal server error that occurred.

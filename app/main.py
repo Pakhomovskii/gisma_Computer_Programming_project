@@ -1,7 +1,7 @@
 import traceback
 from decimal import Decimal
 import uuid
-
+from aiohttp_swagger import *
 import aiohttp_swagger
 from aiohttp import web
 import traceback
@@ -40,6 +40,8 @@ async def create_user_handler(request):
         return web.Response(status=500, text=f"An unexpected error occurred: {str(e)}")
 
 
+@swagger_path(
+    "/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/create_energy_usage_handler.yml")
 async def create_energy_usage_handler(request):
     logger.info("Handling a request to create or update energy usage")
     try:
@@ -55,7 +57,8 @@ async def create_energy_usage_handler(request):
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
-
+@swagger_path(
+    "/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/create-waste-sector.yml")
 async def create_waste_sector_handler(request):
     logger.info("Handling a request to create waste sector data")
     try:
@@ -72,7 +75,7 @@ async def create_waste_sector_handler(request):
         # Respond with a more informative error message
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
-
+@swagger_path("/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/create-business-travel.yml")
 async def create_business_travel_handler(request):
     logger.info("Handling a request to create business travel data")
     try:
@@ -90,6 +93,7 @@ async def create_business_travel_handler(request):
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
+@swagger_path("/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/get-business-travel.yml")
 async def get_business_travel_handler(request):
     try:
         user_uuid = request.query.get('user_uuid')
@@ -104,6 +108,7 @@ async def get_business_travel_handler(request):
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
+@swagger_path("/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/get_energy_usage_handler.yml")
 async def get_energy_usage_handler(request):
     try:
         user_uuid = request.query.get('user_uuid')
@@ -116,7 +121,7 @@ async def get_energy_usage_handler(request):
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
-
+@swagger_path("/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/get-waste-sector.yml")
 async def get_waste_sector_handler(request):
     try:
         user_uuid = request.query.get('user_uuid')
@@ -134,7 +139,7 @@ async def get_waste_sector_handler(request):
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
-
+@swagger_path("/home/sawkay/my_projects/GITHUB/gisma_Computer_Programming_project/app/swagger/give-recommendation.yml")
 async def recommendation(request):
     try:
         user_uuid = request.query.get('user_uuid')
@@ -212,15 +217,27 @@ async def init_app():
     app.router.add_post('/create-waste-sector', create_waste_sector_handler)
     app.router.add_post('/create-business-travel', create_business_travel_handler)
 
-    app.router.add_get('/get-waste-sector', get_waste_sector_handler)
-    app.router.add_get('/get-energy-usage', get_energy_usage_handler)
-    app.router.add_get('/get-business-travel', get_business_travel_handler)
+    app.router.add_post('/get-waste-sector', get_waste_sector_handler)
+    app.router.add_post('/get-energy-usage', get_energy_usage_handler)
+    app.router.add_post('/get-business-travel', get_business_travel_handler)
 
-    app.router.add_get('/give-recommendation', recommendation)
+    app.router.add_post('/give-recommendation', recommendation)
 
     # Setup Swagger documentation
-    aiohttp_swagger.setup_swagger(app, swagger_url="/api/v1/doc", ui_version=3, title="My API Documentation")
+    aiohttp_swagger.setup_swagger(app,api_version="1.0.0", title="co2-reduction project", description= """
+    This project is part of the M602A Computer Programming (WS0124) course, designed to offer a 
+    practical experience in assessing the carbon footprint associated with energy consumption, 
+    waste production, and business travel. Upon completion of all sections, participants will receive 
+    tailored recommendations. These suggestions are grounded in the guidelines and data provided by The European 
+    Environment Agency (EEA), which focuses on the environmental impacts of transportation.
 
+    ***Some useful links:***
+    - [The project repository](https://github.com/Pakhomovskii/gisma_computer_programming_project)
+    - [EU law Emissions monitoring & reporting](https://climate.ec.europa.eu/eu-action/international-action-climate-change/emissions-monitoring-reporting_en)  
+    
+    ***License:*** [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) 
+    """
+  )
     return app
 
 

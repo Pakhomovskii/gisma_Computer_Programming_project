@@ -1,0 +1,31 @@
+tags:
+- Business Travel Management
+summary: Retrieve Business Travel data
+description: >
+        This function is triggered when a GET request is received, aiming to retrieve business travel data for a specified user. The request must include the user's unique identifier (`user_uuid`) as a query parameter. This endpoint fetches the business travel data associated with the provided `user_uuid` from the database and returns it in the response.
+parameters:
+- in: query
+  name: user_uuid
+  description: >
+     The `user_uuid` is the unique identifier for the user whose business travel data is being requested. It must be included in the query parameters of the GET request.
+  required: true
+  schema:
+    type: string
+    description: The UUID of the user for whom the business travel data is being retrieved.
+responses:
+  "200":
+    description: Successful operation
+    schema:
+      type: object
+      properties:
+        data:
+          type: object
+          description: A JSON object containing the retrieved business travel data. Each key-value pair represents a specific piece of data, such as kilometers traveled per year and average efficiency per 100km. Values that are of type `Decimal` or `UUID` are converted to strings for JSON compatibility.
+  "500":
+    description: Internal Server Error
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A message describing the internal server error that occurred.

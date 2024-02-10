@@ -1,26 +1,19 @@
 tags:
 - User Management
 summary: Register a new user
-description: This endpoint registers a new user in the system.
+description: This endpoint registers a new user in the system. The user's details are not specified in the request, implying they are handled internally or through another mechanism not visible in this endpoint.
 operationId: createUser
 consumes:
 - application/json
 produces:
 - application/json
-parameters:
-- in: body
-  name: body
-  description: User to register
-  required: true
-  schema:
-    type: object
-    properties:
-      name:
-        type: string
-      email:
-        type: string
+parameters: []  # Since user details are handled internally, no parameters are expected in the request body.
 responses:
   "201":
     description: Successful operation
-  "500":
-    description: Internal Server Error
+    schema:
+      type: object
+      properties:
+        user_uuid:
+          type: string
+          description: The UUID of the newly registered user, returned as a string.

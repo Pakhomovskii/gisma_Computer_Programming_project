@@ -1,0 +1,51 @@
+      tags:
+        - Waste Sector Management
+      summary: Create or update waste sector data
+      description: >
+        This endpoint allows for the creation or updating of waste sector data for a specific user. It requires details about the user's waste production, including total waste in kilograms and the amount recycled or composted.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: >
+            Waste sector details for a specific user. The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint. This UUID is then used to associate the provided waste sector data with the respective user account.
+          required: true
+          schema:
+            type: object
+            required:
+              - user_uuid
+              - waste_kg
+              - recycled_or_composted_kg
+            properties:
+              user_uuid:
+                type: string
+                description: >
+                  The UUID of the user for whom the waste sector data is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a user.
+              waste_kg:
+                type: number
+                format: float
+                description: The total amount of waste produced by the user in kilograms.
+              recycled_or_composted_kg:
+                type: number
+                format: float
+                description: The amount of waste that has been either recycled or composted by the user in kilograms.
+      responses:
+        "201":
+          description: Successful operation
+          schema:
+            type: object
+            properties:
+              record_id:
+                type: string
+                description: The ID of the new or updated record in the database.
+        "500":
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: A message describing the internal server error that occurred.

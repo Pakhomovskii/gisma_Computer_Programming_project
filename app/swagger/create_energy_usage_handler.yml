@@ -1,0 +1,53 @@
+tags:
+- Energy Management
+summary: Create or update Energy Management data
+description: >
+        This function is triggered upon receiving an HTTP request containing JSON data about a user's energy consumption. The required data includes the user's unique identifier (user_uuid), their average monthly electricity bill (average_monthly_bill), average monthly natural gas bill (average_natural_gas_bill), and monthly fuel bill (monthly_fuel_bill)
+parameters:
+- in: body
+  name: body
+  description: >
+     The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint. This UUID is then used to associate the provided energy usage data with the respective user account.
+  required: true
+  schema:
+    type: object
+    required:
+    - user_uuid
+    - average_monthly_bill
+    - average_natural_gas_bill
+    - monthly_fuel_bill
+    properties:
+      user_uuid:
+        type: string
+        description: >
+          The UUID of the user for whom the energy usage is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a user.
+      average_monthly_bill:
+        type: number
+        format: float
+        description: The average monthly electricity bill for the user, in dollars, allowing decimal values for precise representation.
+      average_natural_gas_bill:
+        type: number
+        format: float
+        description: The average monthly natural gas bill for the user, in dollars, allowing decimal values for precise representation.
+      monthly_fuel_bill:
+        type: number
+        format: float
+        description: The monthly fuel bill for the user, in dollars. This field accepts decimal values to accurately represent the cost.
+responses:
+  "201":
+    description: Successful operation
+    schema:
+      type: object
+      properties:
+        record_id:
+          type: string
+          description: The if of the new row in DB
+  "500":
+    description: Internal Server Error
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A message describing the internal server error that occurred.
+

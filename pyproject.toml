@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "co2-reduction"
-version = "0.1.0"
+version = "1.0.0"
 description = "Python web project, providing insights and best practices for addressing CO2 emissions reduction"
 authors = ["Aleksandr Pakhomovskii <pakhomovskii@gmail.com>"]
 license = "CC-BY-SA-4.0"

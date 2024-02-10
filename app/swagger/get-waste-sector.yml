@@ -1,0 +1,38 @@
+      tags:
+        - Waste Sector Management
+      summary: Retrieve waste sector data
+      description: >
+        This endpoint retrieves waste sector data for a specific user based on their unique user UUID. It provides details such as the total amount of waste produced and the amount that was recycled or composted.
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: user_uuid
+          description: The UUID of the user for whom the waste sector data is being retrieved.
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Successful operation
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                description: Waste sector data for the specified user. The object keys and values will vary based on the user's data.
+        "404":
+          description: Not Found
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                description: A message indicating that no data was found for the provided user UUID.
+        "500":
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: A message describing the internal server error that occurred.
