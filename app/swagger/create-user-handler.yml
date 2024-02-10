@@ -1,7 +1,7 @@
 tags:
 - User Management
 summary: Register a new user
-description: This endpoint registers a new user in the system. The user's details are not specified in the request, implying they are handled internally or through another mechanism not visible in this endpoint.
+description: This endpoint registers a new user in the system
 operationId: createUser
 consumes:
 - application/json

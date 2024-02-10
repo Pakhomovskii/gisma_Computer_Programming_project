@@ -7,8 +7,7 @@ parameters:
 - in: body
   name: body
   description: >
-     The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint. This UUID is then utilized to link the provided business travel data with the respective user account.
-  required: true
+     The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint
   schema:
     type: object
     required:

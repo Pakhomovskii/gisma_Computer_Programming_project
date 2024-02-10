@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 
 @swagger_path("swagger/create-user-handler.yml")
 async def create_user_handler(request):
+    logger.info("Create a new user")
     try:
         user_uuid = await UserModel.register_user()  # Attempt to register a user
         # Convert UUID to string before returning in JSON response
@@ -50,7 +51,7 @@ async def create_energy_usage_handler(request):
         )
         return web.json_response({"record_id": record_id})
     except Exception as e:
-        traceback.print_exc()
+        traceback.print_exc() # I've decided to left it after debugging some issue
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
@@ -84,19 +85,16 @@ async def create_business_travel_handler(request):
         )
         return web.json_response({"record_id": record_id})
     except Exception as e:
-        # Log the full stack trace to help with debugging
         traceback.print_exc()
-        # Respond with a more informative error message
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
 @swagger_path("./swagger/get-business-travel.yml")
 async def get_business_travel_handler(request):
+    logger.info("Get business travel info")
     try:
         user_uuid = request.query.get("user_uuid")
         record = await BusinessTravelModel.get_business_travel(user_uuid)
-
-        # Assuming get_business_travel returns a dictionary or None
         data = {
             key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
             for key, value in record.items()
@@ -109,11 +107,12 @@ async def get_business_travel_handler(request):
 
 @swagger_path("./swagger/get_energy_usage_handler.yml")
 async def get_energy_usage_handler(request):
+    logger.info("Get energy usage info")
     try:
         user_uuid = request.query.get("user_uuid")
         record = await EnergyUsageModel.get_energy_usage(
             user_uuid
-        )  # This is now a single dictionary
+        )
         # Convert Decimal and UUID to string for JSON serialization
         data = {
             key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
@@ -127,6 +126,7 @@ async def get_energy_usage_handler(request):
 
 @swagger_path("./swagger/get-waste-sector.yml")
 async def get_waste_sector_handler(request):
+    logger.info("Get waste sector data")
     try:
         user_uuid = request.query.get("user_uuid")
         record = await WasteSectorModel.get_waste_sector(user_uuid)
@@ -146,13 +146,12 @@ async def get_waste_sector_handler(request):
 
 @swagger_path("./swagger/give-recommendation.yml")
 async def recommendation(request):
+    logger.info("Get recommendation")
     try:
         user_uuid = request.query.get("user_uuid")
 
         # Fetch records from all three models
-        business_travel_record = await BusinessTravelModel.get_business_travel(
-            user_uuid
-        )
+        business_travel_record = await BusinessTravelModel.get_business_travel(user_uuid)
         energy_usage_record = await EnergyUsageModel.get_energy_usage(user_uuid)
         waste_sector_record = await WasteSectorModel.get_waste_sector(user_uuid)
 
@@ -199,18 +198,22 @@ async def recommendation(request):
                     with open(file_path, "r") as file:
                         recommendation_text = file.read()
                         # Add the sector's recommendation text to the combined text
-                        combined_recommendation_text += f"Recommendations for {sector.replace('_', ' ').title()}:\n{recommendation_text}\n\n"
+                        combined_recommendation_text += (
+                            f"Recommendations for"
+                            f" {sector.replace('_', ' ').title()}:\n{recommendation_text}\n\n")
                 except FileNotFoundError:
                     combined_recommendation_text += (
                         f"Recommendation file not found for {sector}.\n\n"
                     )
                 except Exception as e:
-                    combined_recommendation_text += f"An error occurred while reading the file for {sector}: {str(e)}\n\n"
+                    combined_recommendation_text += (f"An error occurred while reading "
+                                                     f"the file for {sector}: {str(e)}\n\n")
 
             response_data = {
                 "highest_carbon_footprint_sector": highest_sector,
                 "carbon_footprint": highest_sectors_formatted,
-                "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change/emissions-monitoring-reporting_en",
+                "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change"
+                          "/emissions-monitoring-reporting_en",
                 "recommendation": combined_recommendation_text,
             }
         else:

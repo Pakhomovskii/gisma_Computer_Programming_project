@@ -41,7 +41,7 @@ responses:
       properties:
         record_id:
           type: string
-          description: The if of the new row in DB
+          description: The ID of the new row in DB
   "500":
     description: Internal Server Error
     schema:

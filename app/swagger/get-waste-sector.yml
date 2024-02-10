@@ -17,9 +17,12 @@
           schema:
             type: object
             properties:
-              data:
-                type: object
-                description: Waste sector data for the specified user. The object keys and values will vary based on the user's data.
+              user_uuid:
+                type: string
+                description: User UUID
+              carbon_footprint:
+                type: string
+                description: Energy usage data for the specified user.
         "404":
           description: Not Found
           schema:
