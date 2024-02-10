@@ -5,10 +5,12 @@ from aiohttp import web
 
 from app.services.database import create_db_connection
 
+
 def serialize_decimal(value):
     if isinstance(value, Decimal):
         return str(value)
     return value
+
 
 class UserModel:
     @staticmethod
@@ -20,7 +22,9 @@ class UserModel:
             INSERT INTO users DEFAULT VALUES
             RETURNING user_uuid;  -- Return the generated 'user_uuid'
             """
-            user_uuid = await conn.fetchval(query)  # Execute the query and get the user_uuid
+            user_uuid = await conn.fetchval(
+                query
+            )  # Execute the query and get the user_uuid
             return user_uuid
         except Exception as e:
             logger.error(f"Failed to register user: {str(e)}")
@@ -31,8 +35,9 @@ class UserModel:
 
 class EnergyUsageModel:
     @staticmethod
-    async def create_or_update_energy_usage(user_uuid, average_monthly_bill, average_natural_gas_bill,
-                                            monthly_fuel_bill):
+    async def create_or_update_energy_usage(
+        user_uuid, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill
+    ):
         conn = await create_db_connection()
         query = """
         INSERT INTO energy_usage (user_uuid, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill)
@@ -43,8 +48,13 @@ class EnergyUsageModel:
             monthly_fuel_bill = EXCLUDED.monthly_fuel_bill
         RETURNING id;
         """
-        record_id = await conn.fetchval(query, user_uuid, average_monthly_bill, average_natural_gas_bill,
-                                        monthly_fuel_bill)
+        record_id = await conn.fetchval(
+            query,
+            user_uuid,
+            average_monthly_bill,
+            average_natural_gas_bill,
+            monthly_fuel_bill,
+        )
         await conn.close()
         return record_id
 
@@ -66,7 +76,9 @@ WHERE user_uuid = $1;
 
 class WasteSectorModel:
     @staticmethod
-    async def create_or_update_waste_sector(user_uuid, waste_kg, recycled_or_composted_kg):
+    async def create_or_update_waste_sector(
+        user_uuid, waste_kg, recycled_or_composted_kg
+    ):
         conn = await create_db_connection()
         query = """
         INSERT INTO waste_sector (user_uuid, waste_kg, recycled_or_composted_kg)
@@ -76,7 +88,9 @@ class WasteSectorModel:
             recycled_or_composted_kg = EXCLUDED.recycled_or_composted_kg
         RETURNING id;
         """
-        record_id = await conn.fetchval(query, user_uuid, waste_kg, recycled_or_composted_kg)
+        record_id = await conn.fetchval(
+            query, user_uuid, waste_kg, recycled_or_composted_kg
+        )
         await conn.close()
         return record_id
 
@@ -90,14 +104,18 @@ FROM waste_sector
 WHERE user_uuid = $1;
 
         """
-        record = await conn.fetchrow(query, user_uuid)  # Use 'record' since it's a single row
+        record = await conn.fetchrow(
+            query, user_uuid
+        )  # Use 'record' since it's a single row
         await conn.close()
         return dict(record)
 
 
 class BusinessTravelModel:
     @staticmethod
-    async def create_or_update_business_travel(user_uuid, kilometers_per_year, average_efficiency_per_100km):
+    async def create_or_update_business_travel(
+        user_uuid, kilometers_per_year, average_efficiency_per_100km
+    ):
         conn = await create_db_connection()
         query = """
         INSERT INTO business_travel (user_uuid, kilometers_per_year, average_efficiency_per_100km)
@@ -107,7 +125,9 @@ class BusinessTravelModel:
             average_efficiency_per_100km = EXCLUDED.average_efficiency_per_100km
         RETURNING id;
         """
-        record_id = await conn.fetchval(query, user_uuid, kilometers_per_year, average_efficiency_per_100km)
+        record_id = await conn.fetchval(
+            query, user_uuid, kilometers_per_year, average_efficiency_per_100km
+        )
         await conn.close()
         return record_id
 

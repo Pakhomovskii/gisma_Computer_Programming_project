@@ -5,7 +5,6 @@ Content-Type: application/json
 
 {}
 
-
 ####
 POST http://127.0.0.1:8080/create-energy-usage
 Content-Type: application/json
@@ -57,4 +56,3 @@ Accept: application/json
 ### Get c
 GET http://localhost:8080/give-recommendation?user_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d
 Accept: application/json
-

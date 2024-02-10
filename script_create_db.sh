@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # PostgreSQL connection details
-DB_USER="postgres"  # Replace with your PostgreSQL username
-DB_PASSWORD="postgres"  # Replace with your PostgreSQL password
-DB_HOST="localhost"  # Default host for PostgreSQL
-DB_NAME="save_energy_project"  # Name of the database to create
+DB_USER="postgres"
+DB_PASSWORD="postgres"
+DB_HOST="localhost"
+DB_NAME="save_energy_project"
 
-# Export password to be used by psql
 export PGPASSWORD="$DB_PASSWORD"
 
 # Function to execute SQL commands
@@ -30,10 +29,7 @@ CREATE TABLE IF NOT EXISTS users (
     user_uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );"
-
 # Define SQL commands to create tables with UUID
-
-
 CREATE_ENERGY_USAGE_TABLE_SQL="
 CREATE TABLE IF NOT EXISTS energy_usage (
     id SERIAL PRIMARY KEY,
@@ -54,7 +50,6 @@ CREATE TABLE IF NOT EXISTS business_travel (
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     UNIQUE(user_uuid)  -- Corrected by adding a comma before UNIQUE
 );"
-
 CREATE_WASTE_SECTOR_TABLE_SQL="
 CREATE TABLE IF NOT EXISTS waste_sector (
     id SERIAL PRIMARY KEY,
@@ -64,8 +59,6 @@ CREATE TABLE IF NOT EXISTS waste_sector (
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     UNIQUE(user_uuid)  -- Corrected by adding a comma before UNIQUE
 );"
-
-
 # Note: No changes needed in other tables since they already reference user_uuid
 
 # Execute SQL commands to create tables in the new database
@@ -74,6 +67,6 @@ execute_sql "$DB_NAME" "$CREATE_USERS_TABLE_SQL"
 execute_sql "$DB_NAME" "$CREATE_WASTE_SECTOR_TABLE_SQL"
 execute_sql "$DB_NAME" "$CREATE_BUSINESS_TRAVEL_TABLE_SQL"
 execute_sql "$DB_NAME" "$CREATE_ENERGY_USAGE_TABLE_SQL"
-# Execute other table creation commands as before...
 
+# Execute other table creation commands as before...
 echo "Database and tables created successfully."
