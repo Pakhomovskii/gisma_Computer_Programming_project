@@ -930,3 +930,10 @@ TypeError: create_user_handler() takes 0 positional arguments but 1 was given
 2024-02-10 22:38:49,347 INFO:127.0.0.1 [10/Feb/2024:22:38:49 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 2024-02-10 22:38:49,993 INFO:127.0.0.1 [10/Feb/2024:22:38:49 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 2024-02-10 22:38:50,468 INFO:127.0.0.1 [10/Feb/2024:22:38:50 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14091 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 00:18:12,967 DEBUG:Using selector: EpollSelector
+2024-02-11 00:18:20,499 INFO:127.0.0.1 [11/Feb/2024:00:18:20 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 00:18:21,083 INFO:127.0.0.1 [11/Feb/2024:00:18:21 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 00:18:21,584 INFO:127.0.0.1 [11/Feb/2024:00:18:21 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 00:18:22,134 INFO:127.0.0.1 [11/Feb/2024:00:18:22 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 00:18:25,870 INFO:Create a new user
+2024-02-11 00:18:25,891 INFO:127.0.0.1 [11/Feb/2024:00:18:25 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"

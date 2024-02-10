@@ -4,7 +4,7 @@ This project is a pivotal component of the **M602A Computer Programming (WS0124)
 
 ### API Documentation
 
-Explore our comprehensive [API Documentation](http://64.226.89.177/api/doc#/) to get started with integrating your applications or conducting assessments.
+Explore my simple [API Documentation](http://64.226.89.177/api/doc#/) to get started with integrating your applications or conducting assessments.
 
 ### Project Overview
 
@@ -23,7 +23,7 @@ This project is built using cutting-edge technologies and frameworks to ensure h
 
 - **Python 3.11:** Chosen for its simplicity and vast ecosystem, Python 3.11 powers our backend logic and data processing, offering the latest features and optimizations for efficient programming.
 - **aiohttp 3.9.3:** Utilized for its powerful asynchronous capabilities, aiohttp enables our project to handle a large number of simultaneous API requests without compromising performance.
-- **aiohttp-swagger 1.0.16:** This integration provides a user-friendly interface for our API documentation, making it accessible and interactive for developers.
+- **aiohttp-swagger 1.0.16:** This integration provides a user-friendly interface for my API documentation, making it accessible and interactive for developers.
 - **asyncpg 0.29.0:** A high-performance PostgreSQL database interface for Python/asyncio, asyncpg is used for its speed and efficiency in handling database operations.
 - **psycopg2 2.9.9:** As a PostgreSQL adapter for Python, psycopg2 facilitates database connections and operations, ensuring reliable data storage and retrieval.
 - **poetry:** This tool is used for dependency management and packaging in Python projects. It simplifies the management of project dependencies and ensures consistent environments across development and production setups.
