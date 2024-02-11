@@ -1,6 +1,6 @@
 ## CO2 Reduction Project 
 
-This project is a pivotal component of the **M602A Computer Programming (WS0124)** course, aiming to provide a practical experience in environmental sustainability practices and programing.
+This project is a pivotal component of the **M602A Computer Programming (WS0124)** course, aiming to provide a practical experience in programing.
 
 ### API Documentation
 
@@ -22,10 +22,10 @@ In an era where environmental sustainability is not just a choice but a necessit
 This project is built using cutting-edge technologies and frameworks to ensure high performance and scalability:
 
 - **Python 3.11:** Chosen for its simplicity and vast ecosystem, Python 3.11 powers our backend logic and data processing, offering the latest features and optimizations for efficient programming.
-- **aiohttp 3.9.3:** Utilized for its powerful asynchronous capabilities, aiohttp enables our project to handle a large number of simultaneous API requests without compromising performance.
-- **aiohttp-swagger 1.0.16:** This integration provides a user-friendly interface for my API documentation, making it accessible and interactive for developers.
-- **asyncpg 0.29.0:** A high-performance PostgreSQL database interface for Python/asyncio, asyncpg is used for its speed and efficiency in handling database operations.
-- **psycopg2 2.9.9:** As a PostgreSQL adapter for Python, psycopg2 facilitates database connections and operations, ensuring reliable data storage and retrieval.
+- **aiohttp:** Utilized for its powerful asynchronous capabilities, aiohttp enables our project to handle a large number of simultaneous API requests without compromising performance.
+- **aiohttp-swagger:** This integration provides a user-friendly interface for my API documentation, making it accessible and interactive for developers.
+- **asyncpg:** A high-performance PostgreSQL database interface for Python/asyncio, asyncpg is used for its speed and efficiency in handling database operations.
+- **psycopg2:** As a PostgreSQL adapter for Python, psycopg2 facilitates database connections and operations, ensuring reliable data storage and retrieval.
 - **poetry:** This tool is used for dependency management and packaging in Python projects. It simplifies the management of project dependencies and ensures consistent environments across development and production setups.
 
 ### DB structure
