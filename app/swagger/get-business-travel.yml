@@ -2,7 +2,7 @@ tags:
 - Business Travel Management
 summary: Retrieve Business Travel data
 description: >
-        This function is triggered when a POST request is received, aiming to retrieve business travel data for a specified user. The request must include the user's unique identifier (`user_uuid`) as a query parameter. This endpoint fetches the business travel data associated with the provided `user_uuid` from the database and returns it in the response.
+        The request must include the user's unique identifier (`user_uuid`) as a query parameter. This endpoint fetches the business travel data (kgCO2)
 produces:
   - application/json
 parameters:

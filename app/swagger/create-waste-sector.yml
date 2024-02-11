@@ -2,7 +2,7 @@
         - Waste Sector Management
       summary: Create or update waste sector data
       description: >
-        This endpoint allows for the creation or updating of waste sector data for a specific user. It requires details about the user's waste production, including total waste in kilograms and the amount recycled or composted.
+        This endpoint allows for the creation or updating of waste sector data for a specific user. It requires details about the user's waste production, including total waste in kilograms and the amount recycled or composted.  *** "waste_category_enum" must be only  "recyclable" ***
       consumes:
         - application/json
       produces:
@@ -32,6 +32,10 @@
                 type: number
                 format: float
                 description: The amount of waste that has been either recycled or composted by the user in kilograms.
+              waste_category_enum:
+                type: string
+                description: Type of recycle. could be only RECYCLABLE for now
+
       responses:
         "201":
           description: Successful operation
@@ -49,3 +53,12 @@
               error:
                 type: string
                 description: A message describing the internal server error that occurred.
+
+        "400":
+          description: Not Found
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Invalid or missing waste category.

@@ -937,3 +937,401 @@ TypeError: create_user_handler() takes 0 positional arguments but 1 was given
 2024-02-11 00:18:22,134 INFO:127.0.0.1 [11/Feb/2024:00:18:22 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 2024-02-11 00:18:25,870 INFO:Create a new user
 2024-02-11 00:18:25,891 INFO:127.0.0.1 [11/Feb/2024:00:18:25 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:11:43,670 DEBUG:Using selector: EpollSelector
+2024-02-11 11:11:43,693 ERROR:unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web.py:303> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 448, in _run_app
+    await site.start()
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1491, in create_server
+    infos = await tasks.gather(*fs)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1423, in _create_server_getaddrinfo
+    infos = await self._ensure_resolved((host, port), family=family,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1419, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+2024-02-11 11:12:01,940 DEBUG:Using selector: EpollSelector
+2024-02-11 11:12:13,370 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,370 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,373 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,373 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,374 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 304 179 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,374 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,374 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,374 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,377 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 304 179 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,377 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,378 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,381 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,381 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,385 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 304 179 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,385 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,386 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,386 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 200 248 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,488 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,489 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,528 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,540 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:13,544 INFO:127.0.0.1 [11/Feb/2024:11:12:13 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:16,037 INFO:127.0.0.1 [11/Feb/2024:11:12:16 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:16,121 INFO:127.0.0.1 [11/Feb/2024:11:12:16 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:16,194 INFO:127.0.0.1 [11/Feb/2024:11:12:16 +0100] "GET /api/doc/swagger_static/images/favicon-32x32.png HTTP/1.1" 304 177 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:21,984 INFO:127.0.0.1 [11/Feb/2024:11:12:21 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:23,014 INFO:127.0.0.1 [11/Feb/2024:11:12:23 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:23,083 INFO:127.0.0.1 [11/Feb/2024:11:12:23 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:26,815 INFO:Create a new user
+2024-02-11 11:12:26,817 ERROR:Failed in register_user: 'coroutine' object does not support the asynchronous context manager protocol
+2024-02-11 11:12:26,817 ERROR:An unexpected error occurred: 'coroutine' object does not support the asynchronous context manager protocol
+2024-02-11 11:12:26,818 INFO:127.0.0.1 [11/Feb/2024:11:12:26 +0100] "POST /register HTTP/1.1" 500 279 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:12:26,819 INFO:127.0.0.1 [11/Feb/2024:11:12:26 +0100] "GET /api/doc/swagger_static/images/throbber.gif HTTP/1.1" 304 178 "http://127.0.0.1:8080/api/doc/swagger_static/css/screen.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:14:27,812 DEBUG:Using selector: EpollSelector
+2024-02-11 11:14:31,382 INFO:127.0.0.1 [11/Feb/2024:11:14:31 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:14:31,693 INFO:127.0.0.1 [11/Feb/2024:11:14:31 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:14:31,781 INFO:127.0.0.1 [11/Feb/2024:11:14:31 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:14:35,215 INFO:Create a new user
+2024-02-11 11:14:35,216 ERROR:Failed in register_user: 'coroutine' object does not support the asynchronous context manager protocol
+2024-02-11 11:14:35,217 ERROR:An unexpected error occurred: 'coroutine' object does not support the asynchronous context manager protocol
+2024-02-11 11:14:35,217 INFO:127.0.0.1 [11/Feb/2024:11:14:35 +0100] "POST /register HTTP/1.1" 500 279 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:26:02,634 DEBUG:Using selector: EpollSelector
+2024-02-11 11:26:04,228 DEBUG:Using selector: EpollSelector
+2024-02-11 11:26:08,322 INFO:Create a new user
+2024-02-11 11:26:08,342 INFO:127.0.0.1 [11/Feb/2024:11:26:08 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:26:19,594 INFO:Get recommendation
+2024-02-11 11:26:19,613 INFO:127.0.0.1 [11/Feb/2024:11:26:19 +0100] "POST /give-recommendation?user_uuid=b9569ab9-326e-4acb-83ca-52501480a663 HTTP/1.1" 200 241 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:26:40,053 INFO:Handling a request to create or update energy usage
+2024-02-11 11:26:40,064 INFO:127.0.0.1 [11/Feb/2024:11:26:40 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:26:44,172 INFO:Get recommendation
+2024-02-11 11:26:44,191 INFO:127.0.0.1 [11/Feb/2024:11:26:44 +0100] "POST /give-recommendation?user_uuid=b9569ab9-326e-4acb-83ca-52501480a663 HTTP/1.1" 200 1561 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:58:36,132 DEBUG:Using selector: EpollSelector
+2024-02-11 11:58:45,844 INFO:127.0.0.1 [11/Feb/2024:11:58:45 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:58:46,189 INFO:127.0.0.1 [11/Feb/2024:11:58:46 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:58:46,356 INFO:127.0.0.1 [11/Feb/2024:11:58:46 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:58:56,446 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 11:58:56,447 INFO:127.0.0.1 [11/Feb/2024:11:58:56 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:59:08,461 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 11:59:08,462 INFO:127.0.0.1 [11/Feb/2024:11:59:08 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 11:59:55,838 DEBUG:Using selector: EpollSelector
+2024-02-11 12:00:00,029 DEBUG:Using selector: EpollSelector
+2024-02-11 12:00:04,510 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:00:04,514 INFO:127.0.0.1 [11/Feb/2024:12:00:04 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:00:07,815 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:00:07,816 INFO:127.0.0.1 [11/Feb/2024:12:00:07 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:00:10,194 INFO:127.0.0.1 [11/Feb/2024:12:00:10 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:00:10,428 INFO:127.0.0.1 [11/Feb/2024:12:00:10 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:00:10,522 INFO:127.0.0.1 [11/Feb/2024:12:00:10 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:00:17,744 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:00:17,745 INFO:127.0.0.1 [11/Feb/2024:12:00:17 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:00:27,337 DEBUG:Using selector: EpollSelector
+2024-02-11 12:00:31,980 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:00:31,984 INFO:127.0.0.1 [11/Feb/2024:12:00:31 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:01:54,594 DEBUG:Using selector: EpollSelector
+2024-02-11 12:03:51,031 DEBUG:Using selector: EpollSelector
+2024-02-11 12:03:53,437 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:03:53,440 INFO:127.0.0.1 [11/Feb/2024:12:03:53 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:03:54,368 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:03:54,369 INFO:127.0.0.1 [11/Feb/2024:12:03:54 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:03:54,535 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:03:54,536 INFO:127.0.0.1 [11/Feb/2024:12:03:54 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:03:54,698 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:03:54,699 INFO:127.0.0.1 [11/Feb/2024:12:03:54 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:03:54,848 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:03:54,849 INFO:127.0.0.1 [11/Feb/2024:12:03:54 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:03:55,058 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:03:55,059 INFO:127.0.0.1 [11/Feb/2024:12:03:55 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:04:07,011 DEBUG:Using selector: EpollSelector
+2024-02-11 12:04:08,973 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:04:08,977 INFO:127.0.0.1 [11/Feb/2024:12:04:08 +0100] "POST /register HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:04:27,607 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_user_handler() missing 1 required positional argument: 'regular_user'
+2024-02-11 12:04:27,608 INFO:127.0.0.1 [11/Feb/2024:12:04:27 +0100] "POST /register HTTP/1.1" 500 245 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-11 12:12:56,002 DEBUG:Using selector: EpollSelector
+2024-02-11 12:13:01,383 INFO:127.0.0.1 [11/Feb/2024:12:13:01 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:13:02,361 INFO:127.0.0.1 [11/Feb/2024:12:13:02 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:13:02,506 INFO:127.0.0.1 [11/Feb/2024:12:13:02 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:13:06,085 INFO:Create a new user
+2024-02-11 12:13:06,087 ERROR:An unexpected error occurred: Expecting value: line 1 column 1 (char 0)
+2024-02-11 12:13:06,087 INFO:127.0.0.1 [11/Feb/2024:12:13:06 +0100] "POST /register HTTP/1.1" 500 242 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:15:01,988 DEBUG:Using selector: EpollSelector
+2024-02-11 12:15:10,174 INFO:127.0.0.1 [11/Feb/2024:12:15:10 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:15:11,188 INFO:127.0.0.1 [11/Feb/2024:12:15:11 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:15:11,276 INFO:127.0.0.1 [11/Feb/2024:12:15:11 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:15:16,659 INFO:Create a new user
+2024-02-11 12:15:16,661 INFO:127.0.0.1 [11/Feb/2024:12:15:16 +0100] "POST /register HTTP/1.1" 400 180 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:16:54,898 DEBUG:Using selector: EpollSelector
+2024-02-11 12:16:58,905 INFO:Create a new user
+2024-02-11 12:16:58,905 ERROR:An unexpected error occurred: type object 'UserModel' has no attribute 'create_user'
+2024-02-11 12:16:58,906 INFO:127.0.0.1 [11/Feb/2024:12:16:58 +0100] "POST /register HTTP/1.1" 500 255 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:19:41,017 DEBUG:Using selector: EpollSelector
+2024-02-11 12:19:45,504 INFO:Create a new user
+2024-02-11 12:19:45,518 INFO:127.0.0.1 [11/Feb/2024:12:19:45 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:20:08,657 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawkay/.cache/pypoetry/virtualenvs/co2-reduction-tLWQ60ZY-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_waste_sector_handler() missing 1 required positional argument: 'recyclable'
+2024-02-11 12:20:08,661 INFO:127.0.0.1 [11/Feb/2024:12:20:08 +0100] "POST /create-waste-sector HTTP/1.1" 500 245 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:55:31,861 DEBUG:Using selector: EpollSelector
+2024-02-11 12:55:40,507 INFO:127.0.0.1 [11/Feb/2024:12:55:40 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:55:40,765 INFO:127.0.0.1 [11/Feb/2024:12:55:40 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:55:40,906 INFO:127.0.0.1 [11/Feb/2024:12:55:40 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14098 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 12:55:44,681 INFO:Create a new user
+2024-02-11 12:55:44,692 INFO:127.0.0.1 [11/Feb/2024:12:55:44 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:03:55,455 DEBUG:Using selector: EpollSelector
+2024-02-11 13:04:01,174 INFO:127.0.0.1 [11/Feb/2024:13:04:01 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:04:01,269 INFO:127.0.0.1 [11/Feb/2024:13:04:01 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14304 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:04:04,799 INFO:Create a new user
+2024-02-11 13:04:04,814 INFO:127.0.0.1 [11/Feb/2024:13:04:04 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:06:39,299 DEBUG:Using selector: EpollSelector
+2024-02-11 13:06:42,750 INFO:127.0.0.1 [11/Feb/2024:13:06:42 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:06:43,470 INFO:127.0.0.1 [11/Feb/2024:13:06:43 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:06:43,616 INFO:127.0.0.1 [11/Feb/2024:13:06:43 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14287 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:06:53,954 INFO:Create a new user
+2024-02-11 13:06:53,965 INFO:127.0.0.1 [11/Feb/2024:13:06:53 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:07:55,088 DEBUG:Using selector: EpollSelector
+2024-02-11 13:07:59,541 INFO:Handling a request to create waste sector data
+2024-02-11 13:07:59,542 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'upper'
+2024-02-11 13:07:59,542 INFO:127.0.0.1 [11/Feb/2024:13:07:59 +0100] "POST /create-waste-sector HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:08:08,707 INFO:127.0.0.1 [11/Feb/2024:13:08:08 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:08:08,975 INFO:127.0.0.1 [11/Feb/2024:13:08:08 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:08:09,114 INFO:127.0.0.1 [11/Feb/2024:13:08:09 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14349 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:08:13,932 INFO:Create a new user
+2024-02-11 13:08:13,943 INFO:127.0.0.1 [11/Feb/2024:13:08:13 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:08:33,099 INFO:Handling a request to create or update energy usage
+2024-02-11 13:08:33,108 INFO:127.0.0.1 [11/Feb/2024:13:08:33 +0100] "POST /create-energy-usage HTTP/1.1" 200 174 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:08:39,192 INFO:Get energy usage info
+2024-02-11 13:08:39,199 INFO:127.0.0.1 [11/Feb/2024:13:08:39 +0100] "POST /get-energy-usage?user_uuid=c917b021-e071-49aa-8834-b2617973ba5b HTTP/1.1" 200 250 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:09:13,653 INFO:Handling a request to create waste sector data
+2024-02-11 13:09:13,654 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'upper'
+2024-02-11 13:09:13,654 INFO:127.0.0.1 [11/Feb/2024:13:09:13 +0100] "POST /create-waste-sector HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:10:19,140 INFO:Handling a request to create waste sector data
+2024-02-11 13:10:19,140 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'upper'
+2024-02-11 13:10:19,140 INFO:127.0.0.1 [11/Feb/2024:13:10:19 +0100] "POST /create-waste-sector HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:10:20,194 INFO:Handling a request to create waste sector data
+2024-02-11 13:10:20,195 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'upper'
+2024-02-11 13:10:20,195 INFO:127.0.0.1 [11/Feb/2024:13:10:20 +0100] "POST /create-waste-sector HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:11:52,487 DEBUG:Using selector: EpollSelector
+2024-02-11 13:11:59,762 INFO:Handling a request to create waste sector data
+2024-02-11 13:11:59,762 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'upper'
+2024-02-11 13:11:59,762 INFO:127.0.0.1 [11/Feb/2024:13:11:59 +0100] "POST /create-waste-sector HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:12:00,689 INFO:Handling a request to create waste sector data
+2024-02-11 13:12:00,689 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'upper'
+2024-02-11 13:12:00,690 INFO:127.0.0.1 [11/Feb/2024:13:12:00 +0100] "POST /create-waste-sector HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:13:51,603 DEBUG:Using selector: EpollSelector
+2024-02-11 13:13:57,759 INFO:Handling a request to create waste sector data
+2024-02-11 13:13:57,759 INFO:127.0.0.1 [11/Feb/2024:13:13:57 +0100] "POST /create-waste-sector HTTP/1.1" 400 200 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:14:28,302 INFO:127.0.0.1 [11/Feb/2024:13:14:28 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:14:29,323 INFO:127.0.0.1 [11/Feb/2024:13:14:29 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:14:29,462 INFO:127.0.0.1 [11/Feb/2024:13:14:29 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14349 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:14:32,405 INFO:Create a new user
+2024-02-11 13:14:32,416 INFO:127.0.0.1 [11/Feb/2024:13:14:32 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:14:47,355 INFO:Handling a request to create waste sector data
+2024-02-11 13:14:47,356 INFO:127.0.0.1 [11/Feb/2024:13:14:47 +0100] "POST /create-waste-sector HTTP/1.1" 400 200 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:16:08,895 DEBUG:Using selector: EpollSelector
+2024-02-11 13:16:12,725 INFO:Handling a request to create waste sector data
+2024-02-11 13:16:12,725 INFO:127.0.0.1 [11/Feb/2024:13:16:12 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:26,434 DEBUG:Using selector: EpollSelector
+2024-02-11 13:17:30,541 INFO:Handling a request to create waste sector data
+2024-02-11 13:17:30,541 INFO:127.0.0.1 [11/Feb/2024:13:17:30 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:31,413 INFO:Handling a request to create waste sector data
+2024-02-11 13:17:31,413 INFO:127.0.0.1 [11/Feb/2024:13:17:31 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:31,725 INFO:Handling a request to create waste sector data
+2024-02-11 13:17:31,726 INFO:127.0.0.1 [11/Feb/2024:13:17:31 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:31,903 INFO:Handling a request to create waste sector data
+2024-02-11 13:17:31,904 INFO:127.0.0.1 [11/Feb/2024:13:17:31 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:32,369 INFO:Handling a request to create waste sector data
+2024-02-11 13:17:32,369 INFO:127.0.0.1 [11/Feb/2024:13:17:32 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:32,493 INFO:Handling a request to create waste sector data
+2024-02-11 13:17:32,493 INFO:127.0.0.1 [11/Feb/2024:13:17:32 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:36,535 INFO:127.0.0.1 [11/Feb/2024:13:17:36 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:36,806 INFO:127.0.0.1 [11/Feb/2024:13:17:36 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:36,948 INFO:127.0.0.1 [11/Feb/2024:13:17:36 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14349 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:17:40,258 INFO:Create a new user
+2024-02-11 13:17:40,269 INFO:127.0.0.1 [11/Feb/2024:13:17:40 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:18:39,007 INFO:Handling a request to create waste sector data
+2024-02-11 13:18:39,008 INFO:127.0.0.1 [11/Feb/2024:13:18:39 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:22:56,063 DEBUG:Using selector: EpollSelector
+2024-02-11 13:22:58,753 INFO:Handling a request to create waste sector data
+2024-02-11 13:22:58,773 INFO:127.0.0.1 [11/Feb/2024:13:22:58 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:23:25,162 INFO:Get waste sector data
+2024-02-11 13:23:25,174 INFO:127.0.0.1 [11/Feb/2024:13:23:25 +0100] "POST /get-waste-sector?user_uuid=3e17acd6-29f8-4457-8965-9d9bd3d8b353 HTTP/1.1" 200 335 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:23:53,980 INFO:Get recommendation
+2024-02-11 13:23:54,004 INFO:127.0.0.1 [11/Feb/2024:13:23:53 +0100] "POST /give-recommendation?user_uuid=3e17acd6-29f8-4457-8965-9d9bd3d8b353 HTTP/1.1" 200 1389 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:24:13,938 INFO:Get business travel info
+2024-02-11 13:24:13,946 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'items'
+2024-02-11 13:24:13,947 INFO:127.0.0.1 [11/Feb/2024:13:24:13 +0100] "POST /get-business-travel?user_uuid=3e17acd6-29f8-4457-8965-9d9bd3d8b353 HTTP/1.1" 500 232 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:24:27,316 INFO:Handling a request to create business travel data
+2024-02-11 13:24:27,325 INFO:127.0.0.1 [11/Feb/2024:13:24:27 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:24:30,920 INFO:Get business travel info
+2024-02-11 13:24:30,929 INFO:127.0.0.1 [11/Feb/2024:13:24:30 +0100] "POST /get-business-travel?user_uuid=3e17acd6-29f8-4457-8965-9d9bd3d8b353 HTTP/1.1" 200 248 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:24:34,083 INFO:Get recommendation
+2024-02-11 13:24:34,107 INFO:127.0.0.1 [11/Feb/2024:13:24:34 +0100] "POST /give-recommendation?user_uuid=3e17acd6-29f8-4457-8965-9d9bd3d8b353 HTTP/1.1" 200 1389 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:24:56,527 INFO:Handling a request to create business travel data
+2024-02-11 13:24:56,535 INFO:127.0.0.1 [11/Feb/2024:13:24:56 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:25:00,904 INFO:Get recommendation
+2024-02-11 13:25:00,928 INFO:127.0.0.1 [11/Feb/2024:13:25:00 +0100] "POST /give-recommendation?user_uuid=3e17acd6-29f8-4457-8965-9d9bd3d8b353 HTTP/1.1" 200 1613 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:26:09,194 INFO:Handling a request to create waste sector data
+2024-02-11 13:26:09,194 INFO:127.0.0.1 [11/Feb/2024:13:26:09 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:27:10,184 DEBUG:Using selector: EpollSelector
+2024-02-11 13:27:13,262 INFO:127.0.0.1 [11/Feb/2024:13:27:13 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:27:13,499 INFO:127.0.0.1 [11/Feb/2024:13:27:13 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:27:13,641 INFO:127.0.0.1 [11/Feb/2024:13:27:13 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14526 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:27:19,191 INFO:Handling a request to create business travel data
+2024-02-11 13:27:19,197 ERROR:Failed to create business travel sector: invalid input for query argument $1: 'string' (invalid UUID 'string': length must be between 32..36 characters, got 6)
+2024-02-11 13:27:19,200 ERROR:An unexpected error occurred: invalid input for query argument $1: 'string' (invalid UUID 'string': length must be between 32..36 characters, got 6)
+2024-02-11 13:27:19,202 INFO:127.0.0.1 [11/Feb/2024:13:27:19 +0100] "POST /create-business-travel HTTP/1.1" 500 309 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:27:29,029 INFO:Create a new user
+2024-02-11 13:27:29,040 INFO:127.0.0.1 [11/Feb/2024:13:27:29 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:27:45,686 INFO:Handling a request to create business travel data
+2024-02-11 13:27:45,698 INFO:127.0.0.1 [11/Feb/2024:13:27:45 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:06,051 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:06,051 INFO:127.0.0.1 [11/Feb/2024:13:28:06 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:54,514 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:54,514 INFO:127.0.0.1 [11/Feb/2024:13:28:54 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:56,016 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:56,017 INFO:127.0.0.1 [11/Feb/2024:13:28:56 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:56,473 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:56,473 INFO:127.0.0.1 [11/Feb/2024:13:28:56 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:56,659 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:56,660 INFO:127.0.0.1 [11/Feb/2024:13:28:56 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:56,825 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:56,826 INFO:127.0.0.1 [11/Feb/2024:13:28:56 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:56,976 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:56,977 INFO:127.0.0.1 [11/Feb/2024:13:28:56 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:28:57,133 INFO:Handling a request to create waste sector data
+2024-02-11 13:28:57,133 INFO:127.0.0.1 [11/Feb/2024:13:28:57 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 13:29:03,852 DEBUG:Using selector: EpollSelector

@@ -11,8 +11,9 @@ from models.models import (
     BusinessTravelModel,
     EnergyUsageModel,
     UserModel,
-    WasteSectorModel,
+    WasteSectorModel, WasteCategory,
 )
+
 # Configure logging
 logging.basicConfig(
     filename="app.log",
@@ -51,7 +52,11 @@ async def create_energy_usage_handler(request):
         )
         return web.json_response({"record_id": record_id})
     except Exception as e:
-        traceback.print_exc() # I've decided to left it after debugging some issue
+        logger.error(
+            f"An unexpected error occurred: {str(e)}"
+        )
+        # Log the full stack trace to help with debugging
+        traceback.print_exc()  # I've decided to left it after debugging some issue
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
@@ -60,16 +65,25 @@ async def create_waste_sector_handler(request):
     logger.info("Handling a request to create waste sector data")
     try:
         data = await request.json()
+        waste_category_value = data.get("waste_category_enum", None)
+        if waste_category_value is None or waste_category_value.upper() not in WasteCategory.__members__:
+            return web.Response(text="Invalid or missing waste category", status=400)
+        # Validate and convert waste_category_value to WasteCategory Enum
+        try:
+            waste_category_enum = WasteCategory[waste_category_value.upper()]
+        except KeyError:
+            return web.Response(text=f"Invalid waste category: {waste_category_value}", status=400)
+
         record_id = await WasteSectorModel.create_or_update_waste_sector(
-            data["user_uuid"],  # Ensure 'user_uuid' is included in your request payload
+            data["user_uuid"],
             data["waste_kg"],
             data["recycled_or_composted_kg"],
+            waste_category=waste_category_enum
         )
-        return web.json_response({"record_id": record_id})
+        return web.json_response({"record_id": record_id}, status=200)
     except Exception as e:
-        # Log the full stack trace to help with debugging
+        logger.error(f"An unexpected error occurred: {str(e)}")
         traceback.print_exc()
-        # Respond with a more informative error message
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
@@ -79,12 +93,15 @@ async def create_business_travel_handler(request):
     try:
         data = await request.json()
         record_id = await BusinessTravelModel.create_or_update_business_travel(
-            data["user_uuid"],  # Ensure 'user_uuid' is included in your request payload
+            data["user_uuid"],
             data["kilometers_per_year"],
             data["average_efficiency_per_100km"],
         )
         return web.json_response({"record_id": record_id})
     except Exception as e:
+        logger.error(
+            f"An unexpected error occurred: {str(e)}"
+        )
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
@@ -101,18 +118,19 @@ async def get_business_travel_handler(request):
         }
         return web.json_response({"data": data})
     except Exception as e:
+        logger.error(
+            f"An unexpected error occurred: {str(e)}"
+        )
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
 
-@swagger_path("./swagger/get_energy_usage_handler.yml")
+@swagger_path("swagger/get-energy-usage-handler.yml")
 async def get_energy_usage_handler(request):
     logger.info("Get energy usage info")
     try:
         user_uuid = request.query.get("user_uuid")
-        record = await EnergyUsageModel.get_energy_usage(
-            user_uuid
-        )
+        record = await EnergyUsageModel.get_energy_usage(user_uuid)
         # Convert Decimal and UUID to string for JSON serialization
         data = {
             key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
@@ -120,6 +138,9 @@ async def get_energy_usage_handler(request):
         }
         return web.json_response({"data": data})
     except Exception as e:
+        logger.error(
+            f"An unexpected error occurred: {str(e)}"
+        )
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
@@ -131,7 +152,6 @@ async def get_waste_sector_handler(request):
         user_uuid = request.query.get("user_uuid")
         record = await WasteSectorModel.get_waste_sector(user_uuid)
         if record:
-            # Convert Decimal and UUID to string for JSON serialization
             response_data = {
                 key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
                 for key, value in record.items()
@@ -140,6 +160,9 @@ async def get_waste_sector_handler(request):
         else:
             return web.json_response({"data": {}})
     except Exception as e:
+        logger.error(
+            f"An unexpected error occurred: {str(e)}"
+        )
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
@@ -149,15 +172,14 @@ async def recommendation(request):
     logger.info("Get recommendation")
     try:
         user_uuid = request.query.get("user_uuid")
-
         # Fetch records from all three models
-        business_travel_record = await BusinessTravelModel.get_business_travel(user_uuid)
+        business_travel_record = await BusinessTravelModel.get_business_travel(
+            user_uuid
+        )
         energy_usage_record = await EnergyUsageModel.get_energy_usage(user_uuid)
         waste_sector_record = await WasteSectorModel.get_waste_sector(user_uuid)
-
         # Initialize a dictionary to hold carbon footprint data
         carbon_footprints = {}
-
         # Process each record, converting values as needed and extracting carbon footprint
         for record_name, record in [
             ("business_travel", business_travel_record),
@@ -200,20 +222,29 @@ async def recommendation(request):
                         # Add the sector's recommendation text to the combined text
                         combined_recommendation_text += (
                             f"Recommendations for"
-                            f" {sector.replace('_', ' ').title()}:\n{recommendation_text}\n\n")
+                            f" {sector.replace('_', ' ').title()}:\n{recommendation_text}\n\n"
+                        )
                 except FileNotFoundError:
+                    logger.error(
+                        f"An unexpected error occurred: {str(e)}"
+                    )
                     combined_recommendation_text += (
                         f"Recommendation file not found for {sector}.\n\n"
                     )
                 except Exception as e:
-                    combined_recommendation_text += (f"An error occurred while reading "
-                                                     f"the file for {sector}: {str(e)}\n\n")
+                    logger.error(
+                        f"An unexpected error occurred: {str(e)}"
+                    )
+                    combined_recommendation_text += (
+                        f"An error occurred while reading "
+                        f"the file for {sector}: {str(e)}\n\n"
+                    )
 
             response_data = {
                 "highest_carbon_footprint_sector": highest_sector,
                 "carbon_footprint": highest_sectors_formatted,
                 "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change"
-                          "/emissions-monitoring-reporting_en",
+                "/emissions-monitoring-reporting_en",
                 "recommendation": combined_recommendation_text,
             }
         else:
@@ -223,6 +254,9 @@ async def recommendation(request):
 
         return web.json_response({"data": response_data})
     except Exception as e:
+        logger.error(
+            f"An unexpected error occurred: {str(e)}"
+        )
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
@@ -230,7 +264,7 @@ async def recommendation(request):
 async def init_app():
     app = web.Application()
 
-    # Define your routes here
+    # Define my routes
     app.router.add_post("/register", create_user_handler)
     app.router.add_post("/create-energy-usage", create_energy_usage_handler)
     app.router.add_post("/create-waste-sector", create_waste_sector_handler)
@@ -266,4 +300,4 @@ async def init_app():
 
 
 if __name__ == "__main__":
-    web.run_app(init_app(), host="64.226.89.177", port=80)
+    web.run_app(init_app(), host="localhost", port=8080)

@@ -2,7 +2,7 @@
         - Waste Sector Management
       summary: Retrieve waste sector data
       description: >
-        This endpoint retrieves waste sector data for a specific user based on their unique user UUID. It provides details such as the total amount of waste produced and the amount that was recycled or composted.
+        This endpoint retrieves waste sector data for a specific user based on their unique user UUID. It provides details such as the total amount of waste produced and the amount in kgCO2 after recycled or composted.
       produces:
         - application/json
       parameters:
@@ -23,6 +23,10 @@
               carbon_footprint:
                 type: string
                 description: Energy usage data for the specified user.
+              waste_category_enum:
+                type: string
+                description: Type of recycle.
+
         "404":
           description: Not Found
           schema:

@@ -2,7 +2,7 @@
         - Energy Management
       summary: Get energy usage for a user
       description: >
-        This endpoint retrieves energy usage data for a specific user based on their unique user UUID. It is intended to provide insights into the user's energy consumption patterns.
+        This endpoint retrieves energy usage data for a specific user based on their unique user UUID. It is intended to provide insights into the user's energy consumption in kgCO2.
       produces:
         - application/json
       parameters:
@@ -23,8 +23,6 @@
               carbon_footprint:
                 type: string
                 description: Energy usage data for the specified user.
-
-
         "404":
           description: Not Found
           schema:

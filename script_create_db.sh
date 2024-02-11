@@ -50,20 +50,25 @@ CREATE TABLE IF NOT EXISTS business_travel (
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     UNIQUE(user_uuid)  -- Corrected by adding a comma before UNIQUE
 );"
+CREATE_WASTE_TYPE="""
+CREATE TYPE waste_category_enum AS ENUM ('RECYCLABLE', 'COMPOSTABLE', 'NON_RECYCLABLE');
+"""
+
 CREATE_WASTE_SECTOR_TABLE_SQL="
 CREATE TABLE IF NOT EXISTS waste_sector (
     id SERIAL PRIMARY KEY,
     user_uuid UUID NOT NULL,
     waste_kg DECIMAL NOT NULL,
     recycled_or_composted_kg DECIMAL NOT NULL,
+    waste_category waste_category_enum NOT NULL,
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
-    UNIQUE(user_uuid)  -- Corrected by adding a comma before UNIQUE
+    UNIQUE(user_uuid)
 );"
-# Note: No changes needed in other tables since they already reference user_uuid
 
 # Execute SQL commands to create tables in the new database
 echo "Creating tables in $DB_NAME"
 execute_sql "$DB_NAME" "$CREATE_USERS_TABLE_SQL"
+execute_sql "$DB_NAME" "$CREATE_WASTE_TYPE"
 execute_sql "$DB_NAME" "$CREATE_WASTE_SECTOR_TABLE_SQL"
 execute_sql "$DB_NAME" "$CREATE_BUSINESS_TRAVEL_TABLE_SQL"
 execute_sql "$DB_NAME" "$CREATE_ENERGY_USAGE_TABLE_SQL"
