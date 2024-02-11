@@ -1,6 +1,5 @@
 from asyncio.log import logger
-from decimal import Decimal
-from enum import Enum, auto
+from enum import Enum
 from app.services.database import create_db_connection
 
 
@@ -9,24 +8,6 @@ class WasteCategory(Enum):
     RECYCLABLE = "RECYCLABLE"
     COMPOSTABLE = "COMPOSTABLE"
     NON_RECYCLABLE = "NON_RECYCLABLE"
-
-
-def serialize_decimal(value) -> str:
-    """
-    Serialize a decimal value to a string representation.
-
-    Args:
-    value (Decimal): The value to be serialized.
-
-    Returns:
-    str: The string representation of the decimal value.
-
-    Raises:
-    TypeError: If the input value is not a Decimal.
-    """
-    if not isinstance(value, Decimal):
-        raise TypeError("Input value must be a Decimal")
-    return str(value)
 
 
 class UserModel:

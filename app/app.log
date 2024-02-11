@@ -1335,3 +1335,11 @@ TypeError: create_waste_sector_handler() missing 1 required positional argument:
 2024-02-11 13:28:57,133 INFO:Handling a request to create waste sector data
 2024-02-11 13:28:57,133 INFO:127.0.0.1 [11/Feb/2024:13:28:57 +0100] "POST /create-waste-sector HTTP/1.1" 400 194 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 2024-02-11 13:29:03,852 DEBUG:Using selector: EpollSelector
+2024-02-11 14:28:34,197 DEBUG:Using selector: EpollSelector
+2024-02-11 14:28:51,793 INFO:127.0.0.1 [11/Feb/2024:14:28:51 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 14:28:52,280 INFO:127.0.0.1 [11/Feb/2024:14:28:52 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 14:28:52,455 INFO:127.0.0.1 [11/Feb/2024:14:28:52 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14328 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 14:29:01,827 INFO:Create a new user
+2024-02-11 14:29:01,838 INFO:127.0.0.1 [11/Feb/2024:14:29:01 +0100] "POST /register HTTP/1.1" 201 216 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-11 14:29:12,926 INFO:Handling a request to create or update energy usage
+2024-02-11 14:29:12,935 INFO:127.0.0.1 [11/Feb/2024:14:29:12 +0100] "POST /create-energy-usage HTTP/1.1" 200 174 "http://127.0.0.1:8080/api/doc" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
