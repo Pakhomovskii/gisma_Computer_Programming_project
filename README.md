@@ -1,6 +1,6 @@
 ## CO2 Reduction Project 
 
-This project is a pivotal component of the **M602A Computer Programming (WS0124)** course, aiming to provide a practical experience in programing.
+This project is a pivotal component of the **M602A Computer Programming (WS0124)** course, aiming to provide a practical experience in programming.
 
 ### API Documentation
 
