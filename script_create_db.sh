@@ -34,21 +34,27 @@ CREATE_ENERGY_USAGE_TABLE_SQL="
 CREATE TABLE IF NOT EXISTS energy_usage (
     id SERIAL PRIMARY KEY,
     user_uuid UUID NOT NULL,
+    city TEXT
+    company_name TEXT
     average_monthly_bill DECIMAL NOT NULL,
     average_natural_gas_bill DECIMAL NOT NULL,
     monthly_fuel_bill DECIMAL NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
-    UNIQUE(user_uuid)  -- Assuming each user has a unique energy usage record; adjust if necessary
+    UNIQUE(user_uuid)
 );
 "
 CREATE_BUSINESS_TRAVEL_TABLE_SQL="
 CREATE TABLE IF NOT EXISTS business_travel (
     id SERIAL PRIMARY KEY,
     user_uuid UUID NOT NULL,
+    city TEXT
+    company_name TEXT
     kilometers_per_year DECIMAL NOT NULL,
     average_efficiency_per_100km DECIMAL NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
-    UNIQUE(user_uuid)  -- Corrected by adding a comma before UNIQUE
+    UNIQUE(user_uuid)
 );"
 CREATE_WASTE_TYPE="""
 CREATE TYPE waste_category_enum AS ENUM ('RECYCLABLE', 'COMPOSTABLE', 'NON_RECYCLABLE');
@@ -57,10 +63,13 @@ CREATE TYPE waste_category_enum AS ENUM ('RECYCLABLE', 'COMPOSTABLE', 'NON_RECYC
 CREATE_WASTE_SECTOR_TABLE_SQL="
 CREATE TABLE IF NOT EXISTS waste_sector (
     id SERIAL PRIMARY KEY,
+    city TEXT
+    company_name TEXT
     user_uuid UUID NOT NULL,
     waste_kg DECIMAL NOT NULL,
     recycled_or_composted_kg DECIMAL NOT NULL,
     waste_category waste_category_enum NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     UNIQUE(user_uuid)
 );"

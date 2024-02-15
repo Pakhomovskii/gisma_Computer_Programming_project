@@ -46,6 +46,8 @@ class EnergyUsageModel:
             average_monthly_bill: float,
             average_natural_gas_bill: float,
             monthly_fuel_bill: float,
+            city: str,
+            company_name: str
     ) -> int:
         """
         Create or update energy usage records for a user in the database.
@@ -55,6 +57,8 @@ class EnergyUsageModel:
         average_monthly_bill (float): The average monthly energy bill.
         average_natural_gas_bill (float): The average monthly natural gas bill.
         monthly_fuel_bill (float): The monthly fuel bill.
+        city (str): The city
+        company_name (str): The company name
 
         Returns:
         int: The ID of the inserted or updated record.
@@ -65,13 +69,10 @@ class EnergyUsageModel:
         try:
             conn = await create_db_connection()
             query = """
-            INSERT INTO energy_usage (user_uuid, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill)
-            VALUES ($1, $2, $3, $4)
-            ON CONFLICT (user_uuid) DO UPDATE 
-            SET average_monthly_bill = EXCLUDED.average_monthly_bill,
-                average_natural_gas_bill = EXCLUDED.average_natural_gas_bill,
-                monthly_fuel_bill = EXCLUDED.monthly_fuel_bill
+            INSERT INTO energy_usage (user_uuid, city, company_name, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill)
+            VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING id;
+;
             """
             record_id = await conn.fetchval(
                 query,
@@ -79,6 +80,8 @@ class EnergyUsageModel:
                 average_monthly_bill,
                 average_natural_gas_bill,
                 monthly_fuel_bill,
+                city,
+                company_name
             )
             await conn.close()
             return record_id
@@ -89,12 +92,15 @@ class EnergyUsageModel:
             await conn.close()
 
     @staticmethod
-    async def get_energy_usage(user_uuid: str) -> dict:
+    async def get_energy_usage(user_uuid: str, city: str,
+            company_name: str) -> dict:
         """
         Retrieve energy usage data for a user from the database.
 
         Args:
         user_uuid (str): The UUID of the user.
+        city (str): The city
+        company_name (str): The company name
 
         Returns:
         dict: A dictionary containing the user's energy usage data. or
@@ -106,12 +112,16 @@ class EnergyUsageModel:
         try:
             conn = await create_db_connection()
             query = """
-    SELECT user_uuid, 
-           ROUND((average_monthly_bill * 12 * 0.0005) + 
-                 (average_natural_gas_bill * 12 * 0.053) + 
-                 (monthly_fuel_bill * 12 * 2.32), 1) AS carbon_footprint
-    FROM energy_usage 
-    WHERE user_uuid = $1;
+                SELECT user_uuid, 
+                   ROUND((average_monthly_bill * 12 * 0.0005) + 
+                         (average_natural_gas_bill * 12 * 0.053) + 
+                         (monthly_fuel_bill * 12 * 2.32), 1) AS carbon_footprint,
+                   city,
+                   company_name
+            FROM energy_usage 
+            WHERE user_uuid = $1
+            AND city = $2
+            AND company_name = $3;
             """
             record = await conn.fetchrow(query, user_uuid)
             await conn.close()
@@ -127,8 +137,12 @@ class EnergyUsageModel:
 
 class WasteSectorModel:
     @staticmethod
-    async def create_or_update_waste_sector(user_uuid: str, waste_kg: float, recycled_or_composted_kg: float,
+    async def create_or_update_waste_sector(user_uuid: str,
+                                            waste_kg: float,
+                                            recycled_or_composted_kg: float,
                                             waste_category: WasteCategory,
+                                            city: str,
+                                            company_name: str
                                             ) -> int:
         """
         Create or update waste sector data for a user in the database.
@@ -138,6 +152,10 @@ class WasteSectorModel:
         waste_kg (float): The amount of waste in kilograms.
         recycled_or_composted_kg (float): The amount of waste recycled or composted in kilograms.
         waste_category (enum): RECYCLABLE
+        city (str): The city
+        company_name (str): The company name
+        city (str): The city
+        company_name (str): The company name
 
         Returns:
         int: The ID of the record created or updated in the database.
@@ -148,8 +166,8 @@ class WasteSectorModel:
         try:
             conn = await create_db_connection()
             query = """
-                    INSERT INTO waste_sector (user_uuid, waste_kg, recycled_or_composted_kg, waste_category)
-                    VALUES ($1, $2, $3, $4)
+                    INSERT INTO waste_sector (user_uuid, city, company_name, waste_kg, recycled_or_composted_kg, waste_category)
+                    VALUES ($1, $2, $3, $4, $5, $6)
                     ON CONFLICT (user_uuid) DO UPDATE 
                     SET waste_kg = EXCLUDED.waste_kg,
                         recycled_or_composted_kg = EXCLUDED.recycled_or_composted_kg,
@@ -157,8 +175,7 @@ class WasteSectorModel:
                     RETURNING id;
                     """
             record_id = await conn.fetchval(
-                query, user_uuid, waste_kg, recycled_or_composted_kg, waste_category.name
-            )
+                query, user_uuid, waste_kg, recycled_or_composted_kg, waste_category.name, city, company_name)
             await conn.close()
             return record_id
         except Exception as e:
@@ -169,13 +186,16 @@ class WasteSectorModel:
                 await conn.close()
 
     @staticmethod
-    async def get_waste_sector(user_uuid: str) -> dict:
+    async def get_waste_sector(user_uuid: str, city: str,
+            company_name: str) -> dict:
         """
         Retrieve waste sector data for a user from the database and
         calculate the carbon footprint based on the waste data and category.
 
         Args:
             user_uuid (str): The UUID of the user for whom the waste sector data is being retrieved.
+            city (str): The city
+            company_name (str): The company name
 
         Returns:
             dict: A dictionary containing waste sector data including the calculated carbon footprint, or
@@ -187,7 +207,7 @@ class WasteSectorModel:
         try:
             conn = await create_db_connection()
             query = """
-               SELECT user_uuid, waste_kg, recycled_or_composted_kg, waste_category,
+               SELECT user_uuid, city, company_name, waste_kg, recycled_or_composted_kg, waste_category,
                       CASE 
                           WHEN waste_category = 'RECYCLABLE' THEN ROUND((waste_kg * 12 * 0.57) * ((100 - recycled_or_composted_kg) / 100), 1)
                           --WHEN waste_category = 'COMPOSTABLE' THEN ROUND((waste_kg * 12 * 0.45) * ((100 - recycled_or_composted_kg) / 100), 1) -- It would be another logic
@@ -203,10 +223,12 @@ class WasteSectorModel:
             if row:
                 return {
                     "user_uuid": row["user_uuid"],
+                    "city": row["city"],
+                    "company_name": row["company_name"],
                     "waste_kg": row["waste_kg"],
                     "recycled_or_composted_kg": row["recycled_or_composted_kg"],
                     "waste_category": row["waste_category"],
-                    "carbon_footprint": row["carbon_footprint"]
+                    "carbon_footprint": row["carbon_footprint"],
                 }
             else:
                 return None
@@ -221,7 +243,11 @@ class WasteSectorModel:
 class BusinessTravelModel:
     @staticmethod
     async def create_or_update_business_travel(
-            user_uuid: str, kilometers_per_year: float, average_efficiency_per_100km: float
+            user_uuid: str,
+            kilometers_per_year: float,
+            average_efficiency_per_100km: float,
+            city: str,
+            company_name: str
     ) -> int:
         """
         Create or update business travel data for a user
@@ -230,6 +256,8 @@ class BusinessTravelModel:
             user_uuid (str): The UUID of the user for whom the business travel data is being created or updated.
             kilometers_per_year (float): The total kilometers traveled per year.
             average_efficiency_per_100km (float): The average efficiency of travel per 100 kilometers.
+            city (str): The city
+            company_name (str): The company name
 
         Returns:
             int: The ID of the record created or updated in the database.
@@ -241,16 +269,15 @@ class BusinessTravelModel:
             conn = await create_db_connection()
             # In this query I use postgres functionality to make an update if values are already in DB
             query = """
-            INSERT INTO business_travel (user_uuid, kilometers_per_year, average_efficiency_per_100km)
-            VALUES ($1, $2, $3)
+            INSERT INTO business_travel (user_uuid, city, company_name, kilometers_per_year, average_efficiency_per_100km)
+            VALUES ($1, $2, $3, $4, $5)
             ON CONFLICT (user_uuid) DO UPDATE 
             SET kilometers_per_year = EXCLUDED.kilometers_per_year,
                 average_efficiency_per_100km = EXCLUDED.average_efficiency_per_100km
             RETURNING id;
             """
             record_id = await conn.fetchval(
-                query, user_uuid, kilometers_per_year, average_efficiency_per_100km
-            )
+                query, user_uuid, kilometers_per_year, average_efficiency_per_100km, city, company_name)
             await conn.close()
             return record_id
         except Exception as e:
@@ -260,17 +287,20 @@ class BusinessTravelModel:
             await conn.close()
 
     @staticmethod
-    async def get_business_travel(user_uuid: str) -> dict:
+    async def get_business_travel(user_uuid: str, city: str,
+            company_name: str) -> dict:
         """
         Retrieve business travel data for a user from the database and calculate
         the carbon footprint based on the travel data.
 
         Args:
             user_uuid (str): The UUID of the user for whom the business travel data is being retrieved.
-
+            city (str): The city
+            company_name (str): The company name
         Returns:
             dict or None: A dictionary containing business travel data including the calculated carbon footprint, or
-            None if no data is found.
+            None if no data is found.\
+
 
         Raises:
         Exception: If an error occurs during database operations.
@@ -279,13 +309,13 @@ class BusinessTravelModel:
 
             conn = await create_db_connection()
             query = """
-    SELECT user_uuid, 
+    SELECT user_uuid, city, company_name,
            ROUND((kilometers_per_year / average_efficiency_per_100km) * 2.31, 1) AS carbon_footprint
     FROM business_travel 
     WHERE user_uuid = $1;
     
             """
-            record = await conn.fetchrow(query, user_uuid)
+            record = await conn.fetchrow(query, user_uuid, city, company_name)
             await conn.close()
             if record:
                 return dict(record)
