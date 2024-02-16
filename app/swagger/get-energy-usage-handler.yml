@@ -6,9 +6,21 @@
       produces:
         - application/json
       parameters:
+#        - in: query
+#          name: user_uuid
+#          description: The UUID of the user for whom the energy usage is being retrieved.
+#          required: true
+#          type: string
+
         - in: query
-          name: user_uuid
-          description: The UUID of the user for whom the energy usage is being retrieved.
+          name: city
+          description: Name of the city
+          required: true
+          type: string
+
+        - in: query
+          name: company_name
+          description: Company name
           required: true
           type: string
       responses:

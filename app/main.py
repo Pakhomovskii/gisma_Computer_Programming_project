@@ -1,6 +1,8 @@
 import uuid
 import logging
 import traceback
+from datetime import datetime
+
 import aiohttp_swagger
 from aiohttp import web
 from decimal import Decimal
@@ -49,6 +51,8 @@ async def create_energy_usage_handler(request):
             data["average_monthly_bill"],
             data["average_natural_gas_bill"],
             data["monthly_fuel_bill"],
+            data["city"],
+            data["company_name"],
         )
         return web.json_response({"record_id": record_id})
     except Exception as e:
@@ -78,6 +82,8 @@ async def create_waste_sector_handler(request):
             data["user_uuid"],
             data["waste_kg"],
             data["recycled_or_composted_kg"],
+            data["city"],
+            data["company_name"],
             waste_category=waste_category_enum
         )
         return web.json_response({"record_id": record_id}, status=200)
@@ -92,12 +98,14 @@ async def create_business_travel_handler(request):
     logger.info("Handling a request to create business travel data")
     try:
         data = await request.json()
-        record_id = await BusinessTravelModel.create_or_update_business_travel(
+        record_id = await BusinessTravelModel.create_business_travel(
             data["user_uuid"],
             data["kilometers_per_year"],
             data["average_efficiency_per_100km"],
+            data["city"],
+            data["company_name"],
         )
-        return web.json_response({"record_id": record_id})
+        return web.json_response({"BMW": record_id})
     except Exception as e:
         logger.error(
             f"An unexpected error occurred: {str(e)}"
@@ -129,11 +137,14 @@ async def get_business_travel_handler(request):
 async def get_energy_usage_handler(request):
     logger.info("Get energy usage info")
     try:
-        user_uuid = request.query.get("user_uuid")
-        record = await EnergyUsageModel.get_energy_usage(user_uuid)
+        city = request.query.get("city")
+        company_name = request.query.get("company_name")
+        created_at = request.query.get("created_at")
+        records = await EnergyUsageModel.get_energy_usage(city, company_name, created_at)
         # Convert Decimal and UUID to string for JSON serialization
         data = {
             key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
+            for record in records
             for key, value in record.items()
         }
         return web.json_response({"data": data})
@@ -244,7 +255,7 @@ async def recommendation(request):
                 "highest_carbon_footprint_sector": highest_sector,
                 "carbon_footprint": highest_sectors_formatted,
                 "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change"
-                "/emissions-monitoring-reporting_en",
+                          "/emissions-monitoring-reporting_en",
                 "recommendation": combined_recommendation_text,
             }
         else:

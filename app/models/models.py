@@ -69,7 +69,7 @@ class EnergyUsageModel:
         try:
             conn = await create_db_connection()
             query = """
-            INSERT INTO energy_usage (user_uuid, city, company_name, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill)
+            INSERT INTO energy_usage (user_uuid, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill, city, company_name)
             VALUES ($1, $2, $3, $4, $5, $6)
             RETURNING id;
 ;
@@ -92,19 +92,17 @@ class EnergyUsageModel:
             await conn.close()
 
     @staticmethod
-    async def get_energy_usage(user_uuid: str, city: str,
-            company_name: str) -> dict:
+    async def get_energy_usage(city: str, company_name: str) -> list:
         """
-        Retrieve energy usage data for a user from the database.
+        Retrieve energy usage data for a specific city and company from the database.
 
         Args:
-        user_uuid (str): The UUID of the user.
         city (str): The city
         company_name (str): The company name
 
         Returns:
-        dict: A dictionary containing the user's energy usage data. or
-            None if no data is found.
+        list: A list of dictionaries, each containing a user's energy usage data.
+            Returns an empty list if no data is found.
 
         Raises:
         Exception: If an error occurs during database operations.
@@ -112,27 +110,35 @@ class EnergyUsageModel:
         try:
             conn = await create_db_connection()
             query = """
-                SELECT user_uuid, 
-                   ROUND((average_monthly_bill * 12 * 0.0005) + 
-                         (average_natural_gas_bill * 12 * 0.053) + 
-                         (monthly_fuel_bill * 12 * 2.32), 1) AS carbon_footprint,
-                   city,
-                   company_name
-            FROM energy_usage 
-            WHERE user_uuid = $1
-            AND city = $2
-            AND company_name = $3;
-            """
-            record = await conn.fetchrow(query, user_uuid)
+                    SELECT user_uuid, 
+                       ROUND((average_monthly_bill * 12 * 0.0005) + 
+                             (average_natural_gas_bill * 12 * 0.053) + 
+                             (monthly_fuel_bill * 12 * 2.32), 1) AS carbon_footprint,
+                       city,
+                       company_name
+                FROM energy_usage 
+                WHERE city = $1 AND company_name = $2;
+                """
+            row = await conn.fetchrow(query, city, company_name)
             await conn.close()
-            if record:
-                return dict(record)
-            return None
+            if row:
+                return {
+                    "user_uuid": row["user_uuid"],
+                    "city": row["city"],
+                    "company_name": row["company_name"],
+                    "waste_kg": row["waste_kg"],
+                    "recycled_or_composted_kg": row["recycled_or_composted_kg"],
+                    "waste_category": row["waste_category"],
+                    "carbon_footprint": row["carbon_footprint"],
+                }
+            else:
+                return None
         except Exception as e:
-            logger.error(f"Failed to get energy date: {str(e)}")
+            logger.error(f"Failed to retrieve waste sector data: {str(e)}")
             raise e
         finally:
-            await conn.close()
+            if conn:
+                await conn.close()
 
 
 class WasteSectorModel:
@@ -140,9 +146,9 @@ class WasteSectorModel:
     async def create_or_update_waste_sector(user_uuid: str,
                                             waste_kg: float,
                                             recycled_or_composted_kg: float,
-                                            waste_category: WasteCategory,
                                             city: str,
-                                            company_name: str
+                                            company_name:
+                                            str,waste_category: WasteCategory,
                                             ) -> int:
         """
         Create or update waste sector data for a user in the database.
@@ -175,7 +181,7 @@ class WasteSectorModel:
                     RETURNING id;
                     """
             record_id = await conn.fetchval(
-                query, user_uuid, waste_kg, recycled_or_composted_kg, waste_category.name, city, company_name)
+                query, user_uuid, city, company_name, waste_kg, recycled_or_composted_kg, waste_category.name)
             await conn.close()
             return record_id
         except Exception as e:
@@ -242,7 +248,7 @@ class WasteSectorModel:
 
 class BusinessTravelModel:
     @staticmethod
-    async def create_or_update_business_travel(
+    async def create_business_travel(
             user_uuid: str,
             kilometers_per_year: float,
             average_efficiency_per_100km: float,
