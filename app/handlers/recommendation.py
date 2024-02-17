@@ -1,10 +1,6 @@
-import traceback
 import uuid
 from asyncio.log import logger
 from decimal import Decimal
-
-from aiohttp import web
-from aiohttp_swagger import swagger_path
 
 from app.models.models import BusinessTravelModel, EnergyUsageModel, WasteSectorModel
 

@@ -939,3 +939,35 @@ aiohttp.http_exceptions.BadHttpMessage: 400, message:
 2024-02-17 16:40:08,519 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "GET /get-business-travel?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0 HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
 2024-02-17 16:40:08,565 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "GET /get-waste-sector?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0 HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
 2024-02-17 16:40:08,582 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "GET /give-recommendation?report_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 17:16:36,259 DEBUG:Using selector: KqueueSelector
+2024-02-17 17:16:37,801 INFO:::1 [17/Feb/2024:17:16:37 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:16:38,163 INFO:::1 [17/Feb/2024:17:16:38 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12492 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:17:02,694 INFO:Create a new report
+2024-02-17 17:17:02,716 INFO:::1 [17/Feb/2024:17:17:02 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:22:18,045 INFO:Get WasteSectorModel info
+2024-02-17 17:22:18,079 INFO:::1 [17/Feb/2024:17:22:18 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:23:03,285 INFO:Handling a request to create waste sector data
+2024-02-17 17:23:03,314 INFO:::1 [17/Feb/2024:17:23:03 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:23:46,994 INFO:Create a new report
+2024-02-17 17:23:47,011 INFO:::1 [17/Feb/2024:17:23:46 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:23:58,867 INFO:Handling a request to create waste sector data
+2024-02-17 17:23:58,895 INFO:::1 [17/Feb/2024:17:23:58 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:24:04,303 INFO:Get WasteSectorModel info
+2024-02-17 17:24:04,329 INFO:::1 [17/Feb/2024:17:24:04 +0100] "POST /get-waste-sector?company_name=BMW HTTP/1.1" 200 594 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:26:29,445 INFO:Get recommendation
+2024-02-17 17:26:29,496 INFO:::1 [17/Feb/2024:17:26:29 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:26:50,541 DEBUG:Using selector: KqueueSelector
+2024-02-17 17:32:57,239 INFO:::1 [17/Feb/2024:17:32:57 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:32:57,666 INFO:::1 [17/Feb/2024:17:32:57 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12492 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:34:05,829 DEBUG:Using selector: KqueueSelector
+2024-02-17 17:34:09,520 INFO:::1 [17/Feb/2024:17:34:09 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:34:09,918 INFO:::1 [17/Feb/2024:17:34:09 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12492 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:34:37,638 DEBUG:Using selector: KqueueSelector
+2024-02-17 17:34:40,034 INFO:::1 [17/Feb/2024:17:34:40 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:34:40,392 INFO:::1 [17/Feb/2024:17:34:40 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12492 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:35:32,117 DEBUG:Using selector: KqueueSelector
+2024-02-17 17:35:34,381 INFO:::1 [17/Feb/2024:17:35:34 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:35:34,825 INFO:::1 [17/Feb/2024:17:35:34 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14689 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 17:39:53,293 INFO:Get recommendation
+2024-02-17 17:39:53,363 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-02-17 17:39:53,364 INFO:::1 [17/Feb/2024:17:39:53 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 523 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"

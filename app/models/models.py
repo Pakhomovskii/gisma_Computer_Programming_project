@@ -204,7 +204,7 @@ class WasteSectorModel:
         )
 
     @staticmethod
-    async def get_waste_sector(company_name: str) -> dict:
+    async def get_waste_sector(company_name: str) -> list:
         """
         Retrieve waste sector from the database and
         calculate the carbon footprint based on the waste data and category.
