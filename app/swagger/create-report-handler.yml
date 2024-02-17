@@ -1,0 +1,19 @@
+tags:
+- Report Management
+summary: Register a new report
+description: This endpoint registers a new report in the system
+operationId: createRecord
+consumes:
+- application/json
+produces:
+- application/json
+parameters: []  # Since report details are handled internally, no parameters are expected in the request body.
+responses:
+  "201":
+    description: Successful operation
+    schema:
+      type: object
+      properties:
+        report_uuid:
+          type: string
+          description: The UUID of the newly registered report, returned as a string.
