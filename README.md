@@ -27,7 +27,7 @@ This project is built using cutting-edge technologies and frameworks to ensure h
 - **asyncpg:** A high-performance PostgreSQL database interface for Python/asyncio, asyncpg is used for its speed and efficiency in handling database operations.
 - **psycopg2:** As a PostgreSQL adapter for Python, psycopg2 facilitates database connections and operations, ensuring reliable data storage and retrieval.
 - **poetry:** This tool is used for dependency management and packaging in Python projects. It simplifies the management of project dependencies and ensures consistent environments across development and production setups.
-
+- **PostgreSQL 14:** With asynchronous connections in PostgreSQL 14, applications can initiate database operations without waiting for the results, making it easier to build responsive and scalable applications.
 ### DB structure
 
 ![DB_structure Text](./pic1.png)
