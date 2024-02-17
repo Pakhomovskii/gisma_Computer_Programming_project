@@ -20,7 +20,7 @@ POST http://127.0.0.1:8080/create-waste-sector
 Content-Type: application/json
 
 {
-  "user_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
+  "report_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
   "waste_kg": 5070,
   "recycled_or_composted_kg": 300
 }
@@ -30,7 +30,7 @@ POST http://127.0.0.1:8080/create-business-travel
 Content-Type: application/json
 
 {
-  "user_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
+  "report_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
   "kilometers_per_year": 70000,
   "average_efficiency_per_100km": 8.5
 }
@@ -38,21 +38,24 @@ Content-Type: application/json
 ###
 
 ### Get calculated energy usage carbon footprint
-GET http://localhost:8080/get-energy-usage?user_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
+###
+POST http://localhost:8080/get-energy-usage
 Accept: application/json
 
-###
+{
+  "company_name": "BMW",
+}
 
 ### Get calculated waste sector carbon footprint
-GET http://localhost:8080/get-business-travel?user_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
+GET http://localhost:8080/get-business-travel?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
 Accept: application/json
 
 ###
 
 ### Get calculated business travel carbon footprint
-GET http://localhost:8080/get-waste-sector?user_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
+GET http://localhost:8080/get-waste-sector?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
 Accept: application/json
 ###
 ### Get c
-GET http://localhost:8080/give-recommendation?user_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d
+GET http://localhost:8080/give-recommendation?report_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d
 Accept: application/json

@@ -5,13 +5,13 @@ description: >
         This function is invoked through a POST request to analyze a user's carbon footprint across different sectors, including business travel, energy usage, and waste management. By comparing the carbon footprints from these sectors, the function identifies the sector(s) with the highest carbon footprint for the specified user. It then provides tailored recommendations to help the user reduce their carbon footprint in those areas. The recommendations are fetched from predefined text files associated with each sector. *** You can see results even one sector was filled ***
 parameters:
 - in: query
-  name: user_uuid
+  name: company_name
   description: >
-     The `user_uuid` is the unique identifier for the user whose carbon footprint is being analyzed. This UUID must be included in the query parameters of the GET request.
+    Company Name
   required: true
   schema:
     type: string
-    description: The UUID of the user for whom the carbon footprint analysis and recommendations are being generated.
+    description: Company name
 responses:
         '200':
           description: Successful operation

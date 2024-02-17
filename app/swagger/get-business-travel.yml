@@ -1,29 +1,38 @@
-tags:
-- Business Travel Management
-summary: Retrieve Business Travel data
-description: >
-        The request must include the user's unique identifier (`user_uuid`) as a query parameter. This endpoint fetches the business travel data (kgCO2)
-produces:
-  - application/json
-parameters:
-- in: query
-  name: user_uuid
-  description: >
-     The `user_uuid` is the unique identifier for the user whose business travel data is being requested
-  required: true
-  type: string
-responses:
+      tags:
+        - Business Travel Management
+      summary: Retrieve Business Travel data
+      description: >
+        The request must include the report's unique identifier (`report_uuid`) as a query parameter. This endpoint fetches the business travel data (kgCO2)
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: company_name
+          description: The fetch all reports for the company
+          required: true
+          type: string
+      responses:
         "200":
           description: Successful operation
           schema:
             type: object
             properties:
-              user_uuid:
+              city:
                 type: string
-                description: User UUID
+                description: City
+              company_name:
+                type: string
+                description: Company
               carbon_footprint:
                 type: string
-                description: Energy usage data for the specified user.
+                description:  The business travel usage data for the company
+              report_uuid:
+                type: string
+                description: Report uuid
+              created_at:
+                type: string
+                description: Created at
+
         "404":
           description: Not Found
           schema:
@@ -31,7 +40,7 @@ responses:
             properties:
               message:
                 type: string
-                description: A message indicating that no data was found for the provided user UUID.
+                description: A message indicating that no data was found for the provided report UUID.
         "500":
           description: Internal Server Error
           schema:

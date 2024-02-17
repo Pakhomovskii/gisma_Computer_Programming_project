@@ -3,38 +3,41 @@
       summary: Create or update waste sector data
       description: >
         This endpoint allows for the creation or updating of waste sector data for a specific user. It requires details about the user's waste production, including total waste in kilograms and the amount recycled or composted.  *** "waste_category_enum" must be only  "recyclable" ***
-      consumes:
-        - application/json
-      produces:
-        - application/json
       parameters:
         - in: body
           name: body
           description: >
-            Waste sector details for a specific user. The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint. This UUID is then used to associate the provided waste sector data with the respective user account.
+            The `report_uuid` is a unique identifier which must be obtained from a successful response after registering a report through the `/register` endpoint. This UUID is then used to associate the provided energy usage data with the respective report.
           required: true
           schema:
             type: object
             required:
-              - user_uuid
+              - report_uuid
               - waste_kg
               - recycled_or_composted_kg
             properties:
-              user_uuid:
+              report_uuid:
                 type: string
                 description: >
-                  The UUID of the user for whom the waste sector data is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a user.
+                  The UUID of the report for which the waste sector data is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a report.
               waste_kg:
                 type: number
                 format: float
-                description: The total amount of waste produced by the user in kilograms.
+                description: The total amount of waste produced in kilograms.
               recycled_or_composted_kg:
                 type: number
                 format: float
-                description: The amount of waste that has been either recycled or composted by the user in kilograms.
+                description: The amount of waste that has been either recycled or composted in kilograms.
               waste_category_enum:
                 type: string
                 description: Type of recycle. could be only RECYCLABLE for now
+              city:
+                type: string
+                format: string
+                description: City.
+              company_name:
+                type: string
+                description: Company name
 
       responses:
         "201":
@@ -53,12 +56,3 @@
               error:
                 type: string
                 description: A message describing the internal server error that occurred.
-
-        "400":
-          description: Not Found
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-                description: Invalid or missing waste category.

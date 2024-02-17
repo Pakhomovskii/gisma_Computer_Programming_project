@@ -2,27 +2,27 @@ tags:
 - Energy Management
 summary: Create or update Energy Management data
 description: >
-        This function is triggered upon receiving an HTTP request containing JSON data about a user's energy consumption. The required data includes the user's unique identifier (user_uuid), their average monthly electricity bill (average_monthly_bill), average monthly natural gas bill (average_natural_gas_bill), and monthly fuel bill (monthly_fuel_bill)
+        This function is triggered upon receiving an HTTP request containing JSON data about a user's energy consumption. The required data includes the report's unique identifier (report_uuid), average monthly electricity bill (average_monthly_bill), average monthly natural gas bill (average_natural_gas_bill), and monthly fuel bill (monthly_fuel_bill). This endpoint allows for the creation or updating the report
 parameters:
 - in: body
   name: body
   description: >
-     The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint. This UUID is then used to associate the provided energy usage data with the respective user account.
+     The `report_uuid` is a unique identifier which must be obtained from a successful response after registering a report through the `/register` endpoint. This UUID is then used to associate the provided energy usage data with the respective report.
   required: true
   schema:
     type: object
     required:
-    - user_uuid
+    - report_uuid
     - average_monthly_bill
     - average_natural_gas_bill
     - monthly_fuel_bill
     - city
     - company_name
     properties:
-      user_uuid:
+      report_uuid:
         type: string
         description: >
-          The UUID of the user for whom the energy usage is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a user.
+          The UUID of the report for which the energy usage is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a report.
       average_monthly_bill:
         type: number
         format: float
@@ -34,13 +34,13 @@ parameters:
       monthly_fuel_bill:
         type: number
         format: float
-        description: The monthly fuel bill for the user, in dollars. This field accepts decimal values to accurately represent the cost.
+        description: The monthly fuel bill for the report, in dollars. This field accepts decimal values to accurately represent the cost.
       city:
         type: string
         description: City
       company_name:
         type: string
-        description: Company name
+        description: Company
 
 responses:
   "201":
@@ -59,4 +59,3 @@ responses:
         error:
           type: string
           description: A message describing the internal server error that occurred.
-

@@ -2,23 +2,25 @@ tags:
 - Business Travel Management
 summary: Create or update Business Travel data
 description: >
-        This function is activated upon receiving an HTTP request with JSON data detailing a user's business travel habits. The essential data includes the user's unique identifier (`user_uuid`), the total kilometers traveled per year for business purposes (`kilometers_per_year`), and the vehicle's average efficiency in liters per 100 kilometers (`average_efficiency_per_100km`).
+        This function is activated upon receiving an HTTP request with JSON data detailing a user's business travel habits. The essential data includes the report's unique identifier (`report_uuid`), the total kilometers traveled per year for business purposes (`kilometers_per_year`), and the vehicle's average efficiency in liters per 100 kilometers (`average_efficiency_per_100km`).
 parameters:
 - in: body
   name: body
   description: >
-     The `user_uuid` is a unique identifier for a user, which must be obtained from a successful response after registering a user through the `/register` endpoint
+     The `report_uuid` is a unique identifier which must be obtained from a successful response after registering a user through the `/register` endpoint
   schema:
     type: object
     required:
-    - user_uuid
+    - report_uuid
     - kilometers_per_year
     - average_efficiency_per_100km
+    - city
+    - company_name
     properties:
-      user_uuid:
+      report_uuid:
         type: string
         description: >
-          The UUID of the user for whom the business travel data is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a user.
+          The UUID of the report for which the business travel data is being recorded. This should be acquired by invoking the `/registration` handler and successfully registering a report.
       kilometers_per_year:
         type: number
         format: float
@@ -27,6 +29,12 @@ parameters:
         type: number
         format: float
         description: The vehicle's average efficiency in liters per 100 kilometers, allowing decimal values for accurate representation.
+      city:
+        type: string
+        description: City
+      company_name:
+        type: string
+        description: Company
 responses:
   "201":
     description: Successful operation

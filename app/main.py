@@ -1,8 +1,6 @@
 import uuid
 import logging
 import traceback
-from datetime import datetime
-
 import aiohttp_swagger
 from aiohttp import web
 from decimal import Decimal
@@ -12,7 +10,7 @@ from app.templates.constans import recommendation_files
 from models.models import (
     BusinessTravelModel,
     EnergyUsageModel,
-    UserModel,
+    ReportModel,
     WasteSectorModel, WasteCategory,
 )
 
@@ -26,13 +24,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-@swagger_path("swagger/create-user-handler.yml")
-async def create_user_handler(request):
-    logger.info("Create a new user")
+@swagger_path("swagger/create-report-handler.yml")
+async def create_report_handler(request):
+    logger.info("Create a new report")
     try:
-        user_uuid = await UserModel.register_user()  # Attempt to register a user
+        report_uuid = await ReportModel.register_report()  # Attempt to register a report
         # Convert UUID to string before returning in JSON response
-        return web.json_response({"user_uuid": str(user_uuid)}, status=201)
+        return web.json_response({"report_uuid": str(report_uuid)}, status=201)
     except Exception as e:
         logger.error(
             f"An unexpected error occurred: {str(e)}"
@@ -47,7 +45,7 @@ async def create_energy_usage_handler(request):
     try:
         data = await request.json()
         record_id = await EnergyUsageModel.create_or_update_energy_usage(
-            data["user_uuid"],
+            data["report_uuid"],
             data["average_monthly_bill"],
             data["average_natural_gas_bill"],
             data["monthly_fuel_bill"],
@@ -79,7 +77,7 @@ async def create_waste_sector_handler(request):
             return web.Response(text=f"Invalid waste category: {waste_category_value}", status=400)
 
         record_id = await WasteSectorModel.create_or_update_waste_sector(
-            data["user_uuid"],
+            data["report_uuid"],
             data["waste_kg"],
             data["recycled_or_composted_kg"],
             data["city"],
@@ -98,14 +96,14 @@ async def create_business_travel_handler(request):
     logger.info("Handling a request to create business travel data")
     try:
         data = await request.json()
-        record_id = await BusinessTravelModel.create_business_travel(
-            data["user_uuid"],
+        record_id = await BusinessTravelModel.create_or_update_business_travel(
+            data["report_uuid"],
             data["kilometers_per_year"],
             data["average_efficiency_per_100km"],
             data["city"],
             data["company_name"],
         )
-        return web.json_response({"BMW": record_id})
+        return web.json_response({"record_id": record_id})
     except Exception as e:
         logger.error(
             f"An unexpected error occurred: {str(e)}"
@@ -118,17 +116,19 @@ async def create_business_travel_handler(request):
 async def get_business_travel_handler(request):
     logger.info("Get business travel info")
     try:
-        user_uuid = request.query.get("user_uuid")
-        record = await BusinessTravelModel.get_business_travel(user_uuid)
-        data = {
-            key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
-            for key, value in record.items()
-        }
-        return web.json_response({"data": data})
+        company_name = request.query.get("company_name")
+        records = await BusinessTravelModel.get_business_travel(company_name)
+        response_data = []
+        for record in records:
+            formatted_record = {
+                key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else str(value))
+                # Convert datetime to string
+                for key, value in record.items()
+            }
+            response_data.append(formatted_record)
+        return web.json_response({"data": response_data})
     except Exception as e:
-        logger.error(
-            f"An unexpected error occurred: {str(e)}"
-        )
+        logger.error(f"An unexpected error occurred: {str(e)}")
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
@@ -137,58 +137,63 @@ async def get_business_travel_handler(request):
 async def get_energy_usage_handler(request):
     logger.info("Get energy usage info")
     try:
-        city = request.query.get("city")
         company_name = request.query.get("company_name")
-        created_at = request.query.get("created_at")
-        records = await EnergyUsageModel.get_energy_usage(city, company_name, created_at)
-        # Convert Decimal and UUID to string for JSON serialization
-        data = {
-            key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
-            for record in records
-            for key, value in record.items()
-        }
-        return web.json_response({"data": data})
+        records = await EnergyUsageModel.get_energy_usage(company_name)
+        response_data = []
+        for record in records:
+            formatted_record = {
+                key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else str(value))
+                # Convert datetime to string
+                for key, value in record.items()
+            }
+            response_data.append(formatted_record)
+        return web.json_response({"data": response_data})
+
     except Exception as e:
-        logger.error(
-            f"An unexpected error occurred: {str(e)}"
-        )
+        logger.error(f"An unexpected error occurred: {str(e)}")
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
-
 
 @swagger_path("./swagger/get-waste-sector.yml")
 async def get_waste_sector_handler(request):
     logger.info("Get waste sector data")
     try:
-        user_uuid = request.query.get("user_uuid")
-        record = await WasteSectorModel.get_waste_sector(user_uuid)
-        if record:
-            response_data = {
-                key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else value)
-                for key, value in record.items()
-            }
-            return web.json_response({"data": response_data})
-        else:
-            return web.json_response({"data": {}})
+        company_name = request.query.get("company_name")
+        records = await WasteSectorModel.get_waste_sector(company_name)
+        response_data = []
+
+        if records:
+            for record in records:
+                if isinstance(record, dict):
+                    formatted_record = {
+                        key: (str(value) if isinstance(value, (Decimal, uuid.UUID)) else str(value))
+                        # Convert datetime to string
+                        for key, value in record.items()
+                    }
+                    response_data.append(formatted_record)
+                else:
+                    logger.error("Record is not a dictionary")
+
+        return web.json_response({"data": response_data})
+
     except Exception as e:
-        logger.error(
-            f"An unexpected error occurred: {str(e)}"
-        )
+        logger.error(f"An unexpected error occurred: {str(e)}")
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
-
 
 @swagger_path("./swagger/give-recommendation.yml")
 async def recommendation(request):
     logger.info("Get recommendation")
     try:
-        user_uuid = request.query.get("user_uuid")
+        company_name = request.query.get("company_name")
+        print("ddd")
+        print(company_name)
         # Fetch records from all three models
-        business_travel_record = await BusinessTravelModel.get_business_travel(
-            user_uuid
-        )
-        energy_usage_record = await EnergyUsageModel.get_energy_usage(user_uuid)
-        waste_sector_record = await WasteSectorModel.get_waste_sector(user_uuid)
+        business_travel_record = await BusinessTravelModel.get_business_travel(company_name)
+        energy_usage_record = await EnergyUsageModel.get_energy_usage(company_name)
+        waste_sector_record = await WasteSectorModel.get_waste_sector(company_name)
+        print("AAaaaa")
+        print(business_travel_record,energy_usage_record,waste_sector_record)
         # Initialize a dictionary to hold carbon footprint data
         carbon_footprints = {}
         # Process each record, converting values as needed and extracting carbon footprint
@@ -198,17 +203,19 @@ async def recommendation(request):
             ("waste_sector", waste_sector_record),
         ]:
             if record:
-                # Convert Decimal and UUID to string for JSON serialization
-                data = {
-                    key: (
-                        str(value) if isinstance(value, (Decimal, uuid.UUID)) else value
-                    )
-                    for key, value in record.items()
-                }
-                carbon_footprints[record_name] = float(data["carbon_footprint"])
-
+                for item in record:
+                    data = {
+                        key: (
+                            str(value) if isinstance(value, (Decimal, uuid.UUID)) else value
+                        )
+                        for key, value in item.items()
+                    }
+                    carbon_footprints[record_name] = float(data["carbon_footprint"])
+        print(f"aaaaa{carbon_footprints}")
         # Compare carbon footprints and determine the highest
         if carbon_footprints:
+            # Calculate the sum of all carbon_footprint values
+            total_carbon_footprint = sum(carbon_footprints.values())
 
             highest_sector = max(carbon_footprints, key=carbon_footprints.get)
             highest_footprint = max(carbon_footprints.values())
@@ -219,11 +226,10 @@ async def recommendation(request):
                 for sector, footprint in carbon_footprints.items()
                 if footprint == highest_footprint
             ]
-
             # Formatting the highest sectors for display
             highest_sectors_formatted = ", ".join(highest_sectors)
-            combined_recommendation_text = ""
-
+            # Add the total carbon footprint to the combined recommendation text
+            combined_recommendation_text = f"Total carbon footprint: {total_carbon_footprint}\n"
             # Read recommendation text for each highest sector and combine
             for sector in highest_sectors:
                 file_path = recommendation_files.get(sector)
@@ -250,19 +256,17 @@ async def recommendation(request):
                         f"An error occurred while reading "
                         f"the file for {sector}: {str(e)}\n\n"
                     )
-
             response_data = {
                 "highest_carbon_footprint_sector": highest_sector,
                 "carbon_footprint": highest_sectors_formatted,
                 "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change"
-                          "/emissions-monitoring-reporting_en",
+                "/emissions-monitoring-reporting_en",
                 "recommendation": combined_recommendation_text,
             }
         else:
             response_data = {
-                "message": "No carbon footprint data available for the given user_uuid"
+                "message": "No carbon footprint data available for the given report_uuid"
             }
-
         return web.json_response({"data": response_data})
     except Exception as e:
         logger.error(
@@ -271,12 +275,11 @@ async def recommendation(request):
         traceback.print_exc()
         return web.Response(text=f"An error occurred: {str(e)}", status=500)
 
-
 async def init_app():
     app = web.Application()
 
     # Define my routes
-    app.router.add_post("/register", create_user_handler)
+    app.router.add_post("/register", create_report_handler)
     app.router.add_post("/create-energy-usage", create_energy_usage_handler)
     app.router.add_post("/create-waste-sector", create_waste_sector_handler)
     app.router.add_post("/create-business-travel", create_business_travel_handler)

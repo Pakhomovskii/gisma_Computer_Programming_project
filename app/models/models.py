@@ -1,5 +1,5 @@
-from asyncio.log import logger
 from enum import Enum
+from asyncio.log import logger
 from app.services.database import create_db_connection
 
 
@@ -10,30 +10,33 @@ class WasteCategory(Enum):
     NON_RECYCLABLE = "NON_RECYCLABLE"
 
 
-class UserModel:
+class BaseModel:
+    pass
+
+class ReportModel:
     @staticmethod
-    async def register_user() -> str:
+    async def register_report() -> str:
         """
-        Register a new user in the database and return the generated user UUID.
+        Register a new report in the database and return the generated report UUID.
 
         Returns:
-        str: The generated user UUID.
+        str: The generated report UUID.
 
         Raises:
-        Exception: If an error occurs during user registration.
+        Exception: If an error occurs during report registration.
         """
         try:
             conn = await create_db_connection()
             query = """
-            INSERT INTO users DEFAULT VALUES
-            RETURNING user_uuid;  -- Return the generated 'user_uuid'
+            INSERT INTO reports DEFAULT VALUES
+            RETURNING report_uuid;  -- Return the generated 'report_uuid'
             """
-            user_uuid = await conn.fetchval(
+            report_uuid = await conn.fetchval(
                 query
-            )  # Execute the query and get the user_uuid
-            return user_uuid
+            )  # Execute the query and get the report_uuid
+            return report_uuid
         except Exception as e:
-            logger.error(f"Failed to register user: {str(e)}")
+            logger.error(f"Failed to register report: {str(e)}")
             raise e  # Re-raise the exception to be caught by the calling handler
         finally:
             await conn.close()  # Ensure the connection is closed
@@ -42,7 +45,7 @@ class UserModel:
 class EnergyUsageModel:
     @staticmethod
     async def create_or_update_energy_usage(
-            user_uuid: str,
+            report_uuid: str,
             average_monthly_bill: float,
             average_natural_gas_bill: float,
             monthly_fuel_bill: float,
@@ -50,15 +53,15 @@ class EnergyUsageModel:
             company_name: str
     ) -> int:
         """
-        Create or update energy usage records for a user in the database.
+        Create or update energy usage records for in the database.
 
         Args:
-        user_uuid (str): The UUID of the user.
+        report_uuid (str): The UUID of the report.
         average_monthly_bill (float): The average monthly energy bill.
         average_natural_gas_bill (float): The average monthly natural gas bill.
         monthly_fuel_bill (float): The monthly fuel bill.
-        city (str): The city
-        company_name (str): The company name
+        city (str): The city name
+        company_name (str): Company name
 
         Returns:
         int: The ID of the inserted or updated record.
@@ -69,14 +72,25 @@ class EnergyUsageModel:
         try:
             conn = await create_db_connection()
             query = """
-            INSERT INTO energy_usage (user_uuid, average_monthly_bill, average_natural_gas_bill, monthly_fuel_bill, city, company_name)
-            VALUES ($1, $2, $3, $4, $5, $6)
-            RETURNING id;
-;
+            INSERT INTO energy_usage (report_uuid, 
+                          average_monthly_bill, 
+                          average_natural_gas_bill, 
+                          monthly_fuel_bill, 
+                          city, 
+                          company_name)
+VALUES ($1, $2, $3, $4, $5, $6)
+ON CONFLICT (report_uuid) DO UPDATE 
+SET average_monthly_bill = EXCLUDED.average_monthly_bill,
+    average_natural_gas_bill = EXCLUDED.average_natural_gas_bill,
+    monthly_fuel_bill = EXCLUDED.monthly_fuel_bill, 
+    company_name = EXCLUDED.company_name,
+    city = EXCLUDED.city
+RETURNING id;
+
             """
             record_id = await conn.fetchval(
                 query,
-                user_uuid,
+                report_uuid,
                 average_monthly_bill,
                 average_natural_gas_bill,
                 monthly_fuel_bill,
@@ -92,76 +106,81 @@ class EnergyUsageModel:
             await conn.close()
 
     @staticmethod
-    async def get_energy_usage(city: str, company_name: str) -> list:
+    async def get_energy_usage(company_name: str):
         """
-        Retrieve energy usage data for a specific city and company from the database.
+    Retrieve energy usage data for a city from the database.
 
-        Args:
-        city (str): The city
-        company_name (str): The company name
+    Args:
+    company_name (str): The name of the company.
 
-        Returns:
-        list: A list of dictionaries, each containing a user's energy usage data.
-            Returns an empty list if no data is found.
+    Returns:
+    list: A list of dictionaries containing energy usage data for all reports related to the company, or an empty list if
+    no data is found.
 
-        Raises:
-        Exception: If an error occurs during database operations.
-        """
+    Raises:
+    Exception: If an error occurs during database operations.
+    """
         try:
             conn = await create_db_connection()
             query = """
-                    SELECT user_uuid, 
-                       ROUND((average_monthly_bill * 12 * 0.0005) + 
-                             (average_natural_gas_bill * 12 * 0.053) + 
-                             (monthly_fuel_bill * 12 * 2.32), 1) AS carbon_footprint,
-                       city,
-                       company_name
-                FROM energy_usage 
-                WHERE city = $1 AND company_name = $2;
-                """
-            row = await conn.fetchrow(query, city, company_name)
+ SELECT company_name,
+        city, 
+        created_at,
+        report_uuid,
+       ROUND((average_monthly_bill * 12 * 0.0005) + 
+             (average_natural_gas_bill * 12 * 0.053) + 
+             (monthly_fuel_bill * 12 * 2.32), 1) AS carbon_footprint
+FROM energy_usage 
+WHERE company_name = $1;
+
+            """
+
+            rows = await conn.fetch(query, company_name)
             await conn.close()
-            if row:
-                return {
-                    "user_uuid": row["user_uuid"],
-                    "city": row["city"],
-                    "company_name": row["company_name"],
-                    "waste_kg": row["waste_kg"],
-                    "recycled_or_composted_kg": row["recycled_or_composted_kg"],
-                    "waste_category": row["waste_category"],
-                    "carbon_footprint": row["carbon_footprint"],
-                }
+
+            if rows:
+                result = []
+                for row in rows:
+                    record = {
+                        "company_name": row["company_name"],
+                        'city': row['city'],
+                        'created_at': row['created_at'],
+                        'report_uuid': row['report_uuid'],
+                        'carbon_footprint': row['carbon_footprint']
+                    }
+                    result.append(record)
+                return result
             else:
-                return None
+                return []  # Or any other appropriate handling for empty result
+
+
         except Exception as e:
-            logger.error(f"Failed to retrieve waste sector data: {str(e)}")
+            logger.error(f"Failed to get energy data: {str(e)}")
             raise e
         finally:
-            if conn:
-                await conn.close()
+            await conn.close()
 
 
 class WasteSectorModel:
     @staticmethod
-    async def create_or_update_waste_sector(user_uuid: str,
+    async def create_or_update_waste_sector(
+                                            report_uuid: str,
                                             waste_kg: float,
                                             recycled_or_composted_kg: float,
                                             city: str,
-                                            company_name:
-                                            str,waste_category: WasteCategory,
+                                            company_name: str,
+                                            waste_category: WasteCategory
                                             ) -> int:
         """
-        Create or update waste sector data for a user in the database.
+        Create or update waste sector in the database.
 
         Args:
-        user_uuid (str): The UUID of the user for whom the waste sector data is being created or updated.
+        report_uuid (str): The UUID of the report.
         waste_kg (float): The amount of waste in kilograms.
         recycled_or_composted_kg (float): The amount of waste recycled or composted in kilograms.
         waste_category (enum): RECYCLABLE
-        city (str): The city
-        company_name (str): The company name
-        city (str): The city
-        company_name (str): The company name
+        city (str): The name of the city
+        company_name (str): The name of the company
 
         Returns:
         int: The ID of the record created or updated in the database.
@@ -172,16 +191,30 @@ class WasteSectorModel:
         try:
             conn = await create_db_connection()
             query = """
-                    INSERT INTO waste_sector (user_uuid, city, company_name, waste_kg, recycled_or_composted_kg, waste_category)
+                    INSERT INTO waste_sector (report_uuid, 
+                                                waste_kg, 
+                                                recycled_or_composted_kg, 
+                                                waste_category,
+                                                city,
+                                                company_name)
                     VALUES ($1, $2, $3, $4, $5, $6)
-                    ON CONFLICT (user_uuid) DO UPDATE 
+                    ON CONFLICT (report_uuid) DO UPDATE 
                     SET waste_kg = EXCLUDED.waste_kg,
                         recycled_or_composted_kg = EXCLUDED.recycled_or_composted_kg,
-                        waste_category = EXCLUDED.waste_category
+                        waste_category = EXCLUDED.waste_category, 
+                        city = EXCLUDED.city, 
+                        company_name = EXCLUDED.company_name
                     RETURNING id;
                     """
             record_id = await conn.fetchval(
-                query, user_uuid, city, company_name, waste_kg, recycled_or_composted_kg, waste_category.name)
+                query,
+                report_uuid,
+                waste_kg,
+                recycled_or_composted_kg,
+                waste_category.name,
+                city,
+                company_name,
+            )
             await conn.close()
             return record_id
         except Exception as e:
@@ -192,16 +225,13 @@ class WasteSectorModel:
                 await conn.close()
 
     @staticmethod
-    async def get_waste_sector(user_uuid: str, city: str,
-            company_name: str) -> dict:
+    async def get_waste_sector(company_name: str) -> dict:
         """
-        Retrieve waste sector data for a user from the database and
+        Retrieve waste sector from the database and
         calculate the carbon footprint based on the waste data and category.
 
         Args:
-            user_uuid (str): The UUID of the user for whom the waste sector data is being retrieved.
-            city (str): The city
-            company_name (str): The company name
+            company_name (str): Name of the company
 
         Returns:
             dict: A dictionary containing waste sector data including the calculated carbon footprint, or
@@ -209,61 +239,68 @@ class WasteSectorModel:
 
         Raises:
             Exception: If an error occurs during database operations.
+
         """
         try:
             conn = await create_db_connection()
             query = """
-               SELECT user_uuid, city, company_name, waste_kg, recycled_or_composted_kg, waste_category,
-                      CASE 
-                          WHEN waste_category = 'RECYCLABLE' THEN ROUND((waste_kg * 12 * 0.57) * ((100 - recycled_or_composted_kg) / 100), 1)
-                          --WHEN waste_category = 'COMPOSTABLE' THEN ROUND((waste_kg * 12 * 0.45) * ((100 - recycled_or_composted_kg) / 100), 1) -- It would be another logic
-                          --WHEN waste_category = 'NON_RECYCLABLE' THEN ROUND((waste_kg * 12 * 0.75) * ((100 - recycled_or_composted_kg) / 100), 1) -- It would be another logic
-                          ELSE 0
-                      END AS carbon_footprint
-               FROM waste_sector
-               WHERE user_uuid = $1;
-               """
-            row = await conn.fetchrow(query, user_uuid)
+                SELECT company_name, 
+                       city, 
+                       created_at,
+                       report_uuid,
+                       waste_category,
+                       CASE 
+                           WHEN waste_category = 'RECYCLABLE' THEN ROUND((waste_kg * 12 * 0.57) * ((100 - recycled_or_composted_kg) / 100), 1)
+                           ELSE 0
+                       END AS carbon_footprint
+                FROM waste_sector
+                WHERE company_name = $1;
+                """
+            rows = await conn.fetch(query, company_name)
             await conn.close()
 
-            if row:
-                return {
-                    "user_uuid": row["user_uuid"],
-                    "city": row["city"],
-                    "company_name": row["company_name"],
-                    "waste_kg": row["waste_kg"],
-                    "recycled_or_composted_kg": row["recycled_or_composted_kg"],
-                    "waste_category": row["waste_category"],
-                    "carbon_footprint": row["carbon_footprint"],
-                }
+            if rows:
+                result = []
+                for row in rows:
+                    record = {
+                        "company_name": row["company_name"],
+                        'city': row['city'],
+                        'created_at': row['created_at'],
+                        'report_uuid': row['report_uuid'],
+                        'carbon_footprint': row['carbon_footprint'],
+                        'waste_category': row['waste_category']
+                    }
+                    result.append(record)
+                return result
             else:
-                return None
+                return []  # Or any other appropriate handling for empty result
+
+
         except Exception as e:
-            logger.error(f"Failed to retrieve waste sector data: {str(e)}")
+            logger.error(f"Failed to get energy data: {str(e)}")
             raise e
         finally:
-            if conn:
-                await conn.close()
-
+            await conn.close()
 
 class BusinessTravelModel:
     @staticmethod
-    async def create_business_travel(
-            user_uuid: str,
+    async def create_or_update_business_travel(
+            report_uuid: str,
             kilometers_per_year: float,
             average_efficiency_per_100km: float,
             city: str,
             company_name: str
+
     ) -> int:
         """
-        Create or update business travel data for a user
+        Create or update business travel data for
 
         Args:
-            user_uuid (str): The UUID of the user for whom the business travel data is being created or updated.
+            report_uuid (str): The UUID of the report for which the business travel data is being created or updated.
             kilometers_per_year (float): The total kilometers traveled per year.
             average_efficiency_per_100km (float): The average efficiency of travel per 100 kilometers.
-            city (str): The city
-            company_name (str): The company name
+            city (str): The name of the city
+            company_name (str): The name of the company
 
         Returns:
             int: The ID of the record created or updated in the database.
@@ -271,19 +308,31 @@ class BusinessTravelModel:
         Raises:
         Exception: If an error occurs during database operations.
         """
+
         try:
             conn = await create_db_connection()
             # In this query I use postgres functionality to make an update if values are already in DB
             query = """
-            INSERT INTO business_travel (user_uuid, city, company_name, kilometers_per_year, average_efficiency_per_100km)
+            INSERT INTO business_travel (report_uuid, 
+            kilometers_per_year, 
+            average_efficiency_per_100km, 
+            city, 
+            company_name)
             VALUES ($1, $2, $3, $4, $5)
-            ON CONFLICT (user_uuid) DO UPDATE 
+            ON CONFLICT (report_uuid) DO UPDATE 
             SET kilometers_per_year = EXCLUDED.kilometers_per_year,
-                average_efficiency_per_100km = EXCLUDED.average_efficiency_per_100km
+            average_efficiency_per_100km = EXCLUDED.average_efficiency_per_100km, 
+            city = EXCLUDED.city, 
+            company_name = EXCLUDED.company_name
             RETURNING id;
             """
             record_id = await conn.fetchval(
-                query, user_uuid, kilometers_per_year, average_efficiency_per_100km, city, company_name)
+                query, report_uuid,
+                kilometers_per_year,
+                average_efficiency_per_100km,
+                city,
+                company_name
+            )
             await conn.close()
             return record_id
         except Exception as e:
@@ -293,42 +342,52 @@ class BusinessTravelModel:
             await conn.close()
 
     @staticmethod
-    async def get_business_travel(user_uuid: str, city: str,
-            company_name: str) -> dict:
+    async def get_business_travel(company_name: str):
         """
-        Retrieve business travel data for a user from the database and calculate
+        Retrieve business travel data from the database and calculate
         the carbon footprint based on the travel data.
 
         Args:
-            user_uuid (str): The UUID of the user for whom the business travel data is being retrieved.
-            city (str): The city
-            company_name (str): The company name
-        Returns:
-            dict or None: A dictionary containing business travel data including the calculated carbon footprint, or
-            None if no data is found.\
+        company_name (str): The name of the company.
 
+        Returns:
+        list: A list of dictionaries containing business travel data for the company, or an empty list if no data is found.
 
         Raises:
         Exception: If an error occurs during database operations.
         """
         try:
-
             conn = await create_db_connection()
             query = """
-    SELECT user_uuid, city, company_name,
-           ROUND((kilometers_per_year / average_efficiency_per_100km) * 2.31, 1) AS carbon_footprint
-    FROM business_travel 
-    WHERE user_uuid = $1;
-    
+                SELECT company_name, 
+                city, 
+                created_at,
+                report_uuid,
+                       ROUND((kilometers_per_year / average_efficiency_per_100km) * 2.31, 1) AS carbon_footprint
+                FROM business_travel 
+                WHERE company_name = $1;
             """
-            record = await conn.fetchrow(query, user_uuid, city, company_name)
+            rows = await conn.fetch(query, company_name)
             await conn.close()
-            if record:
-                return dict(record)
+
+            if rows:
+                result = []
+                for row in rows:
+                    record = {
+                        "company_name": row["company_name"],
+                        'city': row['city'],
+                        'created_at': row['created_at'],
+                        'report_uuid': row['report_uuid'],
+                        'carbon_footprint': row['carbon_footprint']
+                    }
+                    result.append(record)
+                return result
             else:
-                return None  # Or return an empty dictionary {}
+                return []  # Or any other appropriate handling for empty result
+
+
         except Exception as e:
-            logger.error(f"Failed to get business travel sector: {str(e)}")
+            logger.error(f"Failed to get energy data: {str(e)}")
             raise e
         finally:
             await conn.close()
