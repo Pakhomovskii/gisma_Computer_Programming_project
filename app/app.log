@@ -971,3 +971,127 @@ aiohttp.http_exceptions.BadHttpMessage: 400, message:
 2024-02-17 17:39:53,293 INFO:Get recommendation
 2024-02-17 17:39:53,363 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
 2024-02-17 17:39:53,364 INFO:::1 [17/Feb/2024:17:39:53 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 523 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 18:29:13,137 DEBUG:Using selector: KqueueSelector
+2024-02-17 18:33:46,234 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{}: '
+      ^
+2024-02-17 18:33:46,244 INFO:127.0.0.1 [17/Feb/2024:18:33:46 +0100] "UNKNOWN / HTTP/1.0" 400 199 "-" "-"
+2024-02-17 18:33:46,319 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 18:33:46,320 INFO:127.0.0.1 [17/Feb/2024:18:33:46 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 18:33:46,340 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 18:33:46,341 INFO:127.0.0.1 [17/Feb/2024:18:33:46 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 18:33:46,357 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 18:33:46,358 INFO:127.0.0.1 [17/Feb/2024:18:33:46 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 18:33:46,374 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 18:33:46,374 INFO:127.0.0.1 [17/Feb/2024:18:33:46 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 18:34:14,270 INFO:Create a new report
+2024-02-17 18:34:14,298 INFO:127.0.0.1 [17/Feb/2024:18:34:14 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:18,167 INFO:Create a new report
+2024-02-17 18:34:18,181 INFO:127.0.0.1 [17/Feb/2024:18:34:18 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:18,228 INFO:Handling a request to create or update energy usage
+2024-02-17 18:34:18,231 ERROR:An unexpected error occurred: EnergyUsageModel.create_or_update_energy_usage() missing 1 required positional argument: 'report_uuid'
+2024-02-17 18:34:18,233 INFO:127.0.0.1 [17/Feb/2024:18:34:18 +0100] "POST /create-energy-usage HTTP/1.1" 500 293 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:18,253 INFO:Handling a request to create waste sector data
+2024-02-17 18:34:18,299 INFO:127.0.0.1 [17/Feb/2024:18:34:18 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:18,317 INFO:Get EnergyUsageModel info
+2024-02-17 18:34:18,333 INFO:127.0.0.1 [17/Feb/2024:18:34:18 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:18,350 INFO:127.0.0.1 [17/Feb/2024:18:34:18 +0100] "GET /get-business-travel HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:52,380 INFO:Create a new report
+2024-02-17 18:34:52,394 INFO:127.0.0.1 [17/Feb/2024:18:34:52 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:52,427 INFO:Handling a request to create or update energy usage
+2024-02-17 18:34:52,440 INFO:127.0.0.1 [17/Feb/2024:18:34:52 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:52,455 INFO:Handling a request to create waste sector data
+2024-02-17 18:34:52,481 INFO:127.0.0.1 [17/Feb/2024:18:34:52 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:52,500 INFO:Get EnergyUsageModel info
+2024-02-17 18:34:52,515 INFO:127.0.0.1 [17/Feb/2024:18:34:52 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:34:52,533 INFO:127.0.0.1 [17/Feb/2024:18:34:52 +0100] "GET /get-business-travel HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:35:22,423 INFO:Create a new report
+2024-02-17 18:35:22,436 INFO:127.0.0.1 [17/Feb/2024:18:35:22 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:35:22,502 INFO:Handling a request to create or update energy usage
+2024-02-17 18:35:22,520 INFO:127.0.0.1 [17/Feb/2024:18:35:22 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:35:22,539 INFO:Handling a request to create waste sector data
+2024-02-17 18:35:22,579 INFO:127.0.0.1 [17/Feb/2024:18:35:22 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:35:22,624 INFO:Get EnergyUsageModel info
+2024-02-17 18:35:22,642 INFO:127.0.0.1 [17/Feb/2024:18:35:22 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:35:22,664 INFO:Get BusinessTravelModel info
+2024-02-17 18:35:22,682 INFO:127.0.0.1 [17/Feb/2024:18:35:22 +0100] "POST /get-business-travel HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:37:06,568 INFO:Create a new report
+2024-02-17 18:37:06,582 INFO:127.0.0.1 [17/Feb/2024:18:37:06 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:37:06,617 INFO:Handling a request to create or update energy usage
+2024-02-17 18:37:06,632 INFO:127.0.0.1 [17/Feb/2024:18:37:06 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:37:06,653 INFO:Get EnergyUsageModel info
+2024-02-17 18:37:06,673 INFO:127.0.0.1 [17/Feb/2024:18:37:06 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:37:06,693 INFO:Get BusinessTravelModel info
+2024-02-17 18:37:06,711 INFO:127.0.0.1 [17/Feb/2024:18:37:06 +0100] "POST /get-business-travel HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:38:11,730 INFO:Create a new report
+2024-02-17 18:38:11,749 INFO:::1 [17/Feb/2024:18:38:11 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 18:38:29,176 INFO:Handling a request to create or update energy usage
+2024-02-17 18:38:29,195 INFO:::1 [17/Feb/2024:18:38:29 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 18:38:46,110 INFO:Create a new report
+2024-02-17 18:38:46,123 INFO:127.0.0.1 [17/Feb/2024:18:38:46 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:38:46,163 INFO:Handling a request to create or update energy usage
+2024-02-17 18:38:46,175 INFO:127.0.0.1 [17/Feb/2024:18:38:46 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:38:46,190 INFO:Get EnergyUsageModel info
+2024-02-17 18:38:46,201 INFO:127.0.0.1 [17/Feb/2024:18:38:46 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:38:46,222 INFO:Get BusinessTravelModel info
+2024-02-17 18:38:46,233 INFO:127.0.0.1 [17/Feb/2024:18:38:46 +0100] "POST /get-business-travel HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:39:14,495 INFO:Get EnergyUsageModel info
+2024-02-17 18:39:14,507 INFO:::1 [17/Feb/2024:18:39:14 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 525 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 18:39:22,451 INFO:Create a new report
+2024-02-17 18:39:22,466 INFO:127.0.0.1 [17/Feb/2024:18:39:22 +0100] "POST /register HTTP/1.1" 201 218 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:39:22,502 INFO:Handling a request to create or update energy usage
+2024-02-17 18:39:22,515 INFO:127.0.0.1 [17/Feb/2024:18:39:22 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:39:22,539 INFO:Get EnergyUsageModel info
+2024-02-17 18:39:22,552 INFO:127.0.0.1 [17/Feb/2024:18:39:22 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:39:22,570 INFO:Get BusinessTravelModel info
+2024-02-17 18:39:22,582 INFO:127.0.0.1 [17/Feb/2024:18:39:22 +0100] "POST /get-business-travel HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 18:40:08,030 INFO:Get EnergyUsageModel info
+2024-02-17 18:40:08,045 INFO:127.0.0.1 [17/Feb/2024:18:40:08 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 525 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
