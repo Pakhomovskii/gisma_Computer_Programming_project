@@ -2,7 +2,7 @@
         - Waste Sector Management
       summary: Get waste usage for a company
       description: >
-        This endpoint retrieves energy waste reports for the specific company
+        This endpoint retrieves waste reports for the specific company
       produces:
         - application/json
       parameters:

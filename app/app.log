@@ -493,3 +493,449 @@
 2024-02-17 14:05:33,670 DEBUG:Using selector: KqueueSelector
 2024-02-17 14:05:36,022 INFO:Get recommendation
 2024-02-17 14:05:36,075 INFO:::1 [17/Feb/2024:14:05:36 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1593 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 14:42:06,607 DEBUG:Using selector: KqueueSelector
+2024-02-17 14:42:18,051 INFO:Get recommendation
+2024-02-17 14:42:18,125 INFO:::1 [17/Feb/2024:14:42:18 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1593 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 14:42:21,443 INFO:Create a new report
+2024-02-17 14:42:21,458 INFO:::1 [17/Feb/2024:14:42:21 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 14:53:30,501 DEBUG:Using selector: KqueueSelector
+2024-02-17 14:53:35,413 INFO:Create a new report
+2024-02-17 14:53:35,427 INFO:::1 [17/Feb/2024:14:53:35 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 14:54:01,058 INFO:Handling a request to create or update energy usage
+2024-02-17 14:54:01,097 INFO:::1 [17/Feb/2024:14:54:01 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 14:54:06,878 INFO:Get energy usage info
+2024-02-17 14:54:06,890 INFO:::1 [17/Feb/2024:14:54:06 +0100] "POST /get-energy-usage?company_name=A HTTP/1.1" 200 1033 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:16:30,366 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:16:37,757 INFO:Handling a request to create or update energy usage
+2024-02-17 15:16:37,773 INFO:::1 [17/Feb/2024:15:16:37 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:16:42,989 INFO:Get energy usage info
+2024-02-17 15:16:43,003 INFO:::1 [17/Feb/2024:15:16:42 +0100] "POST /get-energy-usage?company_name=A HTTP/1.1" 200 1033 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:17:17,293 INFO:Handling a request to create waste sector data
+2024-02-17 15:17:17,331 INFO:::1 [17/Feb/2024:15:17:17 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:17:25,242 INFO:Get waste sector data
+2024-02-17 15:17:25,268 INFO:::1 [17/Feb/2024:15:17:25 +0100] "POST /get-waste-sector?company_name=A HTTP/1.1" 200 371 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:17:30,701 INFO:Get waste sector data
+2024-02-17 15:17:30,727 INFO:::1 [17/Feb/2024:15:17:30 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:17:37,700 INFO:Get recommendation
+2024-02-17 15:17:37,741 INFO:::1 [17/Feb/2024:15:17:37 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1593 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:17:57,362 INFO:Handling a request to create waste sector data
+2024-02-17 15:17:57,392 INFO:::1 [17/Feb/2024:15:17:57 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:18:00,900 INFO:Get recommendation
+2024-02-17 15:18:00,952 INFO:::1 [17/Feb/2024:15:18:00 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:21:48,525 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:21:58,789 INFO:Get business travel info
+2024-02-17 15:21:58,803 INFO:::1 [17/Feb/2024:15:21:58 +0100] "POST /get-business-travel?company_name=B HTTP/1.1" 200 170 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:22:03,571 INFO:Get business travel info
+2024-02-17 15:22:03,584 INFO:::1 [17/Feb/2024:15:22:03 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:22:39,255 INFO:Handling a request to create business travel data
+2024-02-17 15:22:39,267 INFO:::1 [17/Feb/2024:15:22:39 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:22:41,305 INFO:Get business travel info
+2024-02-17 15:22:41,317 INFO:::1 [17/Feb/2024:15:22:41 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 339 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:22:49,656 INFO:Handling a request to create business travel data
+2024-02-17 15:22:49,667 INFO:::1 [17/Feb/2024:15:22:49 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:22:51,715 INFO:Get business travel info
+2024-02-17 15:22:51,728 INFO:::1 [17/Feb/2024:15:22:51 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 339 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:23:03,049 INFO:Handling a request to create business travel data
+2024-02-17 15:23:03,064 INFO:::1 [17/Feb/2024:15:23:03 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:23:04,858 INFO:Get business travel info
+2024-02-17 15:23:04,870 INFO:::1 [17/Feb/2024:15:23:04 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:28:15,985 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:28:20,324 INFO:Get recommendation
+2024-02-17 15:28:20,381 INFO:::1 [17/Feb/2024:15:28:20 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:28:29,550 INFO:Get BusinessTravelModel info
+2024-02-17 15:28:29,550 ERROR:An unexpected error occurred: type object 'BusinessTravelModel' has no attribute 'get_data'
+2024-02-17 15:28:29,552 INFO:::1 [17/Feb/2024:15:28:29 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:30:43,008 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:30:45,582 INFO:Get BusinessTravelModel info
+2024-02-17 15:30:45,582 ERROR:An unexpected error occurred: type object 'BusinessTravelModel' has no attribute 'get_data_by_company'
+2024-02-17 15:30:45,584 INFO:::1 [17/Feb/2024:15:30:45 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 262 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:31:26,060 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:31:27,983 INFO:Get BusinessTravelModel info
+2024-02-17 15:31:27,983 ERROR:An unexpected error occurred: type object 'BusinessTravelModel' has no attribute 'get_data'
+2024-02-17 15:31:27,985 INFO:::1 [17/Feb/2024:15:31:27 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:32:02,331 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:32:03,532 INFO:Get BusinessTravelModel info
+2024-02-17 15:32:03,532 ERROR:An unexpected error occurred: type object 'BusinessTravelModel' has no attribute 'get_data_by_company_name'
+2024-02-17 15:32:03,534 INFO:::1 [17/Feb/2024:15:32:03 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 267 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:33:11,167 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:33:12,542 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+    return await get_data_handler(request, BusinessTravelModel.get_business_travel())
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:33:12,547 INFO:::1 [17/Feb/2024:15:33:12 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:35:57,782 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+    return await get_data_handler(request, BusinessTravelModel)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:35:57,783 INFO:::1 [17/Feb/2024:15:35:57 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:35:58,674 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+    return await get_data_handler(request, BusinessTravelModel)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:35:58,675 INFO:::1 [17/Feb/2024:15:35:58 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:06,437 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+    return await get_data_handler(request, BusinessTravelModel)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:36:06,438 INFO:::1 [17/Feb/2024:15:36:06 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:11,299 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+    return await get_data_handler(request, BusinessTravelModel)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:36:11,301 INFO:::1 [17/Feb/2024:15:36:11 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:22,474 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:36:22,476 INFO:::1 [17/Feb/2024:15:36:22 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:23,278 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:36:23,279 INFO:::1 [17/Feb/2024:15:36:23 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:23,493 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 144, in get_business_travel_handler
+TypeError: BusinessTravelModel.get_business_travel() missing 1 required positional argument: 'company_name'
+2024-02-17 15:36:23,493 INFO:::1 [17/Feb/2024:15:36:23 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:38,126 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:36:44,892 INFO:Get business travel info
+2024-02-17 15:36:44,905 INFO:::1 [17/Feb/2024:15:36:44 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:49,965 INFO:Get recommendation
+2024-02-17 15:36:50,014 INFO:::1 [17/Feb/2024:15:36:49 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:36:56,303 INFO:Handling a request to create business travel data
+2024-02-17 15:36:56,316 INFO:::1 [17/Feb/2024:15:36:56 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:37:00,240 INFO:Get waste sector data
+2024-02-17 15:37:00,268 INFO:::1 [17/Feb/2024:15:37:00 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:37:04,117 INFO:Handling a request to create waste sector data
+2024-02-17 15:37:04,144 INFO:::1 [17/Feb/2024:15:37:04 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:37:07,844 INFO:Get energy usage info
+2024-02-17 15:37:07,857 INFO:::1 [17/Feb/2024:15:37:07 +0100] "POST /get-energy-usage?company_name=A HTTP/1.1" 200 1033 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:37:56,184 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:43:01,880 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:43:09,770 INFO:Get BusinessTravelModel info
+2024-02-17 15:43:09,784 INFO:::1 [17/Feb/2024:15:43:09 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:43:12,858 INFO:Handling a request to create business travel data
+2024-02-17 15:43:12,872 INFO:::1 [17/Feb/2024:15:43:12 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:43:17,265 INFO:Get WasteSectorModel info
+2024-02-17 15:43:17,297 INFO:::1 [17/Feb/2024:15:43:17 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:43:20,713 INFO:Handling a request to create waste sector data
+2024-02-17 15:43:20,741 INFO:::1 [17/Feb/2024:15:43:20 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:43:26,890 INFO:Get recommendation
+2024-02-17 15:43:26,941 INFO:::1 [17/Feb/2024:15:43:26 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:43:30,324 INFO:Get BusinessTravelModel info
+2024-02-17 15:43:30,337 INFO:::1 [17/Feb/2024:15:43:30 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:46:57,881 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:47:02,228 INFO:Handling a request to create business travel data
+2024-02-17 15:47:02,229 ERROR:An unexpected error occurred: BusinessTravelModel.create_or_update_business_travel() missing 3 required positional arguments: 'average_efficiency_per_100km', 'city', and 'company_name'
+2024-02-17 15:47:02,230 INFO:::1 [17/Feb/2024:15:47:02 +0100] "POST /create-business-travel HTTP/1.1" 500 345 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:52:48,694 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:52:56,093 INFO:Create a new report
+2024-02-17 15:52:56,110 INFO:::1 [17/Feb/2024:15:52:56 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:52:56,687 INFO:Create a new report
+2024-02-17 15:52:56,701 INFO:::1 [17/Feb/2024:15:52:56 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:53:01,765 INFO:Get recommendation
+2024-02-17 15:53:01,821 INFO:::1 [17/Feb/2024:15:53:01 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:53:08,473 INFO:Get BusinessTravelModel info
+2024-02-17 15:53:08,487 INFO:::1 [17/Feb/2024:15:53:08 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:53:12,559 INFO:Handling a request to create business travel data
+2024-02-17 15:53:12,572 INFO:::1 [17/Feb/2024:15:53:12 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:53:19,148 INFO:Get WasteSectorModel info
+2024-02-17 15:53:19,176 INFO:::1 [17/Feb/2024:15:53:19 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:53:22,718 INFO:Handling a request to create waste sector data
+2024-02-17 15:53:22,718 ERROR:An unexpected error occurred: 'kilometers_per_year'
+2024-02-17 15:53:22,720 INFO:::1 [17/Feb/2024:15:53:22 +0100] "POST /create-waste-sector HTTP/1.1" 500 211 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:54:10,260 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:54:12,462 INFO:Handling a request to create waste sector data
+2024-02-17 15:54:12,463 ERROR:An unexpected error occurred: 'One or more required keys are missing in the data dictionary'
+2024-02-17 15:54:12,464 INFO:::1 [17/Feb/2024:15:54:12 +0100] "POST /create-waste-sector HTTP/1.1" 500 252 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 15:54:35,381 DEBUG:Using selector: KqueueSelector
+2024-02-17 15:54:36,936 INFO:Handling a request to create waste sector data
+2024-02-17 15:54:36,936 ERROR:An unexpected error occurred: 'One or more required keys are missing in the data dictionary: kilometers_per_year, average_efficiency_per_100km'
+2024-02-17 15:54:36,937 INFO:::1 [17/Feb/2024:15:54:36 +0100] "POST /create-waste-sector HTTP/1.1" 500 304 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:01:39,479 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:01:41,369 INFO:Handling a request to create waste sector data
+2024-02-17 16:01:41,369 ERROR:An unexpected error occurred: name 'inspect' is not defined
+2024-02-17 16:01:41,372 INFO:::1 [17/Feb/2024:16:01:41 +0100] "POST /create-waste-sector HTTP/1.1" 500 219 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:02:08,784 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:02:10,585 INFO:Handling a request to create waste sector data
+2024-02-17 16:02:10,586 ERROR:An unexpected error occurred: WasteSectorModel.create_or_update_waste_sector() missing 1 required positional argument: 'waste_category'
+2024-02-17 16:02:10,587 INFO:::1 [17/Feb/2024:16:02:10 +0100] "POST /create-waste-sector HTTP/1.1" 500 296 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:04:09,082 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:04:11,030 INFO:Handling a request to create waste sector data
+2024-02-17 16:04:11,030 ERROR:An unexpected error occurred: WasteSectorModel.create_or_update_waste_sector() missing 1 required positional argument: 'waste_category'
+2024-02-17 16:04:11,031 INFO:::1 [17/Feb/2024:16:04:11 +0100] "POST /create-waste-sector HTTP/1.1" 500 296 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:04:11,945 INFO:Handling a request to create waste sector data
+2024-02-17 16:04:11,946 ERROR:An unexpected error occurred: WasteSectorModel.create_or_update_waste_sector() missing 1 required positional argument: 'waste_category'
+2024-02-17 16:04:11,946 INFO:::1 [17/Feb/2024:16:04:11 +0100] "POST /create-waste-sector HTTP/1.1" 500 296 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:06:11,919 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:06:14,383 INFO:Handling a request to create waste sector data
+2024-02-17 16:06:14,383 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'name'
+2024-02-17 16:06:14,385 INFO:::1 [17/Feb/2024:16:06:14 +0100] "POST /create-waste-sector HTTP/1.1" 500 231 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:06:14,647 INFO:Handling a request to create waste sector data
+2024-02-17 16:06:14,647 ERROR:An unexpected error occurred: 'NoneType' object has no attribute 'name'
+2024-02-17 16:06:14,648 INFO:::1 [17/Feb/2024:16:06:14 +0100] "POST /create-waste-sector HTTP/1.1" 500 231 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:08:51,833 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:08:58,313 INFO:Get WasteSectorModel info
+2024-02-17 16:08:58,345 INFO:::1 [17/Feb/2024:16:08:58 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:05,075 INFO:Handling a request to create waste sector data
+2024-02-17 16:09:05,103 INFO:::1 [17/Feb/2024:16:09:05 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:13,465 INFO:Create a new report
+2024-02-17 16:09:13,480 INFO:::1 [17/Feb/2024:16:09:13 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:17,073 INFO:Handling a request to create or update energy usage
+2024-02-17 16:09:17,086 INFO:::1 [17/Feb/2024:16:09:17 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:21,461 INFO:Get EnergyUsageModel info
+2024-02-17 16:09:21,474 INFO:::1 [17/Feb/2024:16:09:21 +0100] "POST /get-energy-usage?company_name=A HTTP/1.1" 200 1033 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:28,628 INFO:Get WasteSectorModel info
+2024-02-17 16:09:28,655 INFO:::1 [17/Feb/2024:16:09:28 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:31,353 INFO:Handling a request to create business travel data
+2024-02-17 16:09:31,366 INFO:::1 [17/Feb/2024:16:09:31 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:36,890 INFO:Get BusinessTravelModel info
+2024-02-17 16:09:36,903 INFO:::1 [17/Feb/2024:16:09:36 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:09:39,908 INFO:Get recommendation
+2024-02-17 16:09:39,973 INFO:::1 [17/Feb/2024:16:09:39 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:12:09,256 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:12:09,257 ERROR:unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web.py:303> exception=NameError("name 'create_report_handler' is not defined")>
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/local/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 685, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web.py", line 342, in _run_app
+    app = await app
+          ^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 125, in init_app
+    app.router.add_post("/register", create_report_handler)
+                                     ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'create_report_handler' is not defined
+2024-02-17 16:12:32,560 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:12:39,076 INFO:Create a new report
+2024-02-17 16:12:39,092 INFO:::1 [17/Feb/2024:16:12:39 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:12:42,424 INFO:Handling a request to create or update energy usage
+2024-02-17 16:12:42,438 INFO:::1 [17/Feb/2024:16:12:42 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:12:45,864 INFO:Get EnergyUsageModel info
+2024-02-17 16:12:45,877 INFO:::1 [17/Feb/2024:16:12:45 +0100] "POST /get-energy-usage?company_name=A HTTP/1.1" 200 1033 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:12:49,620 INFO:Handling a request to create waste sector data
+2024-02-17 16:12:49,647 INFO:::1 [17/Feb/2024:16:12:49 +0100] "POST /create-waste-sector HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:12:53,021 INFO:Get WasteSectorModel info
+2024-02-17 16:12:53,048 INFO:::1 [17/Feb/2024:16:12:53 +0100] "POST /get-waste-sector?company_name=B HTTP/1.1" 200 579 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:12:56,818 INFO:Handling a request to create business travel data
+2024-02-17 16:12:56,830 INFO:::1 [17/Feb/2024:16:12:56 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:13:00,953 INFO:Get BusinessTravelModel info
+2024-02-17 16:13:00,966 INFO:::1 [17/Feb/2024:16:13:00 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:13:04,575 INFO:Get recommendation
+2024-02-17 16:13:04,627 INFO:::1 [17/Feb/2024:16:13:04 +0100] "POST /give-recommendation?company_name=A HTTP/1.1" 200 1432 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:53,751 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:23:58,817 INFO:::1 [17/Feb/2024:16:23:58 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:58,837 INFO:::1 [17/Feb/2024:16:23:58 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:58,837 INFO:::1 [17/Feb/2024:16:23:58 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:58,838 INFO:::1 [17/Feb/2024:16:23:58 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,032 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,122 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,122 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 304 179 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,123 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,131 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,131 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,131 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,132 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,132 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 304 179 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,133 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 304 180 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,136 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,137 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,137 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,137 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,138 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 304 179 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,279 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 304 177 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,283 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 304 178 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,401 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14665 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,440 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 304 178 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:23:59,440 INFO:::1 [17/Feb/2024:16:23:59 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 304 178 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:24:14,982 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+                 ^^^^^^^^^^^^^^^^
+TypeError: create_report_handler() takes 0 positional arguments but 1 was given
+2024-02-17 16:24:14,985 INFO:::1 [17/Feb/2024:16:24:14 +0100] "POST /register HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:24:14,987 INFO:::1 [17/Feb/2024:16:24:14 +0100] "GET /api/doc/swagger_static/images/throbber.gif HTTP/1.1" 304 178 "http://localhost:8080/api/doc/swagger_static/css/screen.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:25:20,581 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:25:22,535 INFO:Create a new report
+2024-02-17 16:25:22,556 INFO:::1 [17/Feb/2024:16:25:22 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:26:08,422 INFO:Handling a request to create or update energy usage
+2024-02-17 16:26:08,424 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 452, in _handle_request
+    resp = await request_handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_app.py", line 543, in _handle
+    resp = await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/handlers/handlers.py", line 41, in create_energy_usage_handler
+    return await create_data_handler(
+                 ^^^^^^^^^^^^^^^^^^^^
+TypeError: create_data_handler() takes 2 positional arguments but 3 were given
+2024-02-17 16:26:08,427 INFO:::1 [17/Feb/2024:16:26:08 +0100] "POST /create-energy-usage HTTP/1.1" 500 245 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:26:57,345 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:26:59,570 INFO:Handling a request to create or update energy usage
+2024-02-17 16:26:59,588 INFO:::1 [17/Feb/2024:16:26:59 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:27:43,887 INFO:Get EnergyUsageModel info
+2024-02-17 16:27:43,902 INFO:::1 [17/Feb/2024:16:27:43 +0100] "POST /get-energy-usage?company_name=B HTTP/1.1" 404 173 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:27:49,538 INFO:Get EnergyUsageModel info
+2024-02-17 16:27:49,552 INFO:::1 [17/Feb/2024:16:27:49 +0100] "POST /get-energy-usage?company_name=A HTTP/1.1" 200 1033 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:28:40,988 INFO:Handling a request to create waste sector data
+2024-02-17 16:28:41,029 INFO:::1 [17/Feb/2024:16:28:40 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:28:47,601 INFO:Get WasteSectorModel info
+2024-02-17 16:28:47,628 INFO:::1 [17/Feb/2024:16:28:47 +0100] "POST /get-waste-sector?company_name=A HTTP/1.1" 200 383 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:29:33,111 INFO:Handling a request to create business travel data
+2024-02-17 16:29:33,147 INFO:::1 [17/Feb/2024:16:29:33 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:03,716 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:03,729 INFO:::1 [17/Feb/2024:16:30:03 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:09,602 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:09,615 INFO:::1 [17/Feb/2024:16:30:09 +0100] "POST /get-business-travel?company_name=B HTTP/1.1" 404 173 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:14,768 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:14,782 INFO:::1 [17/Feb/2024:16:30:14 +0100] "POST /get-business-travel?company_name=C HTTP/1.1" 404 173 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:18,615 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:18,627 INFO:::1 [17/Feb/2024:16:30:18 +0100] "POST /get-business-travel?company_name=A HTTP/1.1" 200 507 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:25,219 INFO:Handling a request to create business travel data
+2024-02-17 16:30:25,233 INFO:::1 [17/Feb/2024:16:30:25 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:28,649 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:28,662 INFO:::1 [17/Feb/2024:16:30:28 +0100] "POST /get-business-travel?company_name=B HTTP/1.1" 404 173 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:30,844 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:30,856 INFO:::1 [17/Feb/2024:16:30:30 +0100] "POST /get-business-travel?company_name=B HTTP/1.1" 404 173 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:36,365 INFO:Handling a request to create business travel data
+2024-02-17 16:30:36,378 INFO:::1 [17/Feb/2024:16:30:36 +0100] "POST /create-business-travel HTTP/1.1" 200 174 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:38,816 INFO:Get BusinessTravelModel info
+2024-02-17 16:30:38,829 INFO:::1 [17/Feb/2024:16:30:38 +0100] "POST /get-business-travel?company_name=B HTTP/1.1" 200 337 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:30:47,421 INFO:Get recommendation
+2024-02-17 16:30:47,468 ERROR:An unexpected error occurred: not enough values to unpack (expected 2, got 1)
+2024-02-17 16:30:47,471 INFO:::1 [17/Feb/2024:16:30:47 +0100] "POST /give-recommendation?company_name=B HTTP/1.1" 500 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:34:28,916 DEBUG:Using selector: KqueueSelector
+2024-02-17 16:34:32,317 INFO:Get recommendation
+2024-02-17 16:34:32,367 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-02-17 16:34:32,367 INFO:::1 [17/Feb/2024:16:34:32 +0100] "POST /give-recommendation?company_name=B HTTP/1.1" 200 521 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 16:40:08,356 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{}: '
+      ^
+2024-02-17 16:40:08,359 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "UNKNOWN / HTTP/1.0" 400 199 "-" "-"
+2024-02-17 16:40:08,434 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 16:40:08,434 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 16:40:08,478 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 16:40:08,478 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 16:40:08,493 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 16:40:08,494 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 16:40:08,504 ERROR:Error handling request
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-85x71Zg0-py3.12/lib/python3.12/site-packages/aiohttp/web_protocol.py", line 350, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_http_parser.pyx", line 557, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadHttpMessage: 400, message:
+  Invalid header token:
+
+    b'{: '
+      ^
+2024-02-17 16:40:08,505 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "UNKNOWN / HTTP/1.0" 400 198 "-" "-"
+2024-02-17 16:40:08,519 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "GET /get-business-travel?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0 HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 16:40:08,565 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "GET /get-waste-sector?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0 HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 16:40:08,582 INFO:127.0.0.1 [17/Feb/2024:16:40:08 +0100] "GET /give-recommendation?report_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d HTTP/1.1" 405 204 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"

@@ -17,3 +17,11 @@ responses:
         report_uuid:
           type: string
           description: The UUID of the newly registered report, returned as a string.
+  "500":
+    description: Internal Server Error
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A message describing the internal server error that occurred.

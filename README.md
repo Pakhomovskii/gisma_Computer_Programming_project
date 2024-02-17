@@ -38,20 +38,26 @@ This project is built using cutting-edge technologies and frameworks to ensure h
 ```
 ├── app/
 │   ├── __init__.py (Required for future use as a package directory)
-│   ├── main.py (Main entry endpoint and API handlers)
+│   ├── main.py (Main entry endpoint that invokes handlers)
 │   ├── app.log (Retained for educational purposes)
+│   ├── handlers/
+│   │   ├── __init__.py
+│   │   ├── config_handlers.py (Contains shared logic for handlers)
+│   │   ├── handlers.py (Contains API handlers)
+│   │   └── recommendation.py (Due to the complexity of generating recommendations, it is implemented here)
 │   ├── models/
 │   │   ├── __init__.py
+│   │   ├── base_model.py (Contains the base model with encapsulated logic)
 │   │   └── models.py (Contains the model classes with encapsulated logic)
 │   ├── services/
 │   │   ├── __init__.py
 │   │   └── database.py (Connects to the Postgres DB)
+│   ├── swagger/ (Swagger YAML configuration files)
 │   ├── templates/
 │   │   ├── __init__.py
 │   │   └── constants.py (Contains constants)
 ├── tests/
-│   ├── __init__.py
-│   └── api-tests.py (API tests only; no unit tests currently)
+│   └── api-tests.py (Includes API tests only; no unit tests for now)
 ├── .gitignore
 ├── pyproject.toml (Project information)
 ├── poetry.lock (System information for Poetry)

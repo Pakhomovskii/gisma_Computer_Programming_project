@@ -1,61 +1,51 @@
-####
+#### Register a new report
 POST http://127.0.0.1:8080/register
-
 Content-Type: application/json
-
 {}
 
-####
+#### Create energy usage data
 POST http://127.0.0.1:8080/create-energy-usage
 Content-Type: application/json
-
 {
   "user_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
   "average_monthly_bill": 1800,
   "average_natural_gas_bill": 580,
   "monthly_fuel_bill": 75
 }
-###
+
+#### Create waste sector data
 POST http://127.0.0.1:8080/create-waste-sector
 Content-Type: application/json
-
 {
   "report_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
   "waste_kg": 5070,
   "recycled_or_composted_kg": 300
 }
 
-###
+#### Create business travel data
 POST http://127.0.0.1:8080/create-business-travel
 Content-Type: application/json
-
 {
   "report_uuid": "9b7fbcb9-0efa-417a-9587-5ef87bdebcd0",
   "kilometers_per_year": 70000,
   "average_efficiency_per_100km": 8.5
 }
 
-###
-
-### Get calculated energy usage carbon footprint
-###
+#### Get calculated energy usage carbon footprint
 POST http://localhost:8080/get-energy-usage
 Accept: application/json
-
 {
-  "company_name": "BMW",
+  "company_name": "BMW"
 }
 
-### Get calculated waste sector carbon footprint
+#### Get calculated waste sector carbon footprint
 GET http://localhost:8080/get-business-travel?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
 Accept: application/json
 
-###
-
-### Get calculated business travel carbon footprint
+#### Get calculated business travel carbon footprint
 GET http://localhost:8080/get-waste-sector?report_uuid=9b7fbcb9-0efa-417a-9587-5ef87bdebcd0
 Accept: application/json
-###
-### Get c
+
+#### Get recommendation
 GET http://localhost:8080/give-recommendation?report_uuid=7d6a7117-cb4c-420e-b8b8-525c1838b79d
 Accept: application/json
