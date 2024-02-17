@@ -3,6 +3,7 @@ from asyncio.log import logger
 from decimal import Decimal
 
 from app.models.models import BusinessTravelModel, EnergyUsageModel, WasteSectorModel
+from app.templates.constans import recommendation_files
 
 
 # Function to fetch records from all three models
@@ -37,11 +38,6 @@ def process_records(records):
 
 # Function to read recommendation text for a given sector
 def read_recommendation_text(sector):
-    recommendation_files = {
-        "business_travel": "/path/to/business_travel_recommendation.txt",
-        "energy_usage": "/path/to/energy_usage_recommendation.txt",
-        "waste_sector": "/path/to/waste_sector_recommendation.txt",
-    }
     file_path = recommendation_files.get(sector)
     try:
         with open(file_path, "r") as file:

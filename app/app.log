@@ -1095,3 +1095,39 @@ aiohttp.http_exceptions.BadHttpMessage: 400, message:
 2024-02-17 18:39:22,582 INFO:127.0.0.1 [17/Feb/2024:18:39:22 +0100] "POST /get-business-travel HTTP/1.1" 404 173 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
 2024-02-17 18:40:08,030 INFO:Get EnergyUsageModel info
 2024-02-17 18:40:08,045 INFO:127.0.0.1 [17/Feb/2024:18:40:08 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 525 "-" "Apache-HttpClient/4.5.14 (Java/17.0.9)"
+2024-02-17 20:00:33,726 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:00:38,714 INFO:::1 [17/Feb/2024:20:00:38 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-17 20:00:43,310 INFO:::1 [17/Feb/2024:20:00:43 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:00:43,589 INFO:::1 [17/Feb/2024:20:00:43 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 200 255 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:00:43,677 INFO:::1 [17/Feb/2024:20:00:43 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14689 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:00:52,471 INFO:Get recommendation
+2024-02-17 20:00:52,541 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-02-17 20:00:52,542 INFO:::1 [17/Feb/2024:20:00:52 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 534 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:03:17,025 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:03:19,743 INFO:Get recommendation
+2024-02-17 20:03:19,827 INFO:::1 [17/Feb/2024:20:03:19 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:03:23,900 INFO:Get recommendation
+2024-02-17 20:03:23,970 INFO:::1 [17/Feb/2024:20:03:23 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:05:48,292 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:05:50,976 INFO:Get recommendation
+2024-02-17 20:05:51,061 INFO:::1 [17/Feb/2024:20:05:50 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:07:35,914 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:07:36,370 INFO:Get recommendation
+2024-02-17 20:07:36,429 INFO:::1 [17/Feb/2024:20:07:36 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:08:14,906 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:08:15,462 INFO:Get recommendation
+2024-02-17 20:08:15,522 INFO:::1 [17/Feb/2024:20:08:15 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:08:40,810 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:08:41,654 INFO:Get recommendation
+2024-02-17 20:08:41,714 INFO:::1 [17/Feb/2024:20:08:41 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:09:16,802 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:09:18,755 INFO:Get recommendation
+2024-02-17 20:09:18,826 INFO:::1 [17/Feb/2024:20:09:18 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:09:30,970 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:09:31,737 INFO:Get recommendation
+2024-02-17 20:09:31,809 INFO:::1 [17/Feb/2024:20:09:31 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:10:06,719 DEBUG:Using selector: KqueueSelector
+2024-02-17 20:10:08,946 INFO:Get recommendation
+2024-02-17 20:10:09,018 INFO:::1 [17/Feb/2024:20:10:08 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-17 20:11:02,674 INFO:Get recommendation
+2024-02-17 20:11:02,770 INFO:::1 [17/Feb/2024:20:11:02 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
