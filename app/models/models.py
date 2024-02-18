@@ -38,7 +38,7 @@ class ReportModel:
             logger.error(f"Failed to register report: {str(e)}")
             raise e  # Re-raise the exception to be caught by the calling handler
         finally:
-            await conn.close()  # Ensure the connection is closed
+            await conn.close()
 
 
 class EnergyUsageModel(BaseModel):

@@ -20,7 +20,7 @@ from app.models.models import (
 
 @swagger_path("swagger/create-report-handler.yml")
 async def create_report_handler(request: web.Request) -> web.Response:
-    logger.info("Create a new report")
+    logger.info("Creating a new report")
     try:
         report_uuid = (
             await ReportModel.register_report()
@@ -37,7 +37,7 @@ async def create_report_handler(request: web.Request) -> web.Response:
 
 @swagger_path("swagger/create-energy-usage-handler.yml")
 async def create_energy_usage_handler(request) -> web.Response:
-    logger.info("Handling a request to create or update energy usage")
+    logger.info("Creating energy sector data")
     return await create_data_handler(
         request, EnergyUsageModel, EnergyUsageModel.create_or_update_energy_usage
     )
@@ -45,7 +45,7 @@ async def create_energy_usage_handler(request) -> web.Response:
 
 @swagger_path("./swagger/create-waste-sector.yml")
 async def create_waste_sector_handler(request):
-    logger.info("Handling a request to create waste sector data")
+    logger.info("Creating waste sector data")
     return await create_data_handler(
         request, WasteSectorModel, WasteSectorModel.create_or_update_waste_sector
     )
@@ -53,7 +53,7 @@ async def create_waste_sector_handler(request):
 
 @swagger_path("./swagger/create-business-travel.yml")
 async def create_business_travel_handler(request):
-    logger.info("Handling a request to create business travel data")
+    logger.info("Creating business travel data")
     return await create_data_handler(
         request,
         BusinessTravelModel,
@@ -63,23 +63,25 @@ async def create_business_travel_handler(request):
 
 @swagger_path("./swagger/get-business-travel.yml")
 async def get_business_travel_handler(request):
+    logger.info("Getting business travel data")
     return await get_data_handler(request, BusinessTravelModel, "get_business_travel")
 
 
 @swagger_path("swagger/get-energy-usage-handler.yml")
 async def get_energy_usage_handler(request):
+    logger.info("Getting energy usage data")
     return await get_data_handler(request, EnergyUsageModel, "get_energy_usage")
 
 
 @swagger_path("./swagger/get-waste-sector.yml")
 async def get_waste_sector_handler(request):
+    logger.info("Getting waste sector data")
     return await get_data_handler(request, WasteSectorModel, "get_waste_sector")
 
 
-# Main recommendation function
-@swagger_path("./swagger/give-recommendation.yml")
+# Main recommendation function@swagger_path("./swagger/give-recommendation.yml")
 async def recommendation(request):
-    logger.info("Get recommendation")
+    logger.info("Getting recommendation")
     try:
         company_name = request.query.get("company_name")
         records = await fetch_records(company_name)
