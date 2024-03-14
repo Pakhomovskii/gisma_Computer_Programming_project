@@ -1131,3 +1131,506 @@ aiohttp.http_exceptions.BadHttpMessage: 400, message:
 2024-02-17 20:10:09,018 INFO:::1 [17/Feb/2024:20:10:08 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
 2024-02-17 20:11:02,674 INFO:Get recommendation
 2024-02-17 20:11:02,770 INFO:::1 [17/Feb/2024:20:11:02 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1605 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-02-23 20:14:13,213 DEBUG:Using selector: KqueueSelector
+2024-02-23 20:33:35,044 DEBUG:Using selector: KqueueSelector
+2024-02-23 20:35:48,301 INFO:127.0.0.1 [23/Feb/2024:20:35:48 +0100] "GET /app.17dbd4405743fb9a.hot-update.json HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:35:48,322 INFO:127.0.0.1 [23/Feb/2024:20:35:48 +0100] "GET / HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:35:54,503 INFO:127.0.0.1 [23/Feb/2024:20:35:54 +0100] "GET / HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:36:41,997 INFO:127.0.0.1 [23/Feb/2024:20:36:41 +0100] "GET / HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:37:18,951 INFO:::1 [23/Feb/2024:20:37:18 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:37:18,955 INFO:::1 [23/Feb/2024:20:37:18 +0100] "GET /js/app.js HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:37:18,958 INFO:::1 [23/Feb/2024:20:37:18 +0100] "GET /js/chunk-vendors.js HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:37:22,526 INFO:127.0.0.1 [23/Feb/2024:20:37:22 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:37:22,652 INFO:127.0.0.1 [23/Feb/2024:20:37:22 +0100] "GET /favicon.ico HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:37:28,207 INFO:127.0.0.1 [23/Feb/2024:20:37:28 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:12,857 INFO:::1 [23/Feb/2024:20:48:12 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:48:29,960 INFO:127.0.0.1 [23/Feb/2024:20:48:29 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,057 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,057 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 200 234 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,057 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,060 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 200 252 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,060 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,061 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,069 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,069 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 250 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,075 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,083 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 200 255 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,084 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,084 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,093 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,093 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,093 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 200 249 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,099 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,101 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,105 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,106 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,232 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,232 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,238 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger_static/images/favicon-32x32.png HTTP/1.1" 200 236 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:30,240 INFO:127.0.0.1 [23/Feb/2024:20:48:30 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12348 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:36,559 INFO:Creating a new report
+2024-02-23 20:48:36,571 INFO:127.0.0.1 [23/Feb/2024:20:48:36 +0100] "GET /api/doc/swagger_static/images/throbber.gif HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/screen.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:48:36,669 INFO:127.0.0.1 [23/Feb/2024:20:48:36 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:53:50,253 INFO:::1 [23/Feb/2024:20:53:50 +0100] "GET /register HTTP/1.1" 405 204 "http://localhost:8082/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-02-23 20:54:24,115 INFO:127.0.0.1 [23/Feb/2024:20:54:24 +0100] "GET /register HTTP/1.1" 405 204 "http://localhost:8082/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:56:55,624 INFO:127.0.0.1 [23/Feb/2024:20:56:55 +0100] "OPTIONS /register HTTP/1.1" 405 204 "http://localhost:8082/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:57:01,004 INFO:127.0.0.1 [23/Feb/2024:20:57:01 +0100] "OPTIONS /register HTTP/1.1" 405 204 "http://localhost:8082/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 20:57:21,539 INFO:127.0.0.1 [23/Feb/2024:20:57:21 +0100] "GET /register HTTP/1.1" 405 204 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-02-23 21:08:11,436 DEBUG:Using selector: KqueueSelector
+2024-02-23 21:08:11,438 ERROR:unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-3xNjvatI-py3.12/lib/python3.12/site-packages/aiohttp/web.py:303> exception=RuntimeError('Added route will never be executed, method OPTIONS is already registered')>
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-3xNjvatI-py3.12/lib/python3.12/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/local/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 685, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-3xNjvatI-py3.12/lib/python3.12/site-packages/aiohttp/web.py", line 342, in _run_app
+    app = await app
+          ^^^^^^^^^
+  File "/Users/pahomovskij/projects/gisma_computer_programming_project/app/main.py", line 34, in init_app
+    app.router.add_options("/register", ResourceOptions(
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-3xNjvatI-py3.12/lib/python3.12/site-packages/aiohttp/web_urldispatcher.py", line 1155, in add_options
+    return self.add_route(hdrs.METH_OPTIONS, path, handler, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-3xNjvatI-py3.12/lib/python3.12/site-packages/aiohttp/web_urldispatcher.py", line 1113, in add_route
+    return resource.add_route(method, handler, expect_handler=expect_handler)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-3xNjvatI-py3.12/lib/python3.12/site-packages/aiohttp/web_urldispatcher.py", line 352, in add_route
+    raise RuntimeError(
+RuntimeError: Added route will never be executed, method OPTIONS is already registered
+2024-02-23 21:15:34,738 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 16:05:47,171 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 16:05:49,591 [INFO] aiohttp.access: ::1 [03/Mar/2024:16:05:49 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 16:05:49,666 [INFO] aiohttp.access: ::1 [03/Mar/2024:16:05:49 +0100] "GET /favicon.ico HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 17:59:22,323 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 18:02:37,925 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:02:37 +0100] "GET /index HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:02:37,960 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:02:37 +0100] "GET /favicon.ico HTTP/1.1" 404 173 "http://localhost:8080/index" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:02:44,866 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:02:44 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:02:53,594 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:02:53 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:33:23,886 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:33:23 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:33:30,430 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:33:30 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:14,922 [INFO] aiohttp.access: ::1 [03/Mar/2024:18:34:14 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 18:34:33,337 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:33 +0100] "GET /api?doc HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:40,575 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:40 +0100] "GET /doc HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,113 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,204 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 200 234 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,205 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,205 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,205 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,206 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 200 252 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,211 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,217 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,218 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,218 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,225 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 250 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,225 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,230 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 200 255 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,233 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,233 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 200 249 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,234 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,235 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,235 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,240 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,256 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,357 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,357 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,365 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger_static/images/favicon-32x32.png HTTP/1.1" 200 236 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:34:48,395 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:34:48 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12850 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:35:07,484 [INFO] asyncio: Creating a new report
+2024-03-03 18:35:07,494 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:35:07 +0100] "GET /api/doc/swagger_static/images/throbber.gif HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/screen.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:35:07,594 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:35:07 +0100] "POST /register HTTP/1.1" 201 369 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,048 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,083 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 200 234 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,087 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,089 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,089 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,089 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 200 252 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,089 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,092 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,100 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 250 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,103 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,103 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,104 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,104 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 200 255 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,107 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,109 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 200 249 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,111 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,111 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,112 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,114 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,115 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,191 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12850 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,192 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:37:45,192 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:37:45 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:40:32,475 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 18:40:38,125 [INFO] aiohttp.access: ::1 [03/Mar/2024:18:40:38 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 18:41:36,180 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 18:41:38,651 [INFO] aiohttp.access: ::1 [03/Mar/2024:18:41:38 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 18:41:59,770 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 18:44:54,363 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 18:45:45,199 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:45:45 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:47:36,578 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:47:36 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 18:47:56,451 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:18:47:56 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 19:00:26,617 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 19:00:26,658 [ERROR] asyncio: unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py:303> exception=ValueError("No directory exists at '/Users/pahomovskij/PycharmProjects/gisma_computer_programming_project/app/static'")>
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 561, in __init__
+    raise ValueError("Not a directory")
+ValueError: Not a directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/local/Cellar/python@3.11/3.11.7_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 342, in _run_app
+    app = await app
+          ^^^^^^^^^
+  File "/Users/pahomovskij/PycharmProjects/gisma_computer_programming_project/app/main.py", line 70, in init_app
+    app.add_routes([web.static('/static', './static')])
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_app.py", line 373, in add_routes
+    return self.router.add_routes(routes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 1212, in add_routes
+    registered_routes.extend(route_def.register(self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_routedef.py", line 98, in register
+    resource = router.add_static(self.prefix, self.path, **self.kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 1136, in add_static
+    resource = StaticResource(
+               ^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 563, in __init__
+    raise ValueError(f"No directory exists at '{directory}'") from error
+ValueError: No directory exists at '/Users/pahomovskij/PycharmProjects/gisma_computer_programming_project/app/static'
+2024-03-03 19:00:43,674 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 19:00:48,171 [INFO] aiohttp.access: ::1 [03/Mar/2024:19:00:48 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 19:00:54,859 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:19:00:54 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 19:02:07,125 [INFO] aiohttp.access: ::1 [03/Mar/2024:19:02:07 +0100] "GET /static/index.html HTTP/1.1" 200 236 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+2024-03-03 19:02:21,424 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:19:02:21 +0100] "GET /static/index.html HTTP/1.1" 200 236 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 19:21:47,387 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 19:55:06,487 [INFO] aiohttp.access: 127.0.0.1 [03/Mar/2024:19:55:06 +0100] "GET /static/index.html HTTP/1.1" 304 177 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-03 19:59:31,998 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 20:09:31,200 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 22:38:57,088 [INFO] asyncio: Getting recommendation
+2024-03-03 22:38:57,254 [INFO] aiohttp.access: ::1 [03/Mar/2024:22:38:57 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "Python/3.11 aiohttp/3.9.3"
+2024-03-03 22:39:03,931 [INFO] asyncio: Getting recommendation
+2024-03-03 22:39:03,998 [INFO] aiohttp.access: ::1 [03/Mar/2024:22:39:03 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "Python/3.11 aiohttp/3.9.3"
+2024-03-03 22:41:05,936 [INFO] asyncio: Creating a new report
+2024-03-03 22:41:05,996 [INFO] aiohttp.access: ::1 [03/Mar/2024:22:41:05 +0100] "POST /register HTTP/1.1" 201 218 "-" "Python/3.11 aiohttp/3.9.3"
+2024-03-03 22:41:09,252 [INFO] asyncio: Creating a new report
+2024-03-03 22:41:09,269 [INFO] aiohttp.access: ::1 [03/Mar/2024:22:41:09 +0100] "POST /register HTTP/1.1" 201 218 "-" "Python/3.11 aiohttp/3.9.3"
+2024-03-03 22:54:38,222 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-03 22:54:41,412 [INFO] asyncio: Creating a new report
+2024-03-03 22:54:41,553 [INFO] aiohttp.access: ::1 [03/Mar/2024:22:54:41 +0100] "POST /register HTTP/1.1" 201 218 "-" "Python/3.11 aiohttp/3.9.3"
+2024-03-03 22:54:44,452 [INFO] asyncio: Creating a new report
+2024-03-03 22:54:44,469 [INFO] aiohttp.access: ::1 [03/Mar/2024:22:54:44 +0100] "POST /register HTTP/1.1" 201 218 "-" "Python/3.11 aiohttp/3.9.3"
+2024-03-08 20:28:34,017 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-08 20:28:54,090 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-08 20:29:28,196 [INFO] asyncio: Creating a new report
+2024-03-08 20:29:28,266 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:29:28 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-08 20:35:21,585 [INFO] asyncio: Creating a new report
+2024-03-08 20:35:21,613 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:35:21 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-08 20:39:02,564 [INFO] asyncio: Creating a new report
+2024-03-08 20:39:02,598 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:39:02 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-08 20:39:24,113 [INFO] asyncio: Creating energy sector data
+2024-03-08 20:39:24,182 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:39:24 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-08 20:39:28,892 [INFO] asyncio: Creating energy sector data
+2024-03-08 20:39:28,910 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:39:28 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-08 20:39:36,733 [INFO] asyncio: Creating energy sector data
+2024-03-08 20:39:36,743 [ERROR] asyncio: Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-08 20:39:36,746 [ERROR] asyncio: An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-08 20:39:36,757 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:39:36 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-08 20:39:38,748 [INFO] asyncio: Creating energy sector data
+2024-03-08 20:39:38,758 [ERROR] asyncio: Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-08 20:39:38,761 [ERROR] asyncio: An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-08 20:39:38,762 [INFO] aiohttp.access: ::1 [08/Mar/2024:20:39:38 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-10 11:53:00,814 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-10 11:53:07,456 [INFO] asyncio: Creating a new report
+2024-03-10 11:53:07,490 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:07 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-10 11:53:36,383 [INFO] asyncio: Creating energy sector data
+2024-03-10 11:53:36,403 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:36 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-10 11:53:42,700 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:42 +0100] "GET /get-energy-usage?company_name=Berlin HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 11:53:48,839 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:48 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 11:53:50,228 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:50 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 11:53:53,178 [INFO] asyncio: Creating energy sector data
+2024-03-10 11:53:53,196 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:53 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-10 11:53:54,646 [INFO] aiohttp.access: ::1 [10/Mar/2024:11:53:54 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:03:23,622 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:03:23 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:03:31,576 [INFO] asyncio: Creating a new report
+2024-03-10 12:03:31,599 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:03:31 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-10 12:03:53,368 [INFO] asyncio: Creating energy sector data
+2024-03-10 12:03:53,385 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:03:53 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-10 12:03:57,525 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:03:57 +0100] "GET /get-energy-usage?company_name=M HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:00,800 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:00 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:01,480 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:01 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:01,681 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:01 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:01,879 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:01 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:02,097 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:02 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:02,296 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:02 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:04:02,497 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:04:02 +0100] "GET /get-energy-usage?company_name=B HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:06:11,172 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:11 +0100] "GET /api-doc HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:11,857 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:11 +0100] "GET /favicon.ico HTTP/1.1" 404 173 "http://localhost:8080/api-doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:19,799 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:19 +0100] "GET /doc HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:43,922 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,002 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,002 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,002 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 200 252 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,003 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,003 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,003 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:43 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 250 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,037 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 200 234 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,038 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,039 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,041 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,041 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,048 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 200 255 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,058 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,058 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 200 249 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,058 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,059 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,059 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,067 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,073 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,214 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12850 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,226 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,227 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:06:44,453 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:06:44 +0100] "GET /api/doc/swagger_static/images/favicon-32x32.png HTTP/1.1" 200 236 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:07:01,902 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:07:01 +0100] "GET /api/doc/swagger_static/images/throbber.gif HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/screen.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:07:01,924 [INFO] asyncio: Getting energy usage data
+2024-03-10 12:07:01,924 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 12:07:01,952 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:07:01 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 858 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 12:27:32,958 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:27:32 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:28:12,187 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:28:12 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:28:36,047 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:28:36 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:32:47,458 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-10 12:33:16,621 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:33:16 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:33:55,392 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:33:55 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 12:35:01,883 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-10 12:35:05,874 [INFO] aiohttp.access: ::1 [10/Mar/2024:12:35:05 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 13:01:38,967 [INFO] aiohttp.access: ::1 [10/Mar/2024:13:01:38 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 212 "-" "python-requests/2.31.0"
+2024-03-10 13:29:26,069 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 13:29:26,070 [INFO] asyncio: Getting energy usage data
+2024-03-10 13:29:26,070 [INFO] asyncio: Getting energy usage data
+2024-03-10 13:29:26,070 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 13:29:26,109 [INFO] aiohttp.access: ::1 [10/Mar/2024:13:29:26 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 13:31:06,661 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 13:31:06,662 [INFO] asyncio: Getting energy usage data
+2024-03-10 13:31:06,662 [INFO] asyncio: Getting energy usage data
+2024-03-10 13:31:06,662 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 13:31:06,689 [INFO] aiohttp.access: ::1 [10/Mar/2024:13:31:06 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 13:36:42,203 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 13:36:42,203 [INFO] asyncio: Getting energy usage data
+2024-03-10 13:36:42,204 [INFO] asyncio: Getting energy usage data
+2024-03-10 13:36:42,204 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 13:36:42,225 [INFO] aiohttp.access: ::1 [10/Mar/2024:13:36:42 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:07:02,097 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 14:07:02,099 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:07:02,099 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:07:02,099 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:07:02,158 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:07:02 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:10:14,136 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage?company_name=BMW
+2024-03-10 14:10:14,137 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:10:14,137 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:10:14,137 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:10:14,178 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:10:14 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 858 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 14:12:56,534 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 14:12:56,536 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:12:56,536 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:12:56,536 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:12:56,567 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:12:56 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:13:56,003 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage?company_name=BMW
+2024-03-10 14:13:56,003 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:13:56,003 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:13:56,003 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:13:56,033 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:13:56 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 858 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-10 14:14:32,123 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 14:14:32,123 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:14:32,124 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:14:32,124 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:14:32,139 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:14:32 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:32:17,340 [INFO] asyncio: Creating a new report
+2024-03-10 14:32:17,426 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:32:17 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-10 14:38:35,366 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 14:38:35,367 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:38:35,367 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:38:35,368 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:38:35,406 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:38:35 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:38:52,204 [INFO] asyncio: Received request: POST http://localhost:8080/get-energy-usage
+2024-03-10 14:38:52,204 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:38:52,204 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:38:52,204 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:38:52,227 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:38:52 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:49:23,386 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-10 14:49:23,387 [ERROR] asyncio: unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py:303> exception=RuntimeError('Added route will never be executed, method OPTIONS is already registered')>
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/local/Cellar/python@3.11/3.11.7_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 342, in _run_app
+    app = await app
+          ^^^^^^^^^
+  File "/Users/pahomovskij/PycharmProjects/gisma_computer_programming_project/app/main.py", line 49, in init_app
+    cors.add(app.router.add_options("/get-energy-usage", get_energy_usage_handler))  # Add OPTIONS
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 1155, in add_options
+    return self.add_route(hdrs.METH_OPTIONS, path, handler, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 1113, in add_route
+    return resource.add_route(method, handler, expect_handler=expect_handler)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_urldispatcher.py", line 352, in add_route
+    raise RuntimeError(
+RuntimeError: Added route will never be executed, method OPTIONS is already registered
+2024-03-10 14:50:51,478 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-10 14:51:01,484 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:51:01,485 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:51:01,513 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:51:01 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 14:51:16,827 [INFO] asyncio: Creating a new report
+2024-03-10 14:51:16,848 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:51:16 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-10 14:51:18,998 [INFO] asyncio: Getting energy usage data
+2024-03-10 14:51:18,998 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 14:51:19,018 [INFO] aiohttp.access: ::1 [10/Mar/2024:14:51:18 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 15:12:39,460 [INFO] asyncio: Getting energy usage data
+2024-03-10 15:12:39,461 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 15:12:39,486 [INFO] aiohttp.access: ::1 [10/Mar/2024:15:12:39 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 15:13:31,557 [INFO] asyncio: Getting energy usage data
+2024-03-10 15:13:31,558 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 15:13:31,581 [INFO] aiohttp.access: ::1 [10/Mar/2024:15:13:31 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 15:13:41,172 [INFO] asyncio: Getting energy usage data
+2024-03-10 15:13:41,172 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 15:13:41,197 [INFO] aiohttp.access: ::1 [10/Mar/2024:15:13:41 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 15:19:21,077 [INFO] asyncio: Getting energy usage data
+2024-03-10 15:19:21,078 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 15:19:21,099 [INFO] aiohttp.access: ::1 [10/Mar/2024:15:19:21 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 707 "-" "python-requests/2.31.0"
+2024-03-10 15:19:31,222 [INFO] asyncio: Getting energy usage data
+2024-03-10 15:19:31,223 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 15:19:31,251 [INFO] aiohttp.access: ::1 [10/Mar/2024:15:19:31 +0100] "POST /get-energy-usage?company_name=%22BMW%22 HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 18:25:04,927 [INFO] asyncio: Getting energy usage data
+2024-03-10 18:25:04,929 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 18:25:04,969 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:25:04 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 707 "-" "python-requests/2.31.0"
+2024-03-10 18:27:25,971 [INFO] asyncio: Getting energy usage data
+2024-03-10 18:27:25,979 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 18:27:26,030 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:27:25 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 707 "-" "python-requests/2.31.0"
+2024-03-10 18:31:25,363 [INFO] asyncio: Creating a new report
+2024-03-10 18:31:25,389 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:31:25 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-10 18:31:42,082 [INFO] asyncio: Getting energy usage data
+2024-03-10 18:31:42,082 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 18:31:42,120 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:31:42 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 707 "-" "python-requests/2.31.0"
+2024-03-10 18:45:07,907 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:45:07 +0100] "POST /get-records?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 18:52:12,820 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:52:12 +0100] "POST /get-records?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 18:55:00,440 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:55:00 +0100] "POST /get-records?company_name=BWM HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 18:55:18,894 [INFO] asyncio: Getting energy usage data
+2024-03-10 18:55:18,896 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 18:55:18,928 [INFO] aiohttp.access: ::1 [10/Mar/2024:18:55:18 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 707 "-" "python-requests/2.31.0"
+2024-03-10 19:42:44,658 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:42:44 +0100] "POST /get-records?company_name=BWM HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 19:43:08,429 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:43:08 +0100] "POST /get-records?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 19:44:44,036 [INFO] asyncio: Getting energy usage data
+2024-03-10 19:44:44,037 [INFO] asyncio: Get EnergyUsageModel info
+2024-03-10 19:44:44,059 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:44:44 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 707 "-" "python-requests/2.31.0"
+2024-03-10 19:45:20,295 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:45:20 +0100] "POST /get-records?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 19:46:26,673 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:46:26 +0100] "POST /get-records?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-10 19:51:15,405 [INFO] asyncio: Getting recommendation
+2024-03-10 19:51:15,613 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:51:15 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1597 "-" "python-requests/2.31.0"
+2024-03-10 19:52:54,561 [INFO] asyncio: Getting recommendation
+2024-03-10 19:52:54,685 [INFO] aiohttp.access: ::1 [10/Mar/2024:19:52:54 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1597 "-" "python-requests/2.31.0"
+2024-03-14 16:33:11,570 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 17:22:01,793 [INFO] asyncio: Creating a new report
+2024-03-14 17:22:01,889 [INFO] aiohttp.access: ::1 [14/Mar/2024:17:22:01 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-14 17:22:25,661 [INFO] asyncio: Creating energy sector data
+2024-03-14 17:22:25,711 [INFO] aiohttp.access: ::1 [14/Mar/2024:17:22:25 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-14 17:26:27,179 [INFO] asyncio: Creating a new report
+2024-03-14 17:26:27,195 [INFO] aiohttp.access: ::1 [14/Mar/2024:17:26:27 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-14 17:26:47,352 [INFO] asyncio: Getting recommendation
+2024-03-14 17:26:47,460 [INFO] aiohttp.access: ::1 [14/Mar/2024:17:26:47 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1595 "-" "python-requests/2.31.0"
+2024-03-14 17:33:23,219 [INFO] asyncio: Getting recommendation
+2024-03-14 17:33:23,286 [INFO] aiohttp.access: ::1 [14/Mar/2024:17:33:23 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1595 "-" "python-requests/2.31.0"
+2024-03-14 17:44:53,309 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 17:44:57,644 [INFO] asyncio: Getting recommendation
+2024-03-14 17:44:57,726 [INFO] aiohttp.access: ::1 [14/Mar/2024:17:44:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1595 "-" "python-requests/2.31.0"
+2024-03-14 18:18:37,467 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 18:18:39,062 [INFO] asyncio: Getting recommendation
+2024-03-14 18:18:39,136 [INFO] aiohttp.access: ::1 [14/Mar/2024:18:18:39 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1595 "-" "python-requests/2.31.0"
+2024-03-14 18:18:53,940 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 18:18:55,303 [INFO] asyncio: Getting recommendation
+2024-03-14 18:18:55,360 [INFO] aiohttp.access: ::1 [14/Mar/2024:18:18:55 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1595 "-" "python-requests/2.31.0"
+2024-03-14 18:19:52,674 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:19:52 +0100] "GET /index.html HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:25,095 [INFO] aiohttp.access: ::1 [14/Mar/2024:18:20:25 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-14 18:20:25,663 [INFO] aiohttp.access: ::1 [14/Mar/2024:18:20:25 +0100] "GET /favicon.ico HTTP/1.1" 404 173 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+2024-03-14 18:20:32,017 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:32 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,340 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,397 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/css/typography.css HTTP/1.1" 200 234 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,399 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/css/reset.css HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,400 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/jquery-1.8.0.min.js HTTP/1.1" 200 252 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,400 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,400 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/css/screen.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,403 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/jquery.slideto.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,408 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/jquery.wiggle.min.js HTTP/1.1" 200 248 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,410 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 250 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,410 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/backbone-min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,411 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/handlebars-4.0.5.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,411 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/lodash.min.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,415 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/swagger-ui.js HTTP/1.1" 304 180 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,415 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,418 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/highlight.9.1.0.pack_extended.js HTTP/1.1" 200 249 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,419 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/jsoneditor.min.js HTTP/1.1" 200 253 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,421 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/marked.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,421 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/lib/swagger-oauth.js HTTP/1.1" 200 251 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,425 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 200 237 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,426 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 200 235 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,529 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,530 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 200 237 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:40,545 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:40 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 12850 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:20:49,550 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:20:49 +0100] "GET /api/doc/swagger_static/lib/object-assign-pollyfill.js HTTP/1.1" 200 248 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:21:28,264 [INFO] asyncio: Creating a new report
+2024-03-14 18:21:28,272 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:21:28 +0100] "GET /api/doc/swagger_static/images/throbber.gif HTTP/1.1" 304 178 "http://localhost:8080/api/doc/swagger_static/css/screen.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:21:28,284 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:21:28 +0100] "POST /register HTTP/1.1" 201 369 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:21:53,387 [INFO] asyncio: Creating business travel data
+2024-03-14 18:21:53,405 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:21:53 +0100] "POST /create-business-travel HTTP/1.1" 200 326 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:22:31,148 [INFO] asyncio: Creating waste sector data
+2024-03-14 18:22:31,177 [INFO] aiohttp.access: 127.0.0.1 [14/Mar/2024:18:22:31 +0100] "POST /create-waste-sector HTTP/1.1" 200 326 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 18:22:38,210 [INFO] asyncio: Getting recommendation
+2024-03-14 18:22:38,274 [INFO] aiohttp.access: ::1 [14/Mar/2024:18:22:38 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1596 "-" "python-requests/2.31.0"
+2024-03-14 18:23:46,665 [INFO] asyncio: Getting recommendation
+2024-03-14 18:23:46,722 [INFO] aiohttp.access: ::1 [14/Mar/2024:18:23:46 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1596 "-" "python-requests/2.31.0"
+2024-03-14 19:13:20,947 [INFO] asyncio: Getting recommendation
+2024-03-14 19:13:21,010 [INFO] aiohttp.access: ::1 [14/Mar/2024:19:13:20 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1596 "-" "python-requests/2.31.0"
+2024-03-14 19:14:04,393 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 19:14:35,513 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 19:14:35,789 [INFO] asyncio: Getting recommendation
+2024-03-14 19:14:35,866 [INFO] aiohttp.access: ::1 [14/Mar/2024:19:14:35 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1596 "-" "python-requests/2.31.0"
+2024-03-14 19:14:35,979 [INFO] asyncio: Getting recommendation
+2024-03-14 19:14:36,033 [INFO] aiohttp.access: ::1 [14/Mar/2024:19:14:35 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1596 "-" "python-requests/2.31.0"
+2024-03-14 19:14:36,163 [INFO] asyncio: Getting recommendation
+2024-03-14 19:14:36,214 [INFO] aiohttp.access: ::1 [14/Mar/2024:19:14:36 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1596 "-" "python-requests/2.31.0"
+2024-03-14 19:54:18,263 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 19:54:21,074 [INFO] asyncio: Getting recommendation
+2024-03-14 19:54:21,135 [INFO] aiohttp.access: ::1 [14/Mar/2024:19:54:21 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 19:54:50,891 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 19:54:52,026 [INFO] asyncio: Getting recommendation
+2024-03-14 19:54:52,084 [INFO] aiohttp.access: ::1 [14/Mar/2024:19:54:52 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:18:16,624 [INFO] asyncio: Creating a new report
+2024-03-14 20:18:16,643 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:18:16 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-14 20:18:19,311 [INFO] asyncio: Getting recommendation
+2024-03-14 20:18:19,386 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:18:19 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:20:56,476 [INFO] asyncio: Getting recommendation
+2024-03-14 20:20:56,530 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:20:56 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:22:19,718 [INFO] asyncio: Getting recommendation
+2024-03-14 20:22:19,783 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:22:19 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:24:57,362 [INFO] asyncio: Getting recommendation
+2024-03-14 20:24:57,428 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:24:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:26:05,057 [INFO] asyncio: Getting recommendation
+2024-03-14 20:26:05,126 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:26:05 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:28:04,480 [INFO] asyncio: Getting recommendation
+2024-03-14 20:28:04,547 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:28:04 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"
+2024-03-14 20:29:49,122 [DEBUG] asyncio: Using selector: KqueueSelector
+2024-03-14 20:30:33,713 [INFO] asyncio: Getting recommendation
+2024-03-14 20:30:33,772 [INFO] aiohttp.access: ::1 [14/Mar/2024:20:30:33 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 1673 "-" "python-requests/2.31.0"

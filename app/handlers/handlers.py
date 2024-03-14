@@ -1,6 +1,6 @@
 import traceback
 from asyncio.log import logger
-
+import streamlit as st
 from aiohttp import web
 from aiohttp_swagger import swagger_path
 
@@ -85,8 +85,14 @@ async def recommendation(request):
     try:
         company_name = request.query.get("company_name")
         records = await fetch_records(company_name)
+        print("AAAAAA")
+        print(records)
         carbon_footprints = process_records(records)
+        print("BBBBBB")
+        print(carbon_footprints)
         response_data = generate_recommendations(carbon_footprints)
+        print("CCCCCC")
+        print(response_data)
         return web.json_response({"data": response_data})
     except Exception as e:
         logger.error(f"An unexpected error occurred: {str(e)}")

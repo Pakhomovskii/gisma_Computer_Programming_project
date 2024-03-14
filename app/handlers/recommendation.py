@@ -32,7 +32,10 @@ def process_records(records):
                     )
                     for key, value in item.items()
                 }
-                carbon_footprints[record_name] = float(data["carbon_footprint"])
+                if "carbon_footprint" in data:  # Check if the key exists
+                    carbon_footprints[record_name] = float(data["carbon_footprint"])
+                else:
+                    logger.warning(f"Item in {record_name} is missing 'carbon_footprint' field: {item}")  # Log a warning
     return carbon_footprints
 
 
@@ -76,6 +79,10 @@ def generate_recommendations(carbon_footprints):
             "carbon_footprint": highest_sectors_formatted,
             "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change/emissions-monitoring-reporting_en",
             "recommendation": combined_recommendation_text,
+            "business_travell" : carbon_footprints.get("business_travell"),
+            "energy_usage": carbon_footprints.get("energy_usage"),
+            "waste_sector": carbon_footprints.get("waste_sector"),
+
         }
     else:
         response_data = {
