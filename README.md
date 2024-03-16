@@ -4,7 +4,9 @@ This project is a pivotal component of the **M602A Computer Programming (WS0124)
 
 ### API Documentation
 
-Explore my simple [API Documentation](http://64.226.89.177/api/doc#/) to get started with integrating your applications or conducting assessments.
+Explore my simple [API Documentation](http://64.226.89.177/api/doc#/) to get started with integrating your applications or conducting assessments. 
+Also, I have a simple streamlit [application](https://ui-co2-sruhci6zpqfzajsimqkbpg.streamlit.app) for this project.
+
 
 ### Project Overview
 

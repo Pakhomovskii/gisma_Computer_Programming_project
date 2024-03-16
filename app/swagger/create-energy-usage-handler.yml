@@ -2,7 +2,7 @@ tags:
 - Energy Management
 summary: Create or update Energy Management data
 description: >
-        This function is triggered upon receiving an HTTP request containing JSON data about a user's energy consumption. The required data includes the report's unique identifier (report_uuid), average monthly electricity bill (average_monthly_bill), average monthly natural gas bill (average_natural_gas_bill), and monthly fuel bill (monthly_fuel_bill). This endpoint allows for the creation or updating the report
+        This function is triggered upon receiving an HTTP request containing JSON data about a user's energy consumption. The required data includes the report's unique identifier (report_uuid), average monthly electricity bill (average_monthly_bill) in euro, average monthly natural gas bill (average_natural_gas_bill) in euro, and monthly fuel bill (monthly_fuel_bill) in euro. This endpoint allows for the creation or updating the report
 parameters:
 - in: body
   name: body
