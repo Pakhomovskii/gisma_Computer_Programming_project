@@ -2,7 +2,7 @@ tags:
 - Business Travel Management
 summary: Create or update Business Travel data
 description: >
-        This function is activated upon receiving an HTTP request with JSON data detailing a user's business travel habits. The essential data includes the report's unique identifier (`report_uuid`), the total kilometers traveled per year for business purposes (`kilometers_per_year`), and the vehicle's average efficiency in liters per 100 kilometers (`average_efficiency_per_100km`).
+        This function is activated upon receiving an HTTP request with JSON data detailing a user's business travel habits. The essential data includes the report's unique identifier (`report_uuid`), the total kilometers traveled per year for business purposes (`kilometers_per_year`) in km, and the vehicle's average efficiency in liters per 100 kilometers (`average_efficiency_per_100km`) in L.
 parameters:
 - in: body
   name: body

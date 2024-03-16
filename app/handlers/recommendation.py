@@ -35,12 +35,13 @@ def process_records(records):
     return carbon_footprints
 
 
+
 # Function to read recommendation text for a given sector
 def read_recommendation_text(sector):
     recommendation_files = {
-        "business_travel": "/path/to/business_travel_recommendation.txt",
-        "energy_usage": "/path/to/energy_usage_recommendation.txt",
-        "waste_sector": "/path/to/waste_sector_recommendation.txt",
+        "business_travel": "./templates/recommendation_business.txt",
+        "energy_usage": "./templates/recommendation_energy_usage.txt",
+        "waste_sector": "./templates/recommendation_waste.txt",
     }
     file_path = recommendation_files.get(sector)
     try:
@@ -70,16 +71,20 @@ def generate_recommendations(carbon_footprints):
         ]
         highest_sectors_formatted = ", ".join(highest_sectors)
         combined_recommendation_text = (
-            f"Total carbon footprint: {total_carbon_footprint}\n"
+            f"Total carbon footprint: {round(total_carbon_footprint,2)} kg \n"
         )
         for sector in highest_sectors:
             recommendation_text = read_recommendation_text(sector)
-            combined_recommendation_text += f"Recommendations for {sector.replace('_', ' ').title()}:\n{recommendation_text}\n\n"
+            combined_recommendation_text += f"Recommendations for the max footprint sector - {sector.replace('_', ' ').title()}:\n{recommendation_text}\n\n"
+
         response_data = {
             "highest_carbon_footprint_sector": highest_sector,
             "carbon_footprint": highest_sectors_formatted,
             "EU_law": "https://climate.ec.europa.eu/eu-action/international-action-climate-change/emissions-monitoring-reporting_en",
             "recommendation": combined_recommendation_text,
+            "business_travel": carbon_footprints.get("business_travel"),
+            "energy_usage": carbon_footprints.get("energy_usage"),
+            "waste_sector": carbon_footprints.get("waste_sector"),
         }
     else:
         response_data = {

@@ -27,16 +27,16 @@ async def init_app():
     app = web.Application()
 
     # Define my routes
-    app.router.add_post("/register", create_report_handler)
+    app.router.add_get("/register", create_report_handler)
     app.router.add_post("/create-energy-usage", create_energy_usage_handler)
     app.router.add_post("/create-waste-sector", create_waste_sector_handler)
     app.router.add_post("/create-business-travel", create_business_travel_handler)
 
-    app.router.add_post("/get-waste-sector", get_waste_sector_handler)
-    app.router.add_post("/get-energy-usage", get_energy_usage_handler)
-    app.router.add_post("/get-business-travel", get_business_travel_handler)
+    app.router.add_get("/get-waste-sector", get_waste_sector_handler)
+    app.router.add_get("/get-energy-usage", get_energy_usage_handler)
+    app.router.add_get("/get-business-travel", get_business_travel_handler)
 
-    app.router.add_post("/give-recommendation", recommendation)
+    app.router.add_get("/give-recommendation", recommendation)
 
     # Setup Swagger documentation
     aiohttp_swagger.setup_swagger(

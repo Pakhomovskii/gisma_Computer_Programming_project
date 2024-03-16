@@ -971,3 +971,490 @@ aiohttp.http_exceptions.BadHttpMessage: 400, message:
 2024-02-17 17:39:53,293 INFO:Get recommendation
 2024-02-17 17:39:53,363 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
 2024-02-17 17:39:53,364 INFO:::1 [17/Feb/2024:17:39:53 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 523 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+2024-03-14 20:38:42,707 DEBUG:Using selector: KqueueSelector
+2024-03-14 20:38:54,852 INFO:127.0.0.1 [14/Mar/2024:20:38:54 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:38:55,083 INFO:127.0.0.1 [14/Mar/2024:20:38:55 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14689 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:39:05,913 INFO:Create a new report
+2024-03-14 20:39:05,930 INFO:127.0.0.1 [14/Mar/2024:20:39:05 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:39:15,845 INFO:Get recommendation
+2024-03-14 20:39:15,898 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-03-14 20:39:15,898 INFO:127.0.0.1 [14/Mar/2024:20:39:15 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 525 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:41:18,586 DEBUG:Using selector: KqueueSelector
+2024-03-14 20:41:25,844 INFO:Get recommendation
+2024-03-14 20:41:25,902 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-03-14 20:41:25,902 ERROR:An unexpected error occurred: 'float' object has no attribute 'get'
+2024-03-14 20:41:25,906 INFO:127.0.0.1 [14/Mar/2024:20:41:25 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 500 227 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:44:00,935 DEBUG:Using selector: KqueueSelector
+2024-03-14 20:44:03,517 INFO:Get recommendation
+2024-03-14 20:44:03,572 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-03-14 20:44:03,573 INFO:127.0.0.1 [14/Mar/2024:20:44:03 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 525 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:44:26,001 DEBUG:Using selector: KqueueSelector
+2024-03-14 20:44:29,023 INFO:Get recommendation
+2024-03-14 20:44:29,077 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-03-14 20:44:29,077 INFO:127.0.0.1 [14/Mar/2024:20:44:29 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 525 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:45:47,381 DEBUG:Using selector: KqueueSelector
+2024-03-14 20:45:50,108 INFO:Get recommendation
+2024-03-14 20:45:50,165 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-03-14 20:45:50,165 INFO:127.0.0.1 [14/Mar/2024:20:45:50 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 600 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:54:03,166 INFO:Create a new report
+2024-03-14 20:54:03,189 INFO:127.0.0.1 [14/Mar/2024:20:54:03 +0100] "POST /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:54:35,232 INFO:Handling a request to create business travel data
+2024-03-14 20:54:35,250 INFO:127.0.0.1 [14/Mar/2024:20:54:35 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:54:41,714 INFO:Get recommendation
+2024-03-14 20:54:41,771 ERROR:Recommendation file not found for energy_usage: [Errno 2] No such file or directory: '/path/to/energy_usage_recommendation.txt'
+2024-03-14 20:54:41,771 INFO:127.0.0.1 [14/Mar/2024:20:54:41 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 613 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:55:22,665 INFO:Handling a request to create waste sector data
+2024-03-14 20:55:22,703 INFO:127.0.0.1 [14/Mar/2024:20:55:22 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 20:55:28,315 INFO:Get recommendation
+2024-03-14 20:55:28,368 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-14 20:55:28,368 INFO:127.0.0.1 [14/Mar/2024:20:55:28 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-14 21:00:09,396 INFO:Get recommendation
+2024-03-14 21:00:09,461 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-14 21:00:09,462 INFO:::1 [14/Mar/2024:21:00:09 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-14 21:00:18,269 INFO:Get EnergyUsageModel info
+2024-03-14 21:00:18,284 INFO:::1 [14/Mar/2024:21:00:18 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-14 21:00:20,893 INFO:Get recommendation
+2024-03-14 21:00:20,963 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-14 21:00:20,963 INFO:::1 [14/Mar/2024:21:00:20 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-14 21:03:54,847 INFO:Get recommendation
+2024-03-14 21:03:54,928 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-14 21:03:54,929 INFO:::1 [14/Mar/2024:21:03:54 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-14 21:18:18,845 INFO:Get EnergyUsageModel info
+2024-03-14 21:18:18,863 INFO:::1 [14/Mar/2024:21:18:18 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-14 21:20:07,540 INFO:Get EnergyUsageModel info
+2024-03-14 21:20:07,559 INFO:::1 [14/Mar/2024:21:20:07 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-14 21:20:59,430 INFO:Get EnergyUsageModel info
+2024-03-14 21:20:59,456 INFO:::1 [14/Mar/2024:21:20:59 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-14 21:53:33,903 INFO:Get EnergyUsageModel info
+2024-03-14 21:53:33,965 INFO:::1 [14/Mar/2024:21:53:33 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-14 21:53:48,407 INFO:Get EnergyUsageModel info
+2024-03-14 21:53:48,421 INFO:::1 [14/Mar/2024:21:53:48 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-14 21:54:16,614 INFO:Get EnergyUsageModel info
+2024-03-14 21:54:16,629 INFO:::1 [14/Mar/2024:21:54:16 +0100] "POST /get-energy-usage?company_name=%D0%B0 HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 07:19:28,366 INFO:Get EnergyUsageModel info
+2024-03-15 07:19:28,397 INFO:::1 [15/Mar/2024:07:19:28 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-15 13:47:51,313 INFO:Get EnergyUsageModel info
+2024-03-15 13:47:51,364 INFO:::1 [15/Mar/2024:13:47:51 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 882 "-" "python-requests/2.31.0"
+2024-03-15 14:04:45,120 INFO:Get recommendation
+2024-03-15 14:04:45,201 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:04:45,202 INFO:::1 [15/Mar/2024:14:04:45 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:05:25,119 INFO:Get recommendation
+2024-03-15 14:05:25,185 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:05:25,187 INFO:::1 [15/Mar/2024:14:05:25 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:19:32,124 DEBUG:Using selector: KqueueSelector
+2024-03-15 14:20:15,237 INFO:Get recommendation
+2024-03-15 14:20:15,342 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:20:15,343 INFO:::1 [15/Mar/2024:14:20:15 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:22:33,018 DEBUG:Using selector: KqueueSelector
+2024-03-15 14:22:35,004 DEBUG:Using selector: KqueueSelector
+2024-03-15 14:23:17,840 INFO:Get recommendation
+2024-03-15 14:23:17,928 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:23:17,932 INFO:::1 [15/Mar/2024:14:23:17 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:37:15,374 INFO:Get recommendation
+2024-03-15 14:37:15,470 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:37:15,471 INFO:::1 [15/Mar/2024:14:37:15 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:39:19,794 INFO:Get recommendation
+2024-03-15 14:39:19,886 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:39:19,887 INFO:::1 [15/Mar/2024:14:39:19 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:41:37,733 INFO:Get recommendation
+2024-03-15 14:41:37,820 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:41:37,821 INFO:::1 [15/Mar/2024:14:41:37 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:45:24,517 INFO:Get recommendation
+2024-03-15 14:45:24,586 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:45:24,586 INFO:::1 [15/Mar/2024:14:45:24 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:48:09,450 INFO:Get recommendation
+2024-03-15 14:48:09,525 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:48:09,525 INFO:::1 [15/Mar/2024:14:48:09 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 14:49:14,206 INFO:Get recommendation
+2024-03-15 14:49:14,290 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 14:49:14,291 INFO:::1 [15/Mar/2024:14:49:14 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "-" "python-requests/2.31.0"
+2024-03-15 15:58:37,552 INFO:Get recommendation
+2024-03-15 15:58:37,670 INFO:::1 [15/Mar/2024:15:58:37 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 16:00:57,150 INFO:Get recommendation
+2024-03-15 16:00:57,234 INFO:::1 [15/Mar/2024:16:00:57 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:11:55,414 DEBUG:Using selector: KqueueSelector
+2024-03-15 18:13:01,638 INFO:Get recommendation
+2024-03-15 18:13:01,988 INFO:::1 [15/Mar/2024:18:13:01 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:17:39,695 DEBUG:Using selector: KqueueSelector
+2024-03-15 18:20:07,799 INFO:Get recommendation
+2024-03-15 18:20:07,926 INFO:::1 [15/Mar/2024:18:20:07 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:20:34,680 INFO:Get recommendation
+2024-03-15 18:20:34,753 INFO:::1 [15/Mar/2024:18:20:34 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:22:11,478 INFO:Get recommendation
+2024-03-15 18:22:11,542 INFO:::1 [15/Mar/2024:18:22:11 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:25:40,941 INFO:Get recommendation
+2024-03-15 18:25:40,996 INFO:::1 [15/Mar/2024:18:25:40 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:29:52,645 INFO:Get recommendation
+2024-03-15 18:29:52,723 INFO:::1 [15/Mar/2024:18:29:52 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:33:54,921 INFO:Get recommendation
+2024-03-15 18:33:54,979 INFO:::1 [15/Mar/2024:18:33:54 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:33:57,226 INFO:Get recommendation
+2024-03-15 18:33:57,282 INFO:::1 [15/Mar/2024:18:33:57 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:35:09,259 INFO:127.0.0.1 [15/Mar/2024:18:35:09 +0100] "GET / HTTP/1.1" 404 173 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:25,641 INFO:127.0.0.1 [15/Mar/2024:18:35:25 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:25,723 INFO:127.0.0.1 [15/Mar/2024:18:35:25 +0100] "GET /api/doc/swagger_static/images/logo_small.png HTTP/1.1" 200 0 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:25,724 INFO:127.0.0.1 [15/Mar/2024:18:35:25 +0100] "GET /api/doc/swagger_static/css/print.css HTTP/1.1" 200 0 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:25,841 INFO:127.0.0.1 [15/Mar/2024:18:35:25 +0100] "GET /api/doc/swagger_static/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 0 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:25,842 INFO:127.0.0.1 [15/Mar/2024:18:35:25 +0100] "GET /api/doc/swagger_static/fonts/DroidSans.ttf HTTP/1.1" 200 0 "http://localhost:8080/api/doc/swagger_static/css/typography.css" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:25,852 INFO:127.0.0.1 [15/Mar/2024:18:35:25 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 14689 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:35:32,933 INFO:Get recommendation
+2024-03-15 18:35:32,997 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:35:32,998 INFO:127.0.0.1 [15/Mar/2024:18:35:32 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 609 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:36:24,432 INFO:Get recommendation
+2024-03-15 18:36:24,490 INFO:::1 [15/Mar/2024:18:36:24 +0100] "POST /give-recommendation HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-15 18:37:28,913 INFO:Create a new report
+2024-03-15 18:37:28,948 INFO:::1 [15/Mar/2024:18:37:28 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 18:37:35,718 INFO:Get EnergyUsageModel info
+2024-03-15 18:37:35,732 INFO:::1 [15/Mar/2024:18:37:35 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 18:37:57,935 INFO:Get EnergyUsageModel info
+2024-03-15 18:37:57,952 INFO:::1 [15/Mar/2024:18:37:57 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 18:39:05,664 INFO:Create a new report
+2024-03-15 18:39:05,682 INFO:::1 [15/Mar/2024:18:39:05 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 18:39:21,103 INFO:Handling a request to create or update energy usage
+2024-03-15 18:39:21,130 INFO:::1 [15/Mar/2024:18:39:21 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-15 18:39:22,820 INFO:Get EnergyUsageModel info
+2024-03-15 18:39:22,833 INFO:::1 [15/Mar/2024:18:39:22 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 18:40:40,102 INFO:Get EnergyUsageModel info
+2024-03-15 18:40:40,118 INFO:::1 [15/Mar/2024:18:40:40 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 18:41:03,249 INFO:Get EnergyUsageModel info
+2024-03-15 18:41:03,264 INFO:::1 [15/Mar/2024:18:41:03 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 18:53:41,427 INFO:::1 [15/Mar/2024:18:53:41 +0100] "GET /get-energy-usage HTTP/1.1" 405 204 "-" "python-requests/2.31.0"
+2024-03-15 18:57:25,252 DEBUG:Using selector: KqueueSelector
+2024-03-15 18:57:45,061 INFO:::1 [15/Mar/2024:18:57:45 +0100] "GET /get-energy-usage HTTP/1.1" 405 204 "-" "python-requests/2.31.0"
+2024-03-15 18:57:53,294 INFO:Get recommendation
+2024-03-15 18:57:53,354 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:53,355 INFO:127.0.0.1 [15/Mar/2024:18:57:53 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:56,653 INFO:Get recommendation
+2024-03-15 18:57:56,708 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:56,709 INFO:127.0.0.1 [15/Mar/2024:18:57:56 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:57,159 INFO:Get recommendation
+2024-03-15 18:57:57,211 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:57,212 INFO:127.0.0.1 [15/Mar/2024:18:57:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:57,338 INFO:Get recommendation
+2024-03-15 18:57:57,390 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:57,390 INFO:127.0.0.1 [15/Mar/2024:18:57:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:57,533 INFO:Get recommendation
+2024-03-15 18:57:57,585 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:57,586 INFO:127.0.0.1 [15/Mar/2024:18:57:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:57,685 INFO:Get recommendation
+2024-03-15 18:57:57,737 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:57,738 INFO:127.0.0.1 [15/Mar/2024:18:57:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:57,855 INFO:Get recommendation
+2024-03-15 18:57:57,906 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:57,907 INFO:127.0.0.1 [15/Mar/2024:18:57:57 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:58,029 INFO:Get recommendation
+2024-03-15 18:57:58,080 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:58,081 INFO:127.0.0.1 [15/Mar/2024:18:57:58 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:58,191 INFO:Get recommendation
+2024-03-15 18:57:58,243 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:58,243 INFO:127.0.0.1 [15/Mar/2024:18:57:58 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:58,356 INFO:Get recommendation
+2024-03-15 18:57:58,408 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:58,409 INFO:127.0.0.1 [15/Mar/2024:18:57:58 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:58,517 INFO:Get recommendation
+2024-03-15 18:57:58,569 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:58,569 INFO:127.0.0.1 [15/Mar/2024:18:57:58 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:58,692 INFO:Get recommendation
+2024-03-15 18:57:58,743 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:58,744 INFO:127.0.0.1 [15/Mar/2024:18:57:58 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:58,864 INFO:Get recommendation
+2024-03-15 18:57:58,916 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:58,916 INFO:127.0.0.1 [15/Mar/2024:18:57:58 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:59,066 INFO:Get recommendation
+2024-03-15 18:57:59,177 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:59,178 INFO:127.0.0.1 [15/Mar/2024:18:57:59 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:59,188 INFO:Get recommendation
+2024-03-15 18:57:59,241 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:59,241 INFO:127.0.0.1 [15/Mar/2024:18:57:59 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:59,346 INFO:Get recommendation
+2024-03-15 18:57:59,400 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:59,400 INFO:127.0.0.1 [15/Mar/2024:18:57:59 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:57:59,493 INFO:Get recommendation
+2024-03-15 18:57:59,547 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:57:59,547 INFO:127.0.0.1 [15/Mar/2024:18:57:59 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 18:58:05,613 INFO:Get recommendation
+2024-03-15 18:58:05,665 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 18:58:05,665 INFO:127.0.0.1 [15/Mar/2024:18:58:05 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:01:30,907 INFO:::1 [15/Mar/2024:19:01:30 +0100] "GET /get-energy-usage HTTP/1.1" 405 204 "-" "python-requests/2.31.0"
+2024-03-15 19:04:25,957 INFO:Create a new report
+2024-03-15 19:04:25,975 INFO:::1 [15/Mar/2024:19:04:25 +0100] "POST /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 19:04:42,476 INFO:::1 [15/Mar/2024:19:04:42 +0100] "GET /get-energy-usage HTTP/1.1" 405 204 "-" "python-requests/2.31.0"
+2024-03-15 19:05:33,476 INFO:::1 [15/Mar/2024:19:05:33 +0100] "GET /get-energy-usage HTTP/1.1" 405 204 "-" "python-requests/2.31.0"
+2024-03-15 19:08:59,149 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:09:05,801 INFO:Get recommendation
+2024-03-15 19:09:05,801 ERROR:An unexpected error occurred: 'multidict._multidict.MultiDictProxy' object has no attribute 'post'
+2024-03-15 19:09:05,802 INFO:127.0.0.1 [15/Mar/2024:19:09:05 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 500 258 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:09:46,542 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:10:12,082 INFO:Get EnergyUsageModel info
+2024-03-15 19:10:12,103 INFO:::1 [15/Mar/2024:19:10:12 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 19:11:02,242 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:11:03,426 INFO:Get EnergyUsageModel info
+2024-03-15 19:11:03,442 INFO:::1 [15/Mar/2024:19:11:03 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 19:11:26,617 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:11:27,101 INFO:Get EnergyUsageModel info
+2024-03-15 19:11:27,117 INFO:::1 [15/Mar/2024:19:11:27 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 19:12:40,942 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:12:52,204 INFO:Get EnergyUsageModel info
+2024-03-15 19:12:52,229 INFO:::1 [15/Mar/2024:19:12:52 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 19:16:18,312 INFO:Get EnergyUsageModel info
+2024-03-15 19:16:18,326 INFO:127.0.0.1 [15/Mar/2024:19:16:18 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:18:24,619 INFO:Get EnergyUsageModel info
+2024-03-15 19:18:24,636 INFO:::1 [15/Mar/2024:19:18:24 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:18:34,708 INFO:::1 [15/Mar/2024:19:18:34 +0100] "GET /get-energy-usage HTTP/1.1" 405 204 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:18:38,569 INFO:Get EnergyUsageModel info
+2024-03-15 19:18:38,582 INFO:::1 [15/Mar/2024:19:18:38 +0100] "POST /get-energy-usage HTTP/1.1" 404 173 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:21:34,317 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:21:35,854 INFO:Get EnergyUsageModel info
+2024-03-15 19:21:35,870 INFO:127.0.0.1 [15/Mar/2024:19:21:35 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:23:33,564 INFO:Get EnergyUsageModel info
+2024-03-15 19:23:33,590 INFO:::1 [15/Mar/2024:19:23:33 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:24:05,622 INFO:Get EnergyUsageModel info
+2024-03-15 19:24:05,776 INFO:::1 [15/Mar/2024:19:24:05 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "python-requests/2.31.0"
+2024-03-15 19:27:00,970 INFO:::1 [15/Mar/2024:19:27:00 +0100] "POST /get-recomendation?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 19:29:26,826 INFO:::1 [15/Mar/2024:19:29:26 +0100] "POST /get-recomendation?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 19:30:29,445 INFO:Get recommendation
+2024-03-15 19:30:29,530 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 19:30:29,530 INFO:::1 [15/Mar/2024:19:30:29 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "-" "python-requests/2.31.0"
+2024-03-15 19:31:14,771 INFO:Get recommendation
+2024-03-15 19:31:15,566 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 19:31:15,566 INFO:127.0.0.1 [15/Mar/2024:19:31:14 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:34:52,143 INFO:::1 [15/Mar/2024:19:34:52 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 405 204 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:34:55,932 INFO:Get EnergyUsageModel info
+2024-03-15 19:34:55,951 INFO:::1 [15/Mar/2024:19:34:55 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:35:37,712 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:35:47,709 INFO:::1 [15/Mar/2024:19:35:47 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 405 208 "-" "python-requests/2.31.0"
+2024-03-15 19:35:47,893 INFO:::1 [15/Mar/2024:19:35:47 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 405 208 "-" "python-requests/2.31.0"
+2024-03-15 19:35:48,057 INFO:::1 [15/Mar/2024:19:35:48 +0100] "POST /get-energy-usage?company_name=BMW HTTP/1.1" 405 208 "-" "python-requests/2.31.0"
+2024-03-15 19:36:23,317 INFO:Get EnergyUsageModel info
+2024-03-15 19:36:23,338 INFO:::1 [15/Mar/2024:19:36:23 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "python-requests/2.31.0"
+2024-03-15 19:36:49,256 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:37:00,934 INFO:127.0.0.1 [15/Mar/2024:19:37:00 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:37:01,162 INFO:127.0.0.1 [15/Mar/2024:19:37:01 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 20819 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:37:20,078 INFO:Get EnergyUsageModel info
+2024-03-15 19:37:20,094 INFO:127.0.0.1 [15/Mar/2024:19:37:20 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:38:11,040 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:38:15,375 INFO:127.0.0.1 [15/Mar/2024:19:38:15 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:38:15,472 INFO:127.0.0.1 [15/Mar/2024:19:38:15 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 20819 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:41:21,714 INFO:Get EnergyUsageModel info
+2024-03-15 19:41:21,732 INFO:::1 [15/Mar/2024:19:41:21 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:41:25,774 INFO:Get EnergyUsageModel info
+2024-03-15 19:41:25,840 INFO:::1 [15/Mar/2024:19:41:25 +0100] "HEAD /get-energy-usage?company_name=BMW HTTP/1.1" 200 159 "-" "PostmanRuntime/7.36.3"
+2024-03-15 19:45:23,283 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:45:35,122 INFO:127.0.0.1 [15/Mar/2024:19:45:35 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:45:35,223 INFO:127.0.0.1 [15/Mar/2024:19:45:35 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 21510 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:45:38,974 INFO:Create a new report
+2024-03-15 19:45:38,999 INFO:127.0.0.1 [15/Mar/2024:19:45:38 +0100] "GET /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:46:40,361 INFO:Get EnergyUsageModel info
+2024-03-15 19:46:40,391 INFO:::1 [15/Mar/2024:19:46:40 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "python-requests/2.31.0"
+2024-03-15 19:46:44,975 INFO:::1 [15/Mar/2024:19:46:44 +0100] "POST /give-recommendation?company_name=BMW HTTP/1.1" 405 208 "-" "python-requests/2.31.0"
+2024-03-15 19:47:12,725 INFO:Get recommendation
+2024-03-15 19:47:12,797 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 19:47:12,797 INFO:::1 [15/Mar/2024:19:47:12 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "-" "python-requests/2.31.0"
+2024-03-15 19:48:27,569 INFO:Get recommendation
+2024-03-15 19:48:27,626 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 19:48:27,626 INFO:127.0.0.1 [15/Mar/2024:19:48:27 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:55:26,464 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:55:32,445 INFO:Get recommendation
+2024-03-15 19:55:32,497 ERROR:An unexpected error occurred: name 'recommendation_text' is not defined
+2024-03-15 19:55:32,503 INFO:127.0.0.1 [15/Mar/2024:19:55:32 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 500 231 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:56:06,207 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:57:01,018 INFO:Get recommendation
+2024-03-15 19:57:01,069 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/path/to/waste_sector_recommendation.txt'
+2024-03-15 19:57:01,069 INFO:127.0.0.1 [15/Mar/2024:19:57:01 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:58:17,039 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:58:20,481 INFO:Get recommendation
+2024-03-15 19:58:20,532 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/templates/waste_sector_recommendation.txt'
+2024-03-15 19:58:20,533 INFO:127.0.0.1 [15/Mar/2024:19:58:20 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:58:21,374 INFO:Get recommendation
+2024-03-15 19:58:21,421 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/templates/waste_sector_recommendation.txt'
+2024-03-15 19:58:21,421 INFO:127.0.0.1 [15/Mar/2024:19:58:21 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:58:21,829 INFO:Get recommendation
+2024-03-15 19:58:21,878 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/templates/waste_sector_recommendation.txt'
+2024-03-15 19:58:21,878 INFO:127.0.0.1 [15/Mar/2024:19:58:21 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:58:21,999 INFO:Get recommendation
+2024-03-15 19:58:22,047 ERROR:Recommendation file not found for waste_sector: [Errno 2] No such file or directory: '/templates/waste_sector_recommendation.txt'
+2024-03-15 19:58:22,047 INFO:127.0.0.1 [15/Mar/2024:19:58:21 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 614 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:59:42,562 DEBUG:Using selector: KqueueSelector
+2024-03-15 19:59:45,432 INFO:Get recommendation
+2024-03-15 19:59:45,486 INFO:127.0.0.1 [15/Mar/2024:19:59:45 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1513 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:59:46,499 INFO:Get recommendation
+2024-03-15 19:59:46,553 INFO:127.0.0.1 [15/Mar/2024:19:59:46 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1513 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:59:56,219 INFO:127.0.0.1 [15/Mar/2024:19:59:56 +0100] "GET /api/doc HTTP/1.1" 200 5000 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 19:59:56,320 INFO:127.0.0.1 [15/Mar/2024:19:59:56 +0100] "GET /api/doc/swagger.json HTTP/1.1" 200 21510 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:00:05,900 INFO:Get recommendation
+2024-03-15 20:00:05,957 INFO:127.0.0.1 [15/Mar/2024:20:00:05 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1513 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:00:23,753 INFO:Get recommendation
+2024-03-15 20:00:23,805 INFO:::1 [15/Mar/2024:20:00:23 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1513 "-" "python-requests/2.31.0"
+2024-03-15 20:01:53,829 DEBUG:Using selector: KqueueSelector
+2024-03-15 20:02:01,035 INFO:Get recommendation
+2024-03-15 20:02:01,090 INFO:127.0.0.1 [15/Mar/2024:20:02:01 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1725 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:02:24,413 DEBUG:Using selector: KqueueSelector
+2024-03-15 20:02:28,900 INFO:Get recommendation
+2024-03-15 20:02:28,952 INFO:127.0.0.1 [15/Mar/2024:20:02:28 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1733 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:03:08,943 DEBUG:Using selector: KqueueSelector
+2024-03-15 20:03:11,993 INFO:Get recommendation
+2024-03-15 20:03:12,049 INFO:127.0.0.1 [15/Mar/2024:20:03:11 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:03:21,379 INFO:Get recommendation
+2024-03-15 20:03:21,436 INFO:::1 [15/Mar/2024:20:03:21 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "-" "python-requests/2.31.0"
+2024-03-15 20:07:06,239 INFO:Get recommendation
+2024-03-15 20:07:06,302 INFO:::1 [15/Mar/2024:20:07:06 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "-" "python-requests/2.31.0"
+2024-03-15 20:07:52,466 INFO:Get recommendation
+2024-03-15 20:07:52,528 INFO:::1 [15/Mar/2024:20:07:52 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "-" "python-requests/2.31.0"
+2024-03-15 20:10:22,961 INFO:Get recommendation
+2024-03-15 20:10:23,011 INFO:127.0.0.1 [15/Mar/2024:20:10:22 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:10:23,799 INFO:Get recommendation
+2024-03-15 20:10:23,848 INFO:127.0.0.1 [15/Mar/2024:20:10:23 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:10:23,991 INFO:Get recommendation
+2024-03-15 20:10:24,040 INFO:127.0.0.1 [15/Mar/2024:20:10:23 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:10:24,174 INFO:Get recommendation
+2024-03-15 20:10:24,223 INFO:127.0.0.1 [15/Mar/2024:20:10:24 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1717 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:12:13,613 DEBUG:Using selector: KqueueSelector
+2024-03-15 20:12:17,956 INFO:Get recommendation
+2024-03-15 20:12:18,028 INFO:::1 [15/Mar/2024:20:12:17 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1725 "-" "python-requests/2.31.0"
+2024-03-15 20:12:47,516 DEBUG:Using selector: KqueueSelector
+2024-03-15 20:12:48,555 INFO:Get recommendation
+2024-03-15 20:12:48,660 INFO:::1 [15/Mar/2024:20:12:48 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1706 "-" "python-requests/2.31.0"
+2024-03-15 20:13:11,245 INFO:Get recommendation
+2024-03-15 20:13:11,319 INFO:::1 [15/Mar/2024:20:13:11 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1688 "-" "python-requests/2.31.0"
+2024-03-15 20:15:23,081 DEBUG:Using selector: KqueueSelector
+2024-03-15 20:15:25,535 INFO:Get recommendation
+2024-03-15 20:15:25,626 INFO:::1 [15/Mar/2024:20:15:25 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1452 "-" "python-requests/2.31.0"
+2024-03-15 20:18:37,056 INFO:Get recommendation
+2024-03-15 20:18:37,132 INFO:::1 [15/Mar/2024:20:18:37 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1452 "-" "python-requests/2.31.0"
+2024-03-15 20:21:27,766 INFO:Get recommendation
+2024-03-15 20:21:27,834 INFO:::1 [15/Mar/2024:20:21:27 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1452 "-" "python-requests/2.31.0"
+2024-03-15 20:24:38,725 INFO:Get recommendation
+2024-03-15 20:24:38,800 INFO:::1 [15/Mar/2024:20:24:38 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1452 "-" "python-requests/2.31.0"
+2024-03-15 20:25:06,287 INFO:Get recommendation
+2024-03-15 20:25:06,355 INFO:::1 [15/Mar/2024:20:25:06 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1452 "-" "python-requests/2.31.0"
+2024-03-15 20:53:46,971 INFO:::1 [15/Mar/2024:20:53:46 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:53:57,140 INFO:Create a new report
+2024-03-15 20:53:57,159 INFO:::1 [15/Mar/2024:20:53:57 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 20:55:44,523 INFO:Create a new report
+2024-03-15 20:55:44,544 INFO:::1 [15/Mar/2024:20:55:44 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 20:56:07,309 INFO:::1 [15/Mar/2024:20:56:07 +0100] "POST /create-waste-usage HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:56:57,693 INFO:::1 [15/Mar/2024:20:56:57 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:57:19,580 INFO:Get WasteSectorModel info
+2024-03-15 20:57:19,628 INFO:127.0.0.1 [15/Mar/2024:20:57:19 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 404 173 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:57:35,296 INFO:Create a new report
+2024-03-15 20:57:35,320 INFO:127.0.0.1 [15/Mar/2024:20:57:35 +0100] "GET /register HTTP/1.1" 201 218 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:58:12,085 INFO:Handling a request to create waste sector data
+2024-03-15 20:58:12,119 INFO:127.0.0.1 [15/Mar/2024:20:58:12 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:58:20,566 INFO:Get WasteSectorModel info
+2024-03-15 20:58:20,595 INFO:127.0.0.1 [15/Mar/2024:20:58:20 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 375 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-15 20:58:24,624 INFO:::1 [15/Mar/2024:20:58:24 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:58:25,542 INFO:::1 [15/Mar/2024:20:58:25 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:58:25,708 INFO:::1 [15/Mar/2024:20:58:25 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:58:25,874 INFO:::1 [15/Mar/2024:20:58:25 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 20:58:26,025 INFO:::1 [15/Mar/2024:20:58:26 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 21:04:48,325 INFO:Handling a request to create or update energy usage
+2024-03-15 21:04:48,339 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-15 21:04:48,341 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-15 21:04:48,348 INFO:::1 [15/Mar/2024:21:04:48 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-15 21:04:53,547 INFO:Get EnergyUsageModel info
+2024-03-15 21:04:53,563 INFO:::1 [15/Mar/2024:21:04:53 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "python-requests/2.31.0"
+2024-03-15 21:04:57,724 INFO:::1 [15/Mar/2024:21:04:57 +0100] "GET /get-waste-usage?company_name=BMW HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-15 21:05:01,303 INFO:Get recommendation
+2024-03-15 21:05:01,371 INFO:::1 [15/Mar/2024:21:05:01 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1473 "-" "python-requests/2.31.0"
+2024-03-15 21:17:54,893 INFO:Get WasteSectorModel info
+2024-03-15 21:17:54,930 INFO:::1 [15/Mar/2024:21:17:54 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 375 "-" "python-requests/2.31.0"
+2024-03-15 21:19:35,271 INFO:Get WasteSectorModel info
+2024-03-15 21:19:35,313 INFO:::1 [15/Mar/2024:21:19:35 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 375 "-" "python-requests/2.31.0"
+2024-03-15 21:19:53,661 INFO:Create a new report
+2024-03-15 21:19:53,684 INFO:::1 [15/Mar/2024:21:19:53 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 21:20:13,530 INFO:Handling a request to create waste sector data
+2024-03-15 21:20:13,594 INFO:::1 [15/Mar/2024:21:20:13 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-15 21:20:15,545 INFO:Get WasteSectorModel info
+2024-03-15 21:20:15,576 INFO:::1 [15/Mar/2024:21:20:15 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 581 "-" "python-requests/2.31.0"
+2024-03-15 21:20:24,659 INFO:Get recommendation
+2024-03-15 21:20:24,755 INFO:::1 [15/Mar/2024:21:20:24 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1454 "-" "python-requests/2.31.0"
+2024-03-15 21:59:51,552 INFO:Handling a request to create waste sector data
+2024-03-15 21:59:51,606 INFO:::1 [15/Mar/2024:21:59:51 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-15 21:59:53,975 INFO:Get WasteSectorModel info
+2024-03-15 21:59:54,021 INFO:::1 [15/Mar/2024:21:59:53 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 581 "-" "python-requests/2.31.0"
+2024-03-15 22:11:55,797 INFO:Create a new report
+2024-03-15 22:11:55,817 INFO:::1 [15/Mar/2024:22:11:55 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 22:14:15,790 INFO:Get BusinessTravelModel info
+2024-03-15 22:14:15,810 INFO:::1 [15/Mar/2024:22:14:15 +0100] "GET /get-business-travel?company_name=BMW HTTP/1.1" 200 516 "-" "python-requests/2.31.0"
+2024-03-15 22:14:20,080 INFO:Get recommendation
+2024-03-15 22:14:20,168 INFO:::1 [15/Mar/2024:22:14:20 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1454 "-" "python-requests/2.31.0"
+2024-03-15 22:14:25,507 INFO:Get recommendation
+2024-03-15 22:14:25,582 INFO:::1 [15/Mar/2024:22:14:25 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1454 "-" "python-requests/2.31.0"
+2024-03-15 22:14:41,498 INFO:Get BusinessTravelModel info
+2024-03-15 22:14:41,516 INFO:::1 [15/Mar/2024:22:14:41 +0100] "GET /get-business-travel?company_name=BMW HTTP/1.1" 200 516 "-" "python-requests/2.31.0"
+2024-03-15 22:14:52,758 INFO:Create a new report
+2024-03-15 22:14:52,775 INFO:::1 [15/Mar/2024:22:14:52 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 22:15:16,956 INFO:Get BusinessTravelModel info
+2024-03-15 22:15:16,971 INFO:::1 [15/Mar/2024:22:15:16 +0100] "GET /get-business-travel?company_name=BMW HTTP/1.1" 200 516 "-" "python-requests/2.31.0"
+2024-03-15 22:15:18,175 INFO:Handling a request to create business travel data
+2024-03-15 22:15:18,193 INFO:::1 [15/Mar/2024:22:15:18 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-15 22:53:47,871 INFO:Get recommendation
+2024-03-15 22:53:48,096 INFO:::1 [15/Mar/2024:22:53:47 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-15 23:04:22,290 INFO:Get WasteSectorModel info
+2024-03-15 23:04:22,326 INFO:::1 [15/Mar/2024:23:04:22 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 581 "-" "python-requests/2.31.0"
+2024-03-15 23:05:09,957 INFO:Create a new report
+2024-03-15 23:05:09,974 INFO:::1 [15/Mar/2024:23:05:09 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 23:57:21,637 INFO:Create a new report
+2024-03-15 23:57:21,657 INFO:::1 [15/Mar/2024:23:57:21 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-15 23:58:34,428 INFO:Get recommendation
+2024-03-15 23:58:34,511 INFO:::1 [15/Mar/2024:23:58:34 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-15 23:59:59,565 INFO:Get BusinessTravelModel info
+2024-03-15 23:59:59,582 INFO:::1 [15/Mar/2024:23:59:59 +0100] "GET /get-business-travel?company_name=BMW HTTP/1.1" 200 688 "-" "python-requests/2.31.0"
+2024-03-16 00:01:06,976 INFO:Create a new report
+2024-03-16 00:01:07,005 INFO:::1 [16/Mar/2024:00:01:06 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 00:01:16,163 INFO:Get recommendation
+2024-03-16 00:01:16,243 INFO:::1 [16/Mar/2024:00:01:16 +0100] "GET /give-recommendation?company_name=BM HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-16 00:01:32,360 INFO:Get recommendation
+2024-03-16 00:01:32,442 INFO:::1 [16/Mar/2024:00:01:32 +0100] "GET /give-recommendation?company_name= HTTP/1.1" 200 1402 "-" "python-requests/2.31.0"
+2024-03-16 09:07:14,124 INFO:Create a new report
+2024-03-16 09:07:14,175 INFO:::1 [16/Mar/2024:09:07:14 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:16:44,439 INFO:::1 [16/Mar/2024:09:16:44 +0100] "POST /register HTTP/1.1" 405 208 "-" "python-requests/2.31.0"
+2024-03-16 09:16:58,681 INFO:::1 [16/Mar/2024:09:16:58 +0100] "POST /register HTTP/1.1" 405 208 "-" "python-requests/2.31.0"
+2024-03-16 09:17:54,040 INFO:Create a new report
+2024-03-16 09:17:54,068 INFO:::1 [16/Mar/2024:09:17:54 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:17:57,498 INFO:Create a new report
+2024-03-16 09:17:57,519 INFO:::1 [16/Mar/2024:09:17:57 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:22:27,926 INFO:Create a new report
+2024-03-16 09:22:27,942 INFO:::1 [16/Mar/2024:09:22:27 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:25:58,872 INFO:Handling a request to create or update energy usage
+2024-03-16 09:25:58,895 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-16 09:25:58,898 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-16 09:25:58,902 INFO:::1 [16/Mar/2024:09:25:58 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-16 09:26:57,367 INFO:Create a new report
+2024-03-16 09:26:57,396 INFO:::1 [16/Mar/2024:09:26:57 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:30:18,837 INFO:Get EnergyUsageModel info
+2024-03-16 09:30:18,860 INFO:::1 [16/Mar/2024:09:30:18 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "python-requests/2.31.0"
+2024-03-16 09:40:48,575 INFO:Get recommendation
+2024-03-16 09:40:48,653 INFO:::1 [16/Mar/2024:09:40:48 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-16 09:41:13,104 INFO:Create a new report
+2024-03-16 09:41:13,120 INFO:::1 [16/Mar/2024:09:41:13 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:42:26,399 INFO:Get WasteSectorModel info
+2024-03-16 09:42:26,441 INFO:::1 [16/Mar/2024:09:42:26 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 581 "-" "python-requests/2.31.0"
+2024-03-16 09:42:32,276 INFO:Get EnergyUsageModel info
+2024-03-16 09:42:32,290 INFO:::1 [16/Mar/2024:09:42:32 +0100] "GET /get-energy-usage?company_name=BMW HTTP/1.1" 200 1055 "-" "python-requests/2.31.0"
+2024-03-16 09:45:21,088 INFO:Get recommendation
+2024-03-16 09:45:21,161 INFO:::1 [16/Mar/2024:09:45:21 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-16 09:48:39,831 DEBUG:Using selector: KqueueSelector
+2024-03-16 09:48:48,063 INFO:Get recommendation
+2024-03-16 09:48:48,135 INFO:::1 [16/Mar/2024:09:48:48 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1469 "-" "python-requests/2.31.0"
+2024-03-16 09:49:43,020 INFO:Create a new report
+2024-03-16 09:49:43,037 INFO:::1 [16/Mar/2024:09:49:43 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:51:04,068 INFO:Get recommendation
+2024-03-16 09:51:04,140 INFO:::1 [16/Mar/2024:09:51:04 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1469 "-" "python-requests/2.31.0"
+2024-03-16 09:51:25,911 INFO:Create a new report
+2024-03-16 09:51:25,932 INFO:::1 [16/Mar/2024:09:51:25 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:51:42,296 INFO:Handling a request to create business travel data
+2024-03-16 09:51:42,326 INFO:::1 [16/Mar/2024:09:51:42 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-16 09:51:45,924 INFO:Get BusinessTravelModel info
+2024-03-16 09:51:45,942 INFO:::1 [16/Mar/2024:09:51:45 +0100] "GET /get-business-travel?company_name=BMW HTTP/1.1" 200 861 "-" "python-requests/2.31.0"
+2024-03-16 09:51:50,204 INFO:Get recommendation
+2024-03-16 09:51:50,269 INFO:::1 [16/Mar/2024:09:51:50 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1454 "-" "python-requests/2.31.0"
+2024-03-16 09:55:19,606 INFO:Create a new report
+2024-03-16 09:55:19,624 INFO:::1 [16/Mar/2024:09:55:19 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-16 09:57:19,632 INFO:Get recommendation
+2024-03-16 09:57:19,697 INFO:::1 [16/Mar/2024:09:57:19 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1454 "-" "python-requests/2.31.0"
+2024-03-16 10:18:25,577 DEBUG:Using selector: KqueueSelector
+2024-03-16 10:18:28,760 INFO:Get recommendation
+2024-03-16 10:18:28,823 INFO:127.0.0.1 [16/Mar/2024:10:18:28 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "http://localhost:8080/api/doc" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0"
+2024-03-16 10:22:54,245 INFO:Get WasteSectorModel info
+2024-03-16 10:22:54,281 INFO:::1 [16/Mar/2024:10:22:54 +0100] "GET /get-waste-sector?company_name=BMW HTTP/1.1" 200 581 "-" "python-requests/2.31.0"
