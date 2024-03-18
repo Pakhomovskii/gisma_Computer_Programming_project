@@ -30,7 +30,6 @@ async def init_app():
     app = web.Application()
 
 
-    # Configure CORS (allow requests from your frontend's origin)
     cors = aiohttp_cors.setup(app, defaults={
         "*": aiohttp_cors.ResourceOptions(
             allow_credentials=True,
