@@ -4,13 +4,13 @@ from asyncio.log import logger
 from aiohttp import web
 from aiohttp_swagger import swagger_path
 
-from app.handlers.config_handlers import get_data_handler, create_data_handler
-from app.handlers.recommendation import (
+from handlers.config_handlers import get_data_handler, create_data_handler
+from handlers.recommendation import (
     fetch_records,
     generate_recommendations,
     process_records,
 )
-from app.models.models import (
+from models.models import (
     BusinessTravelModel,
     EnergyUsageModel,
     WasteSectorModel,

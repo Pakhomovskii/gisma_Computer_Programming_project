@@ -2,7 +2,7 @@ import logging
 import aiohttp_swagger
 from aiohttp import web
 
-from app.handlers.handlers import (
+from handlers.handlers import (
     create_report_handler,
     create_waste_sector_handler,
     create_business_travel_handler,
@@ -62,4 +62,4 @@ async def init_app():
 
 
 if __name__ == "__main__":
-    web.run_app(init_app(), host="localhost", port=8080)
+    web.run_app(init_app(), host="64.226.89.177", port=80)

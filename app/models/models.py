@@ -1,8 +1,8 @@
 from enum import Enum
 from asyncio.log import logger
 
-from app.models.base_model import BaseModel
-from app.services.database import create_db_connection
+from models.base_model import BaseModel
+from services.database import create_db_connection
 
 
 # It might be useful for the future of the project to encapsulate logic and make it more readable

@@ -1,0 +1,332 @@
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 4, in <module>
+    import aiohttp_swagger
+ModuleNotFoundError: No module named 'aiohttp_swagger'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 4, in <module>
+    import aiohttp_swagger
+ModuleNotFoundError: No module named 'aiohttp_swagger'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 269, in <module>
+    web.run_app(init_app(), host="64.226.89.177", port=80)
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web.py", line 448, in _run_app
+    await site.start()
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1525, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 98] error while attempting to bind on address ('64.226.89.177', 80): address already in use
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 45, in create_energy_usage_handler
+    data = await request.json()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web_request.py", line 685, in json
+    return loads(body)
+           ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 2 column 39 (char 40)
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 155, in recommendation
+    energy_usage_record = await EnergyUsageModel.get_energy_usage(user_uuid)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 121, in get_energy_usage
+    return dict(record)
+           ^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 155, in recommendation
+    energy_usage_record = await EnergyUsageModel.get_energy_usage(user_uuid)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 121, in get_energy_usage
+    return dict(record)
+           ^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 180, in recommendation
+    waste_sector_record = await WasteSectorModel.get_waste_sector(user_uuid)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 234, in get_waste_sector
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 219, in get_waste_sector
+    row = await conn.fetchrow(query, user_uuid)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1925, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+asyncpg.exceptions.UndefinedColumnError: column "waste_category" does not exist
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 180, in recommendation
+    waste_sector_record = await WasteSectorModel.get_waste_sector(user_uuid)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 234, in get_waste_sector
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 219, in get_waste_sector
+    row = await conn.fetchrow(query, user_uuid)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1925, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+asyncpg.exceptions.UndefinedColumnError: column "waste_category" does not exist
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 180, in recommendation
+    waste_sector_record = await WasteSectorModel.get_waste_sector(user_uuid)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 234, in get_waste_sector
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 219, in get_waste_sector
+    row = await conn.fetchrow(query, user_uuid)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1925, in _do_execute
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 433, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 166, in prepare
+asyncpg.exceptions.UndefinedColumnError: column "waste_category" does not exist
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/./codecs/uuid.pyx", line 16, in asyncpg.pgproto.pgproto.uuid_encode
+  File "asyncpg/pgproto/./uuid.pyx", line 88, in asyncpg.pgproto.pgproto.pg_uuid_bytes_from_str
+ValueError: invalid UUID 'string': length must be between 32..36 characters, got 6
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 47, in create_energy_usage_handler
+    record_id = await EnergyUsageModel.create_or_update_energy_usage(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 106, in create_or_update_energy_usage
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 95, in create_or_update_energy_usage
+    record_id = await conn.fetchval(
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 715, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1945, in _do_execute
+    result = await executor(stmt, None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 186, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 'string' (invalid UUID 'string': length must be between 32..36 characters, got 6)
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/./codecs/uuid.pyx", line 16, in asyncpg.pgproto.pgproto.uuid_encode
+  File "asyncpg/pgproto/./uuid.pyx", line 88, in asyncpg.pgproto.pgproto.pg_uuid_bytes_from_str
+ValueError: invalid UUID 'wq': length must be between 32..36 characters, got 2
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 176, in recommendation
+    business_travel_record = await BusinessTravelModel.get_business_travel(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 315, in get_business_travel
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 307, in get_business_travel
+    record = await conn.fetchrow(query, user_uuid)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1945, in _do_execute
+    result = await executor(stmt, None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 186, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 'wq' (invalid UUID 'wq': length must be between 32..36 characters, got 2)
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/./codecs/uuid.pyx", line 16, in asyncpg.pgproto.pgproto.uuid_encode
+  File "asyncpg/pgproto/./uuid.pyx", line 88, in asyncpg.pgproto.pgproto.pg_uuid_bytes_from_str
+ValueError: invalid UUID '"708661a8-da30-4933-91c2-7470f8a16a0c"': length must be between 32..36 characters, got 38
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 176, in recommendation
+    business_travel_record = await BusinessTravelModel.get_business_travel(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 315, in get_business_travel
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 307, in get_business_travel
+    record = await conn.fetchrow(query, user_uuid)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 749, in fetchrow
+    data = await self._execute(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1945, in _do_execute
+    result = await executor(stmt, None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 186, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: '"708661a8-da30-4933-91c2-7470f8a16a0c"' (invalid UUID '"708661a8-da30-4933-91c2-7470f8a16a0c"': length must be between 32..36 characters, got 38)
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 4, in <module>
+    import aiohttp_swagger
+ModuleNotFoundError: No module named 'aiohttp_swagger'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 4, in <module>
+    import aiohttp_swagger
+ModuleNotFoundError: No module named 'aiohttp_swagger'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 303, in <module>
+    web.run_app(init_app(), host="64.226.89.177", port=80)
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web.py", line 448, in _run_app
+    await site.start()
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1525, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 98] error while attempting to bind on address ('64.226.89.177', 80): address already in use
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 303, in <module>
+    web.run_app(init_app(), host="64.226.89.177", port=80)
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web.py", line 448, in _run_app
+    await site.start()
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/aiohttp/web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 1525, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 98] error while attempting to bind on address ('64.226.89.177', 80): address already in use
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 2, in <module>
+    import aiohttp_swagger
+ModuleNotFoundError: No module named 'aiohttp_swagger'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 5, in <module>
+    from app.handlers.handlers import (
+ModuleNotFoundError: No module named 'app'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 5, in <module>
+    from app.handlers.handlers import (
+ModuleNotFoundError: No module named 'app'
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/main.py", line 5, in <module>
+    from handlers.handlers import (
+  File "/home/gisma_computer_programming_project/app/handlers/handlers.py", line 13, in <module>
+    from app.models.models import (
+ModuleNotFoundError: No module named 'app'
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/./codecs/uuid.pyx", line 16, in asyncpg.pgproto.pgproto.uuid_encode
+  File "asyncpg/pgproto/./uuid.pyx", line 88, in asyncpg.pgproto.pgproto.pg_uuid_bytes_from_str
+ValueError: invalid UUID 'f55d26a2-e34f-43a4-81d0-27043d3b52def55d26a2-e34f-43a4-81d0-27043d3b52de': length must be between 32..36 characters, got 72
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gisma_computer_programming_project/app/handlers/config_handlers.py", line 22, in create_data_handler
+    record_id = await create_method(**args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/models.py", line 195, in create_or_update_waste_sector
+    return await BaseModel.create_or_update_record(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/models/base_model.py", line 15, in create_or_update_record
+    raise e
+  File "/home/gisma_computer_programming_project/app/models/base_model.py", line 10, in create_or_update_record
+    record_id = await conn.fetchval(query, *args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 715, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1794, in _execute
+    result, _ = await self.__execute(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1892, in __execute
+    result, stmt = await self._do_execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gisma_computer_programming_project/app/myenv/lib/python3.11/site-packages/asyncpg/connection.py", line 1945, in _do_execute
+    result = await executor(stmt, None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 186, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 'f55d26a2-e34f-43a4-81d0-27043d3b52def55... (invalid UUID 'f55d26a2-e34f-43a4-81d0-27043d3b52def55d26a2-e34f-43a4-81d0-27043d3b52de': length must be between 32..36 characters, got 72)
