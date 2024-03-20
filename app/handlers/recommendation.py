@@ -92,11 +92,6 @@ def generate_recommendations(carbon_footprints):
             "energy_usage": carbon_footprints.get("energy_usage"),
             "waste_sector": carbon_footprints.get("waste_sector"),
 
-
-            "business_travel": carbon_footprints.get("business_travel"),
-            "energy_usage": carbon_footprints.get("energy_usage"),
-            "waste_sector": carbon_footprints.get("waste_sector"),
-
         }
     else:
         response_data = {
