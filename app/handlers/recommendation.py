@@ -2,7 +2,7 @@ import uuid
 from asyncio.log import logger
 from decimal import Decimal
 
-from models.models import BusinessTravelModel, EnergyUsageModel, WasteSectorModel
+from app.models.models import BusinessTravelModel, EnergyUsageModel, WasteSectorModel
 
 
 # Function to fetch records from all three models

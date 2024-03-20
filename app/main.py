@@ -2,7 +2,7 @@ import logging
 import aiohttp_swagger
 from aiohttp import web
 
-from handlers.handlers import (
+from app.handlers.handlers import (
     create_report_handler,
     create_waste_sector_handler,
     create_business_travel_handler,

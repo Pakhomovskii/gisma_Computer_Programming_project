@@ -1,5 +1,5 @@
 from asyncio.log import logger
-from services.database import create_db_connection
+from app.services.database import create_db_connection
 
 
 class BaseModel:
