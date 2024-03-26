@@ -23,12 +23,11 @@ In an era where environmental sustainability is not just a choice but a necessit
 
 This project is built using cutting-edge technologies and frameworks to ensure high performance and scalability:
 
-- **Python 3.11:** 
-- **aiohttp 3.9.3:** 
-- **aiohttp-swagger:** 
-- **asyncpg:** 
-- **psycopg2:** 
-- **PostgreSQL 14:**
+- **Python 3.11** 
+- **aiohttp 3.9.3** 
+- **asyncpg** 
+- **psycopg2** 
+- **PostgreSQL 14**
 
 ### DB structure
 
