@@ -17,7 +17,7 @@ from app.handlers.handlers import (
 )
 
 
-# Configure logging (more context)
+# Configure logging
 logging.basicConfig(
     filename="app.log",
     level=logging.DEBUG,
@@ -35,7 +35,7 @@ async def init_app():
             allow_credentials=True,
             expose_headers="*",
             allow_headers="*",
-            allow_methods=["GET"],  # Allow GET requests specifically for this endpoint
+            allow_methods=["GET"],  
         )
     })
 
@@ -45,7 +45,7 @@ async def init_app():
     cors.add(app.router.add_post("/create-waste-sector", create_waste_sector_handler))
     cors.add(app.router.add_post("/create-business-travel", create_business_travel_handler))
     cors.add(app.router.add_post("/get-waste-sector", get_waste_sector_handler))
-    cors.add(app.router.add_post("/get-energy-usage", get_energy_usage_handler))  # Existing line
+    cors.add(app.router.add_post("/get-energy-usage", get_energy_usage_handler))
     cors.add(app.router.add_post("/get-business-travel", get_business_travel_handler))
     cors.add(app.router.add_post("/give-recommendation", recommendation))
 
