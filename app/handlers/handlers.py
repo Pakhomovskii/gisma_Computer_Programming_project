@@ -79,7 +79,8 @@ async def get_waste_sector_handler(request):
     return await get_data_handler(request, WasteSectorModel, "get_waste_sector")
 
 
-# Main recommendation function@swagger_path("./swagger/give-recommendation.yml")
+# Main recommendation function
+@swagger_path("./swagger/give-recommendation.yml")
 async def recommendation(request):
     logger.info("Getting recommendation")
     try:
