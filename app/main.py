@@ -62,4 +62,4 @@ async def init_app():
 
 
 if __name__ == "__main__":
-    web.run_app(init_app(), host="64.226.89.177", port=80)
+    web.run_app(init_app(), host="localhost", port=8080)

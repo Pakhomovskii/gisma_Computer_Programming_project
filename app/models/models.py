@@ -69,20 +69,32 @@ class EnergyUsageModel(BaseModel):
         Exception: If an error occurs during database operations.
         """
         query = """
-                    INSERT INTO energy_usage (report_uuid, 
-                                  average_monthly_bill, 
-                                  average_natural_gas_bill, 
-                                  monthly_fuel_bill, 
-                                  city, 
-                                  company_name)
-                    VALUES ($1, $2, $3, $4, $5, $6)
-                    ON CONFLICT (report_uuid) DO UPDATE 
-                    SET average_monthly_bill = EXCLUDED.average_monthly_bill,
-                        average_natural_gas_bill = EXCLUDED.average_natural_gas_bill,
-                        monthly_fuel_bill = EXCLUDED.monthly_fuel_bill, 
-                        company_name = EXCLUDED.company_name,
-                        city = EXCLUDED.city
-                    RETURNING id;
+WITH new_report_data AS (
+    INSERT INTO reports DEFAULT VALUES
+    RETURNING report_uuid
+),
+new_values AS (
+    SELECT 
+        COALESCE($1, (SELECT report_uuid FROM new_report_data)), -- Generate UUID if $1 is empty
+        COALESCE(NULLIF($2, ''), NULL)::numeric, 
+        COALESCE(NULLIF($3, ''), NULL)::numeric,
+        COALESCE(NULLIF($4, ''), NULL)::numeric,
+        $5, $6 
+)
+INSERT INTO energy_usage (report_uuid, 
+                          average_monthly_bill, 
+                          average_natural_gas_bill, 
+                          monthly_fuel_bill, 
+                          city, 
+                          company_name)
+SELECT * FROM new_values
+ON CONFLICT (report_uuid) DO UPDATE 
+SET average_monthly_bill = EXCLUDED.average_monthly_bill,
+    average_natural_gas_bill = EXCLUDED.average_natural_gas_bill,
+    monthly_fuel_bill = EXCLUDED.monthly_fuel_bill, 
+    company_name = EXCLUDED.company_name,
+    city = EXCLUDED.city
+RETURNING id; 
                 """
         record_fields = {
             "company_name": "company_name",

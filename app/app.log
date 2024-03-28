@@ -2465,3 +2465,236 @@ aiohttp.http_exceptions.BadStatusLine: 400, message:
 2024-03-20 15:17:11,794 INFO:Get recommendation
 2024-03-20 15:17:11,955 INFO:34.127.26.17 [20/Mar/2024:15:17:11 +0000] "GET /give-recommendation?company_name= HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
 2024-03-20 15:25:04,004 INFO:83.97.73.245 [20/Mar/2024:15:25:04 +0000] "GET /actuator/gateway/routes HTTP/1.1" 404 192 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
+2024-03-23 16:58:15,191 DEBUG:Using selector: KqueueSelector
+2024-03-23 16:58:15,294 ERROR:unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py:303> exception=OSError(49, "error while attempting to bind on address ('64.226.89.177', 80): can't assign requested address")>
+Traceback (most recent call last):
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 544, in run_app
+    loop.run_until_complete(main_task)
+  File "/usr/local/Cellar/python@3.11/3.11.7_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web.py", line 448, in _run_app
+    await site.start()
+  File "/Users/pahomovskij/Library/Caches/pypoetry/virtualenvs/co2-reduction-0TDo319t-py3.11/lib/python3.11/site-packages/aiohttp/web_runner.py", line 119, in start
+    self._server = await loop.create_server(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.11/3.11.7_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1525, in create_server
+    raise OSError(err.errno, 'error while attempting '
+OSError: [Errno 49] error while attempting to bind on address ('64.226.89.177', 80): can't assign requested address
+2024-03-23 16:58:31,843 DEBUG:Using selector: KqueueSelector
+2024-03-24 16:56:55,910 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:02:01,324 INFO:Create a new report
+2024-03-24 17:02:01,409 INFO:::1 [24/Mar/2024:17:02:01 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-24 17:02:07,376 INFO:Get recommendation
+2024-03-24 17:02:07,518 INFO:::1 [24/Mar/2024:17:02:07 +0100] "GET /give-recommendation?company_name=V HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-24 17:02:18,734 INFO:Get recommendation
+2024-03-24 17:02:18,801 INFO:::1 [24/Mar/2024:17:02:18 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-24 17:02:41,397 INFO:Handling a request to create or update energy usage
+2024-03-24 17:02:41,411 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-24 17:02:41,414 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-24 17:02:41,428 INFO:::1 [24/Mar/2024:17:02:41 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-24 17:29:37,196 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:29:45,611 INFO:Handling a request to create or update energy usage
+2024-03-24 17:29:45,624 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-24 17:29:45,626 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-24 17:29:45,631 INFO:::1 [24/Mar/2024:17:29:45 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-24 17:31:45,458 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:31:52,432 INFO:Handling a request to create or update energy usage
+2024-03-24 17:31:52,444 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-24 17:31:52,446 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-24 17:31:52,452 INFO:::1 [24/Mar/2024:17:31:52 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-24 17:39:48,899 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:40:01,783 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:40:04,486 INFO:Handling a request to create or update energy usage
+2024-03-24 17:40:04,499 ERROR:Failed to create or update record: CASE types text and uuid cannot be matched
+2024-03-24 17:40:04,501 ERROR:An unexpected error occurred: CASE types text and uuid cannot be matched
+2024-03-24 17:40:04,507 INFO:::1 [24/Mar/2024:17:40:04 +0100] "POST /create-energy-usage HTTP/1.1" 500 232 "-" "python-requests/2.31.0"
+2024-03-24 17:40:06,400 INFO:Handling a request to create or update energy usage
+2024-03-24 17:40:06,410 ERROR:Failed to create or update record: CASE types text and uuid cannot be matched
+2024-03-24 17:40:06,413 ERROR:An unexpected error occurred: CASE types text and uuid cannot be matched
+2024-03-24 17:40:06,414 INFO:::1 [24/Mar/2024:17:40:06 +0100] "POST /create-energy-usage HTTP/1.1" 500 232 "-" "python-requests/2.31.0"
+2024-03-24 17:40:06,580 INFO:Handling a request to create or update energy usage
+2024-03-24 17:40:06,591 ERROR:Failed to create or update record: CASE types text and uuid cannot be matched
+2024-03-24 17:40:06,593 ERROR:An unexpected error occurred: CASE types text and uuid cannot be matched
+2024-03-24 17:40:06,594 INFO:::1 [24/Mar/2024:17:40:06 +0100] "POST /create-energy-usage HTTP/1.1" 500 232 "-" "python-requests/2.31.0"
+2024-03-24 17:40:12,787 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:40:14,467 INFO:Handling a request to create or update energy usage
+2024-03-24 17:40:14,478 ERROR:Failed to create or update record: CASE types text and uuid cannot be matched
+2024-03-24 17:40:14,481 ERROR:An unexpected error occurred: CASE types text and uuid cannot be matched
+2024-03-24 17:40:14,484 INFO:::1 [24/Mar/2024:17:40:14 +0100] "POST /create-energy-usage HTTP/1.1" 500 232 "-" "python-requests/2.31.0"
+2024-03-24 17:41:48,185 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:41:56,409 INFO:Handling a request to create or update energy usage
+2024-03-24 17:41:56,443 ERROR:Failed to create or update record: insert or update on table "energy_usage" violates foreign key constraint "energy_usage_report_uuid_fkey"
+DETAIL:  Key (report_uuid)=(ec136c37-dda6-4d46-adcd-94639e56b9f9) is not present in table "reports".
+2024-03-24 17:41:56,445 ERROR:An unexpected error occurred: insert or update on table "energy_usage" violates foreign key constraint "energy_usage_report_uuid_fkey"
+DETAIL:  Key (report_uuid)=(ec136c37-dda6-4d46-adcd-94639e56b9f9) is not present in table "reports".
+2024-03-24 17:41:56,451 INFO:::1 [24/Mar/2024:17:41:56 +0100] "POST /create-energy-usage HTTP/1.1" 500 396 "-" "python-requests/2.31.0"
+2024-03-24 17:44:59,019 INFO:Handling a request to create or update energy usage
+2024-03-24 17:44:59,034 ERROR:Failed to create or update record: insert or update on table "energy_usage" violates foreign key constraint "energy_usage_report_uuid_fkey"
+DETAIL:  Key (report_uuid)=(0ee81b44-9d1a-427d-8160-c728273f8369) is not present in table "reports".
+2024-03-24 17:44:59,037 ERROR:An unexpected error occurred: insert or update on table "energy_usage" violates foreign key constraint "energy_usage_report_uuid_fkey"
+DETAIL:  Key (report_uuid)=(0ee81b44-9d1a-427d-8160-c728273f8369) is not present in table "reports".
+2024-03-24 17:44:59,038 INFO:::1 [24/Mar/2024:17:44:59 +0100] "POST /create-energy-usage HTTP/1.1" 500 396 "-" "python-requests/2.31.0"
+2024-03-24 17:53:41,149 DEBUG:Using selector: KqueueSelector
+2024-03-24 17:53:46,958 INFO:Handling a request to create or update energy usage
+2024-03-24 17:53:46,982 ERROR:Failed to create or update record: insert or update on table "energy_usage" violates foreign key constraint "energy_usage_report_uuid_fkey"
+DETAIL:  Key (report_uuid)=(b044c235-9a1b-4edb-a688-492847584ac9) is not present in table "reports".
+2024-03-24 17:53:46,984 ERROR:An unexpected error occurred: insert or update on table "energy_usage" violates foreign key constraint "energy_usage_report_uuid_fkey"
+DETAIL:  Key (report_uuid)=(b044c235-9a1b-4edb-a688-492847584ac9) is not present in table "reports".
+2024-03-24 17:53:46,990 INFO:::1 [24/Mar/2024:17:53:46 +0100] "POST /create-energy-usage HTTP/1.1" 500 396 "-" "python-requests/2.31.0"
+2024-03-26 11:13:54,265 DEBUG:Using selector: KqueueSelector
+2024-03-26 11:13:58,059 INFO:Get recommendation
+2024-03-26 11:13:58,160 INFO:::1 [26/Mar/2024:11:13:58 +0100] "GET /give-recommendation?company_name=V HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-26 11:14:02,793 INFO:Get recommendation
+2024-03-26 11:14:02,854 INFO:::1 [26/Mar/2024:11:14:02 +0100] "GET /give-recommendation?company_name=V HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-26 11:14:09,242 INFO:Get recommendation
+2024-03-26 11:14:09,304 INFO:::1 [26/Mar/2024:11:14:09 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-26 11:14:20,114 INFO:Get recommendation
+2024-03-26 11:14:20,171 INFO:::1 [26/Mar/2024:11:14:20 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-26 11:14:36,323 INFO:Get recommendation
+2024-03-26 11:14:36,377 INFO:::1 [26/Mar/2024:11:14:36 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-26 11:18:55,695 INFO:Get recommendation
+2024-03-26 11:18:55,763 INFO:::1 [26/Mar/2024:11:18:55 +0100] "GET /give-recommendation?company_name=V HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-26 11:19:05,817 INFO:Get recommendation
+2024-03-26 11:19:05,880 INFO:::1 [26/Mar/2024:11:19:05 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-26 11:19:27,806 INFO:Get recommendation
+2024-03-26 11:19:27,861 INFO:::1 [26/Mar/2024:11:19:27 +0100] "GET /give-recommendation?company_name=BMW HTTP/1.1" 200 1481 "-" "python-requests/2.31.0"
+2024-03-26 11:25:46,713 INFO:Create a new report
+2024-03-26 11:25:46,749 INFO:::1 [26/Mar/2024:11:25:46 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 11:25:59,903 INFO:Handling a request to create waste sector data
+2024-03-26 11:25:59,946 INFO:::1 [26/Mar/2024:11:25:59 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 11:26:03,984 INFO:Get recommendation
+2024-03-26 11:26:04,050 INFO:::1 [26/Mar/2024:11:26:03 +0100] "GET /give-recommendation?company_name=R HTTP/1.1" 200 1493 "-" "python-requests/2.31.0"
+2024-03-26 11:26:20,242 INFO:Get recommendation
+2024-03-26 11:26:20,301 INFO:::1 [26/Mar/2024:11:26:20 +0100] "GET /give-recommendation?company_name=R HTTP/1.1" 200 1493 "-" "python-requests/2.31.0"
+2024-03-26 11:27:37,454 INFO:Get recommendation
+2024-03-26 11:27:37,548 INFO:::1 [26/Mar/2024:11:27:37 +0100] "GET /give-recommendation?company_name=R HTTP/1.1" 200 1493 "-" "python-requests/2.31.0"
+2024-03-26 11:59:10,991 DEBUG:Using selector: KqueueSelector
+2024-03-26 12:11:55,594 INFO:Create a new report
+2024-03-26 12:11:55,618 INFO:::1 [26/Mar/2024:12:11:55 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 12:12:12,911 INFO:Handling a request to create or update energy usage
+2024-03-26 12:12:12,928 INFO:::1 [26/Mar/2024:12:12:12 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:12:26,542 INFO:Handling a request to create waste sector data
+2024-03-26 12:12:26,587 INFO:::1 [26/Mar/2024:12:12:26 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:12:37,168 INFO:Handling a request to create business travel data
+2024-03-26 12:12:37,186 INFO:::1 [26/Mar/2024:12:12:37 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:12:40,948 INFO:Get recommendation
+2024-03-26 12:12:41,004 INFO:::1 [26/Mar/2024:12:12:40 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1501 "-" "python-requests/2.31.0"
+2024-03-26 12:18:08,839 INFO:Get recommendation
+2024-03-26 12:18:08,935 INFO:::1 [26/Mar/2024:12:18:08 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1501 "-" "python-requests/2.31.0"
+2024-03-26 12:21:52,014 INFO:Get recommendation
+2024-03-26 12:21:52,115 INFO:::1 [26/Mar/2024:12:21:52 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1501 "-" "python-requests/2.31.0"
+2024-03-26 12:23:38,606 INFO:Get recommendation
+2024-03-26 12:23:38,679 INFO:::1 [26/Mar/2024:12:23:38 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1501 "-" "python-requests/2.31.0"
+2024-03-26 12:29:14,409 INFO:Create a new report
+2024-03-26 12:29:14,431 INFO:::1 [26/Mar/2024:12:29:14 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 12:29:24,746 INFO:Handling a request to create or update energy usage
+2024-03-26 12:29:24,763 INFO:::1 [26/Mar/2024:12:29:24 +0100] "POST /create-energy-usage HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:29:39,974 INFO:Handling a request to create waste sector data
+2024-03-26 12:29:40,019 INFO:::1 [26/Mar/2024:12:29:39 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:29:52,535 INFO:Handling a request to create business travel data
+2024-03-26 12:29:52,552 INFO:::1 [26/Mar/2024:12:29:52 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:29:56,738 INFO:Get recommendation
+2024-03-26 12:29:56,800 INFO:::1 [26/Mar/2024:12:29:56 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:31:18,319 INFO:Get BusinessTravelModel info
+2024-03-26 12:31:18,339 INFO:::1 [26/Mar/2024:12:31:18 +0100] "GET /get-business-travel?company_name=q HTTP/1.1" 200 341 "-" "python-requests/2.31.0"
+2024-03-26 12:31:22,073 INFO:Get WasteSectorModel info
+2024-03-26 12:31:22,139 INFO:::1 [26/Mar/2024:12:31:22 +0100] "GET /get-waste-sector?company_name=q HTTP/1.1" 200 373 "-" "python-requests/2.31.0"
+2024-03-26 12:31:25,887 INFO:Get EnergyUsageModel info
+2024-03-26 12:31:25,902 INFO:::1 [26/Mar/2024:12:31:25 +0100] "GET /get-energy-usage?company_name=q HTTP/1.1" 200 341 "-" "python-requests/2.31.0"
+2024-03-26 12:31:30,483 INFO:Get recommendation
+2024-03-26 12:31:30,543 INFO:::1 [26/Mar/2024:12:31:30 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:35:32,730 INFO:Get recommendation
+2024-03-26 12:35:32,793 INFO:::1 [26/Mar/2024:12:35:32 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:35:58,252 INFO:Get recommendation
+2024-03-26 12:35:58,318 INFO:::1 [26/Mar/2024:12:35:58 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:37:15,310 INFO:Create a new report
+2024-03-26 12:37:15,327 INFO:::1 [26/Mar/2024:12:37:15 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 12:37:20,929 INFO:Get recommendation
+2024-03-26 12:37:20,997 INFO:::1 [26/Mar/2024:12:37:20 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:38:07,043 INFO:Create a new report
+2024-03-26 12:38:07,059 INFO:::1 [26/Mar/2024:12:38:07 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 12:38:12,887 INFO:Get recommendation
+2024-03-26 12:38:12,949 INFO:::1 [26/Mar/2024:12:38:12 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:39:00,760 INFO:Get recommendation
+2024-03-26 12:39:00,830 INFO:::1 [26/Mar/2024:12:39:00 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:39:22,155 INFO:Get recommendation
+2024-03-26 12:39:22,217 INFO:::1 [26/Mar/2024:12:39:22 +0100] "GET /give-recommendation?company_name=1 HTTP/1.1" 200 243 "-" "python-requests/2.31.0"
+2024-03-26 12:39:24,485 INFO:Get recommendation
+2024-03-26 12:39:24,552 INFO:::1 [26/Mar/2024:12:39:24 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:40:35,601 INFO:Get recommendation
+2024-03-26 12:40:35,661 INFO:::1 [26/Mar/2024:12:40:35 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1437 "-" "python-requests/2.31.0"
+2024-03-26 12:40:44,377 INFO:Get BusinessTravelModel info
+2024-03-26 12:40:44,392 INFO:::1 [26/Mar/2024:12:40:44 +0100] "GET /get-business-travel?company_name=1 HTTP/1.1" 404 173 "-" "python-requests/2.31.0"
+2024-03-26 12:40:46,745 INFO:Get BusinessTravelModel info
+2024-03-26 12:40:46,761 INFO:::1 [26/Mar/2024:12:40:46 +0100] "GET /get-business-travel?company_name=q HTTP/1.1" 200 341 "-" "python-requests/2.31.0"
+2024-03-26 12:41:04,490 INFO:Create a new report
+2024-03-26 12:41:04,503 INFO:::1 [26/Mar/2024:12:41:04 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 12:41:09,884 INFO:Handling a request to create business travel data
+2024-03-26 12:41:09,899 INFO:::1 [26/Mar/2024:12:41:09 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:41:13,356 INFO:Get recommendation
+2024-03-26 12:41:13,417 INFO:::1 [26/Mar/2024:12:41:13 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1435 "-" "python-requests/2.31.0"
+2024-03-26 12:41:27,903 INFO:Handling a request to create waste sector data
+2024-03-26 12:41:27,935 INFO:::1 [26/Mar/2024:12:41:27 +0100] "POST /create-waste-sector HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:41:30,330 INFO:Get recommendation
+2024-03-26 12:41:30,390 INFO:::1 [26/Mar/2024:12:41:30 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1502 "-" "python-requests/2.31.0"
+2024-03-26 12:41:43,007 INFO:Handling a request to create business travel data
+2024-03-26 12:41:43,020 INFO:::1 [26/Mar/2024:12:41:43 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:41:45,256 INFO:Get recommendation
+2024-03-26 12:41:45,315 INFO:::1 [26/Mar/2024:12:41:45 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1502 "-" "python-requests/2.31.0"
+2024-03-26 12:41:50,098 INFO:Create a new report
+2024-03-26 12:41:50,113 INFO:::1 [26/Mar/2024:12:41:50 +0100] "GET /register HTTP/1.1" 201 218 "-" "python-requests/2.31.0"
+2024-03-26 12:41:56,627 INFO:Handling a request to create business travel data
+2024-03-26 12:41:56,644 INFO:::1 [26/Mar/2024:12:41:56 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:41:58,577 INFO:Get recommendation
+2024-03-26 12:41:58,634 INFO:::1 [26/Mar/2024:12:41:58 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1502 "-" "python-requests/2.31.0"
+2024-03-26 12:42:06,552 INFO:Handling a request to create business travel data
+2024-03-26 12:42:06,564 INFO:::1 [26/Mar/2024:12:42:06 +0100] "POST /create-business-travel HTTP/1.1" 200 175 "-" "python-requests/2.31.0"
+2024-03-26 12:42:09,422 INFO:Get recommendation
+2024-03-26 12:42:09,483 INFO:::1 [26/Mar/2024:12:42:09 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:43:32,886 INFO:Get recommendation
+2024-03-26 12:43:32,957 INFO:::1 [26/Mar/2024:12:43:32 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:44:29,837 INFO:Get recommendation
+2024-03-26 12:44:29,903 INFO:::1 [26/Mar/2024:12:44:29 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:46:16,329 INFO:Get recommendation
+2024-03-26 12:46:16,397 INFO:::1 [26/Mar/2024:12:46:16 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:47:48,825 INFO:Get recommendation
+2024-03-26 12:47:48,889 INFO:::1 [26/Mar/2024:12:47:48 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:49:59,034 INFO:Get recommendation
+2024-03-26 12:49:59,106 INFO:::1 [26/Mar/2024:12:49:59 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:56:45,413 INFO:Get recommendation
+2024-03-26 12:56:45,481 INFO:::1 [26/Mar/2024:12:56:45 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 12:57:18,874 INFO:Get recommendation
+2024-03-26 12:57:18,940 INFO:::1 [26/Mar/2024:12:57:18 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 13:04:16,838 INFO:Get recommendation
+2024-03-26 13:04:16,907 INFO:::1 [26/Mar/2024:13:04:16 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 13:07:34,722 INFO:Get recommendation
+2024-03-26 13:07:34,791 INFO:::1 [26/Mar/2024:13:07:34 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 13:44:08,730 DEBUG:Using selector: KqueueSelector
+2024-03-26 13:44:15,299 INFO:Get recommendation
+2024-03-26 13:44:15,421 INFO:::1 [26/Mar/2024:13:44:15 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 13:44:26,913 INFO:Handling a request to create or update energy usage
+2024-03-26 13:44:26,924 ERROR:Failed to create or update record: column "average_monthly_bill" is of type numeric but expression is of type text
+HINT:  You will need to rewrite or cast the expression.
+2024-03-26 13:44:26,926 ERROR:An unexpected error occurred: column "average_monthly_bill" is of type numeric but expression is of type text
+HINT:  You will need to rewrite or cast the expression.
+2024-03-26 13:44:26,934 INFO:::1 [26/Mar/2024:13:44:26 +0100] "POST /create-energy-usage HTTP/1.1" 500 326 "-" "python-requests/2.31.0"
+2024-03-26 13:54:10,842 DEBUG:Using selector: KqueueSelector
+2024-03-26 13:54:16,441 INFO:Handling a request to create or update energy usage
+2024-03-26 13:54:16,458 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-26 13:54:16,460 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-26 13:54:16,466 INFO:::1 [26/Mar/2024:13:54:16 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
+2024-03-26 13:55:25,550 DEBUG:Using selector: KqueueSelector
+2024-03-26 13:55:29,062 DEBUG:Using selector: KqueueSelector
+2024-03-26 13:55:34,839 INFO:Handling a request to create or update energy usage
+2024-03-26 13:55:34,873 ERROR:Failed to create or update record: invalid input for query argument $2: 213.0 (expected str, got float)
+2024-03-26 13:55:34,875 ERROR:An unexpected error occurred: invalid input for query argument $2: 213.0 (expected str, got float)
+2024-03-26 13:55:34,881 INFO:::1 [26/Mar/2024:13:55:34 +0100] "POST /create-energy-usage HTTP/1.1" 500 258 "-" "python-requests/2.31.0"
+2024-03-26 15:15:24,907 DEBUG:Using selector: KqueueSelector
+2024-03-26 15:15:33,229 INFO:Get recommendation
+2024-03-26 15:15:33,324 INFO:::1 [26/Mar/2024:15:15:33 +0100] "GET /give-recommendation?company_name=q HTTP/1.1" 200 1504 "-" "python-requests/2.31.0"
+2024-03-26 15:15:37,828 INFO:Handling a request to create or update energy usage
+2024-03-26 15:15:37,838 ERROR:Failed to create or update record: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-26 15:15:37,840 ERROR:An unexpected error occurred: invalid input for query argument $1: '' (invalid UUID '': length must be between 32..36 characters, got 0)
+2024-03-26 15:15:37,849 INFO:::1 [26/Mar/2024:15:15:37 +0100] "POST /create-energy-usage HTTP/1.1" 500 297 "-" "python-requests/2.31.0"
