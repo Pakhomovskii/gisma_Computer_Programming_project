@@ -4,7 +4,9 @@ This project is a pivotal component of the **M602A Computer Programming (WS0124)
 
 ### API Documentation
 
-Explore my simple [API Documentation](http://64.226.89.177/api/doc#/) to get started with integrating your applications or conducting assessments.
+Explore my simple [API Documentation](http://64.226.89.177/api/doc#/) to get started with integrating your applications or conducting assessments. 
+Also, I have a simple streamlit [application](https://ui-co2-sruhci6zpqfzajsimqkbpg.streamlit.app) for this project.
+
 
 ### Project Overview
 
@@ -17,16 +19,15 @@ In an era where environmental sustainability is not just a choice but a necessit
 - **Business Travel Insights:** Gain insights into how business travel contributes to overall carbon emissions.
 - **Tailored Recommendations:** Receive personalized suggestions to reduce your carbon footprint based on your assessment results.
 
-### Technologies Used
+#### Technologies Used
 
 This project is built using cutting-edge technologies and frameworks to ensure high performance and scalability:
 
-- **Python 3.11:** Chosen for its simplicity and vast ecosystem, Python 3.11 powers our backend logic and data processing, offering the latest features and optimizations for efficient programming.
-- **aiohttp 3.9.3:** Utilized for its powerful asynchronous capabilities, aiohttp enables our project to handle a large number of simultaneous API requests without compromising performance.
-- **aiohttp-swagger:** This integration provides a user-friendly interface for my API documentation, making it accessible and interactive for developers.
-- **asyncpg:** A high-performance PostgreSQL database interface for Python/asyncio, asyncpg is used for its speed and efficiency in handling database operations.
-- **psycopg2:** As a PostgreSQL adapter for Python, psycopg2 facilitates database connections and operations, ensuring reliable data storage and retrieval.
-- **poetry:** This tool is used for dependency management and packaging in Python projects. It simplifies the management of project dependencies and ensures consistent environments across development and production setups.
+- **Python 3.11** 
+- **aiohttp 3.9.3** 
+- **asyncpg** 
+- **psycopg2** 
+- **PostgreSQL 14**
 
 ### DB structure
 
